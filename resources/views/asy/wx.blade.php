@@ -264,7 +264,7 @@
                 doResult();
 
                 num++; //每摇一次，num加1
-                if (num == 40) {
+                if (num == 20) {
                     socket.emit('change', 2);
                     $('.page3').show().siblings().hide();
                 }
