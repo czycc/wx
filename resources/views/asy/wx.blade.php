@@ -15,7 +15,7 @@
 
 <body>
 <!--第一页-->
-<div class="page page1 hidden">
+<div class="page page1">
     <div class="top pos">
         <img src="{{asset('asy/eyeImg/p1/center.png')}}"/>
     </div>
@@ -58,7 +58,7 @@
     </div>
 </div>
 <!--第三页-->
-<div class="page page3 ">
+<div class="page page3 hidden">
     <div class="day pos">
         <img src="{{asset('asy/eyeImg/p3/seven.png')}}"/>
     </div>
