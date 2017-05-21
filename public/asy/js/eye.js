@@ -36,6 +36,7 @@ if(window.DeviceMotionEvent) {
 	alert('抱歉，你的手机配置实在有些过不去，考虑换个新的再来试试吧');
 }
 var times = 0;
+var socket =io('http://127.0.0.1:3000');
 var num = 0; //统计摇一摇的次数
 function deviceMotionHandler(eventData) {
 
@@ -56,6 +57,7 @@ function deviceMotionHandler(eventData) {
 			doResult();
 
 			num++; //每摇一次，num加1
+			socket.emit('change', num);
 
 		}
 		last_x = x;

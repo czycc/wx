@@ -11,8 +11,12 @@
 |
 */
 
+//强生安视优项目
 Route::get('/', function () {
-    return view('welcome');
+    return view('asy.wx');
+});
+Route::get('/asy/pc', function () {
+    return view('asy.pc');
 });
 
 Auth::routes();
