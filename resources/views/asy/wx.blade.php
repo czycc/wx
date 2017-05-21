@@ -197,7 +197,8 @@
 </div>
 
 </body>
-<script src="//{{ Request::getHost() }}:8000/socket.io/socket.io.js"></script>
+{{--<script src="//{{ Request::getHost() }}:8000/socket.io/socket.io.js"></script>--}}
+<script src="//{{ Request::getHost() }}:3000/socket.io/socket.io.js"></script>
 <script src="{{asset('asy/js/jquery-1.11.3..min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('asy/js/eye.js')}}" type="text/javascript" charset="utf-8"></script>
 <script type="application/javascript">
@@ -240,7 +241,7 @@
     }
     var times = 0;
     var num = 0; //统计摇一摇的次数
-    var socket = io('https://{{ Request::getHost() }}:8000');
+    var socket = io('http://{{ Request::getHost() }}:3000');
     function deviceMotionHandler(eventData) {
 
         var acceleration = eventData.accelerationIncludingGravity;
