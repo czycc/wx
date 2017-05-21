@@ -8,6 +8,7 @@ socket.on('connection', function (socket) {
     });
     socket.on('change',function (val) {
         console.log('msg:' +val);
+        socket.broadcast.emit('change', val);
     });
 });
 
