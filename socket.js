@@ -7,7 +7,7 @@ socket.on('connection', function (socket) {
         console.log('a user disconnect');
     });
     socket.on('change',function (val) {
-        console.log('msg:${val}');
+        console.log('msg:' +val);
     });
 });
 
