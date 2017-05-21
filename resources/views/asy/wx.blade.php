@@ -95,7 +95,7 @@
     </div>
 </div>
 <!--第四页-->
-<div class="page page4 hidden gremAll">
+<div class="page page4 gremAll hidden">
     <div class="day pos">
         <img src="{{asset('asy/eyeImg/p4/ten.png')}}"/>
     </div>
@@ -204,28 +204,28 @@
 <script type="application/javascript">
     //开始游戏
     $('.page1 .beginPlay img').click(function () {
-
+        socket.emit('change',1);
         $('.page2').show().siblings().hide();
 
-    })
+    });
     //第十天继续清洗,扔掉
 
     //继续清洗
     $('.page3 .goBtm img').click(function () {
-
+        socket.emit('change', 3);
         $('.page4').show().siblings().hide();
 
-    })
+    });
     $('.page4 .goBtm img').click(function () {
-
+        socket.emit('change', 4);
         $('.page5').show().siblings().hide();
 
-    })
+    });
 
     //扔掉镜片
 
     $('.page .trowBtm img').click(function () {
-
+        socket.emit('change', 5);
         $('.page6').show().siblings().hide();
     })
 
@@ -261,8 +261,10 @@
                 doResult();
 
                 num++; //每摇一次，num加1
-                socket.emit('change', num);
-
+                if (num == 40) {
+                    socket.emit('change', 2);
+                    $('.page3').show().siblings().hide();
+                }
             }
             last_x = x;
             last_y = y;
