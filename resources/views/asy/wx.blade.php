@@ -240,7 +240,7 @@
     }
     var times = 0;
     var num = 0; //统计摇一摇的次数
-    var socket = io('http://{{ Request::getHost() }}:3000');
+    var socket = io('https://{{ Request::getHost() }}:3000');
     function deviceMotionHandler(eventData) {
 
         var acceleration = eventData.accelerationIncludingGravity;
