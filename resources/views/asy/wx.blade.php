@@ -270,24 +270,7 @@
                     
 
                 }
-                if(num == 10){
-               		if($('.page3').css('display') == 'block'){
-			
-						$('.hide').fadeOut(2000);
-						
-					};
-					
-					if($('.page4').css('display') == 'block'){
-						
-						$('.hide1').fadeOut(2000);
-						
-					};
-				
-					if($('.page5').css('display') == 'block'){
-				
-						$('.hide2').fadeOut(2000);
-					}
-                }
+
             }
             last_x = x;
             last_y = y;
@@ -300,6 +283,23 @@
             return false;
         }
         $('.shakeImg').addClass('hand');
+        if($('.page3').css('display') == 'block'){
+			
+			$('.hide').fadeOut(3000);
+						
+			};
+					
+			if($('.page4').css('display') == 'block'){
+						
+				$('.hide1').fadeOut(3000);
+						
+			};
+				
+			if($('.page5').css('display') == 'block'){
+				
+				$('.hide2').fadeOut(3000);
+				
+			}
 
         setTimeout(function () {
             times = 0;
