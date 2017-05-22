@@ -12,7 +12,7 @@
 */
 
 //强生安视优项目
-Route::get('/', function () {
+Route::get('/asy/mobile', function () {
     return view('asy.wx');
 });
 Route::get('/asy/pc', function () {
