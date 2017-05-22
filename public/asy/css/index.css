@@ -40,6 +40,7 @@ img{
 	position: absolute;
 	left: -5%;
 	margin-top: 22%;
+	animation: wmove 1.5s linear infinite alternate;
 
 }
 .page4 .gremAll .redgrem,.page5 .gremAll .redgrem{
@@ -51,6 +52,7 @@ img{
 	position: absolute;
 	left: 8%;
 	margin-top: 10%;
+	animation: wmove2 1.5s linear infinite alternate;
 
 }
 .page4 .gremAll .blackgrem,.page5 .gremAll .blackgrem{
@@ -60,6 +62,7 @@ img{
 	position: absolute;
 	margin-top: 16%;
 	left:26%;
+	animation: wmove 1.5s linear infinite alternate;
 	
 }
 .page .gremAll .bluegrem{
@@ -70,20 +73,62 @@ img{
 	margin-top: 7%;
 	left: 24%;
 	width: 10%;
+	animation: wmove4 1.5s linear infinite alternate;
 }
 .page .gremAll .orangegrem{
 	position: absolute;
 	margin-top: 14%;
 	left: -6%;
 	width: 10%;
+	animation: wmove3 1.5s linear infinite alternate;
 }
 .page .gremAll .greensmall{
 	position: absolute;
 	margin-top: 0%;
 	left: 15%;
+	animation: wmove4 1.5s linear infinite alternate;
 }
 .page .gremAll .orangesmall{
 	position: absolute;
 	margin-top: 1%;
 	left: -5%;
+	animation: wmove3 1.5s linear infinite alternate;
+}
+/*细菌*/
+@keyframes wmove{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	
+	100%{
+		transform: translate3d(0,5px,0);
+	}
+	
+}
+@keyframes wmove2{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	
+	100%{
+		transform: translate3d(0,-10px,0);
+	}
+}
+@keyframes wmove3{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	
+	100%{
+		transform: translate3d(0,10px,0);
+	}
+}
+@keyframes wmove4{
+	0%{
+		transform: translate3d(0,0,0);
+	}
+	
+	100%{
+		transform: translate3d(0,-15px,0);
+	}
 }

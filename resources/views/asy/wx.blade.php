@@ -284,7 +284,25 @@
         setTimeout(function () {
             times = 0;
             $('.shakeImg').removeClass('hand');
-        }, 3000);
+            
+            if($('.page3').show()){
+	
+				$('.hide').fadeOut(1500);
+				
+			};
+			
+			if($('.page4').show()){
+				
+				$('.hide').fadeOut(1500);
+				
+			}
+			
+			if($('.page5').show()){
+		
+				$('.hide').fadeOut(1500);
+				
+			}
+        }, 2000);
     }
 </script>
 
