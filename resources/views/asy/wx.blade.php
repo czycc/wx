@@ -285,19 +285,19 @@
             times = 0;
             $('.shakeImg').removeClass('hand');
             
-            if($('.page3').show()){
+            if($('.page3').css('display') == 'block'){
 	
 				$('.hide').fadeOut(1500);
 				
 			};
 			
-			if($('.page4').show()){
+			if($('.page4').css('display') == 'block'){
 				
 				$('.hide').fadeOut(1500);
 				
-			}
+			};
 			
-			if($('.page5').show()){
+			if($('.page5').css('display') == 'block'){
 		
 				$('.hide').fadeOut(1500);
 				
