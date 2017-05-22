@@ -285,40 +285,24 @@
             times = 0;
             $('.shakeImg').removeClass('hand');
             
-<<<<<<< HEAD
-            if($('.page3').css('display') == 'block'){
+
+        	if($('.page3').css('display') == 'block'){
 	
-=======
-            if($('.page3').show()){
-
->>>>>>> origin/master
-				$('.hide').fadeOut(1500);
-
+				$('.hide').fadeOut(2000);
+				
 			};
-<<<<<<< HEAD
 			
 			if($('.page4').css('display') == 'block'){
 				
-				$('.hide').fadeOut(1500);
+				$('.hide').fadeOut(2000);
 				
 			};
-			
+		
 			if($('.page5').css('display') == 'block'){
 		
-=======
+				$('.hide').fadeOut(2000);
+			}	
 
-			if($('.page4').show()){
-
->>>>>>> origin/master
-				$('.hide').fadeOut(1500);
-
-			}
-//
-//			if($('.page5').show()){
-//
-//				$('.hide').fadeOut(1500);
-//
-//			}
         }, 2000);
     }
 </script>
