@@ -65,13 +65,13 @@
     <div class="eye pos">
         <img src="{{asset('asy/eyeImg/p2/eye.png')}}"/>
     </div>
-    <div class="grem redgrem">
+    <div class="grem redgrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem1.png')}}"/>
     </div>
     <div class="grem blackgrem">
         <img src="{{asset('asy/eyeImg/germ/grem7.png')}}"/>
     </div>
-    <div class="grem bluegrem">
+    <div class="grem bluegrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem5.png')}}"/>
     </div>
 
@@ -102,19 +102,19 @@
     <div class="eye pos">
         <img src="{{asset('asy/eyeImg/p2/eye.png')}}"/>
     </div>
-    <div class="grem redgrem">
+    <div class="grem redgrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem1.png')}}"/>
     </div>
     <div class="grem blackgrem">
         <img src="{{asset('asy/eyeImg/germ/grem7.png')}}"/>
     </div>
-    <div class="grem bluegrem">
+    <div class="grem bluegrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem5.png')}}"/>
     </div>
     <div class="grem greengrem">
         <img src="{{asset('asy/eyeImg/germ/grem2.png')}}"/>
     </div>
-    <div class="grem orangegrem">
+    <div class="grem orangegrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem6.png')}}"/>
     </div>
     <div class="center pos">
@@ -144,22 +144,22 @@
     <div class="eye pos">
         <img src="{{asset('asy/eyeImg/p2/eye.png')}}"/>
     </div>
-    <div class="grem redgrem">
+    <div class="grem redgrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem1.png')}}"/>
     </div>
     <div class="grem blackgrem">
         <img src="{{asset('asy/eyeImg/germ/grem7.png')}}"/>
     </div>
-    <div class="grem bluegrem">
+    <div class="grem bluegrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem5.png')}}"/>
     </div>
     <div class="grem greengrem">
         <img src="{{asset('asy/eyeImg/germ/grem2.png')}}"/>
     </div>
-    <div class="grem orangegrem">
+    <div class="grem orangegrem hide">
         <img src="{{asset('asy/eyeImg/germ/grem6.png')}}"/>
     </div>
-    <div class="grem greensmall">
+    <div class="grem greensmall hide">
         <img src="{{asset('asy/eyeImg/germ/grem3.png')}}"/>
     </div>
     <div class="grem orangesmall">
