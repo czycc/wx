@@ -285,17 +285,17 @@
             times = 0;
             $('.shakeImg').removeClass('hand');
             
-//            if($('.page3').show()){
-//
-//				$('.hide').fadeOut(1500);
-//
-//			};
-//
-//			if($('.page4').show()){
-//
-//				$('.hide').fadeOut(1500);
-//
-//			}
+            if($('.page3').show()){
+
+				$('.hide').fadeOut(1500);
+
+			};
+
+			if($('.page4').show()){
+
+				$('.hide').fadeOut(1500);
+
+			}
 //
 //			if($('.page5').show()){
 //
