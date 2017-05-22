@@ -102,19 +102,19 @@
     <div class="eye pos">
         <img src="{{asset('asy/eyeImg/p2/eye.png')}}"/>
     </div>
-    <div class="grem redgrem hide">
+    <div class="grem redgrem hide1">
         <img src="{{asset('asy/eyeImg/germ/grem1.png')}}"/>
     </div>
     <div class="grem blackgrem">
         <img src="{{asset('asy/eyeImg/germ/grem7.png')}}"/>
     </div>
-    <div class="grem bluegrem hide">
+    <div class="grem bluegrem hide1">
         <img src="{{asset('asy/eyeImg/germ/grem5.png')}}"/>
     </div>
     <div class="grem greengrem">
         <img src="{{asset('asy/eyeImg/germ/grem2.png')}}"/>
     </div>
-    <div class="grem orangegrem hide">
+    <div class="grem orangegrem hide1">
         <img src="{{asset('asy/eyeImg/germ/grem6.png')}}"/>
     </div>
     <div class="center pos">
@@ -144,22 +144,22 @@
     <div class="eye pos">
         <img src="{{asset('asy/eyeImg/p2/eye.png')}}"/>
     </div>
-    <div class="grem redgrem hide">
+    <div class="grem redgrem hide2">
         <img src="{{asset('asy/eyeImg/germ/grem1.png')}}"/>
     </div>
     <div class="grem blackgrem">
         <img src="{{asset('asy/eyeImg/germ/grem7.png')}}"/>
     </div>
-    <div class="grem bluegrem hide">
+    <div class="grem bluegrem hide2">
         <img src="{{asset('asy/eyeImg/germ/grem5.png')}}"/>
     </div>
     <div class="grem greengrem">
         <img src="{{asset('asy/eyeImg/germ/grem2.png')}}"/>
     </div>
-    <div class="grem orangegrem hide">
+    <div class="grem orangegrem hide2">
         <img src="{{asset('asy/eyeImg/germ/grem6.png')}}"/>
     </div>
-    <div class="grem greensmall hide">
+    <div class="grem greensmall hide2">
         <img src="{{asset('asy/eyeImg/germ/grem3.png')}}"/>
     </div>
     <div class="grem orangesmall">
@@ -267,6 +267,26 @@
                 if (num == 20) {
                     socket.emit('change', 2);
                     $('.page3').show().siblings().hide();
+                    
+
+                }
+                if(num == 10){
+               		if($('.page3').css('display') == 'block'){
+			
+						$('.hide').fadeOut(2000);
+						
+					};
+					
+					if($('.page4').css('display') == 'block'){
+						
+						$('.hide1').fadeOut(2000);
+						
+					};
+				
+					if($('.page5').css('display') == 'block'){
+				
+						$('.hide2').fadeOut(2000);
+					}
                 }
             }
             last_x = x;
@@ -285,25 +305,11 @@
             times = 0;
             $('.shakeImg').removeClass('hand');
             
-
-        	if($('.page3').css('display') == 'block'){
 	
-				$('.hide').fadeOut(2000);
-				
-			};
-			
-			if($('.page4').css('display') == 'block'){
-				
-				$('.hide').fadeOut(2000);
-				
-			};
-		
-			if($('.page5').css('display') == 'block'){
-		
-				$('.hide').fadeOut(2000);
-			}	
 
         }, 2000);
+        
+
     }
 </script>
 
