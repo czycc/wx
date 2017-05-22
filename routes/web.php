@@ -22,3 +22,8 @@ Route::get('/asy/pc', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//九牧扫码进入游戏
+Route::any('/wechat', 'Wechat\WechatController@serve');
+Route::get('/wechat/menu', 'Wechat\MenuController@menu');
+
