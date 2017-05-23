@@ -35,15 +35,11 @@ class WechatController extends Controller
                             break;
                         case 'CLICK':
                             if ($message->EventKey == 'menu_01') {
-                                $msg = new Material('mpnews',['media_id' => 'AlsuxGHbgkOpWWlLaxtJzYlwPNu1QYNza037Lm5C_wc']);
-                                $openid = $message->FromUserName;
-                                $wechat->staff->message($msg)->to($openid)->send();
-                                return 'true';
-                            } elseif ($message->EventKey == 'menu_02') {
                                 $msg = new Material('mpnews','AlsuxGHbgkOpWWlLaxtJzWQw5oW1EWtvSVyPK_7dfFE');
                                 $openid = $message->FromUserName;
                                 $wechat->staff->message($msg)->to($openid)->send();
-                                return 'true';
+                            } elseif ($message->EventKey == 'menu_02') {
+
                             } else {
                                 return '您好！九牧厨柜诚邀您共同开启财富之门！九牧厨柜招商热线：0592-2677770九牧厨柜期待您的加入！';
                             }
