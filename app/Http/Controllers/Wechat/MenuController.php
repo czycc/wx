@@ -32,7 +32,7 @@ class MenuController extends Controller
                     ],
                     [
                         "type" => "click",
-                        "name" => "九牧橱柜",
+                        "name" => "九牧厨柜",
                         "key" => "menu_02"
                     ],
                     [
