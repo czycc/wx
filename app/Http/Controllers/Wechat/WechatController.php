@@ -24,7 +24,12 @@ class WechatController extends Controller
                     if ($message->Event == 'subscribe') {
 
                     }
-                    return '欢迎关注我们的微信公众号！回复关键字"启初礼品申领"领取礼品二维码。';
+                    $str = '指缝太宽,时光太瘦
+                    机智的你、终于来了！[鼓掌]
+                    什么？不太熟？
+                    没关系，点击右下角菜单栏分分钟建立友谊城堡
+                    作为一名热情的小伙伴、现在只要告诉我你喜欢的厨房style，牧牧会为你量身打造哟～';
+                    return $str;
                     break;
                 case 'text':
                     if ($message->Content == '启初礼品申领') {
