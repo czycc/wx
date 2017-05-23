@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use EasyWeChat\Message\Image;
 use EasyWeChat\Message\Material;
 use EasyWeChat\Message\Article;
+use Illuminate\Support\Facades\Redis;
 
 class WechatController extends Controller
 {
@@ -26,9 +27,27 @@ class WechatController extends Controller
                 case 'event':
                     switch ($message->Event) {
                         case 'subscribe':
-                            if (isset($message->EventKey)){
-                                return $message->EventKey;
+                            //扫码
+                            if (isset($message->EventKey) && $message->EventKey == 'qrscene_999'){
+                                $code = mt_rand('1000','9999');
+                                $bool=Redis::setex('code1',60, $code);
+                                if ($bool){
+                                    return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                }else{
+                                    $bool=Redis::setex('code2',60, $code);
+                                    if ($bool){
+                                        return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                    }else{
+                                        $bool=Redis::setex('code3',60, $code);
+                                        if ($bool){
+                                            return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                        }else{
+                                            return '很遗憾，当前已经有用户正在游戏中，请稍后再试[玫瑰]';
+                                        }
+                                    }
+                                }
                             }
+                            //正常关注回复
                             $str = '指缝太宽,时光太瘦
 机智的你、终于来了！[鼓掌]
 什么？不太熟？
@@ -51,7 +70,23 @@ class WechatController extends Controller
                             break;
                         case 'SCAN':
                             if ($message->EventKey == '999'){
-                                return '999';
+                                $code = mt_rand('1000','9999');
+                                $bool=Redis::setex('code1',60, $code);
+                                if ($bool){
+                                    return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                }else{
+                                    $bool=Redis::setex('code2',60, $code);
+                                    if ($bool){
+                                        return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                    }else{
+                                        $bool=Redis::setex('code3',60, $code);
+                                        if ($bool){
+                                            return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                        }else{
+                                            return '很遗憾，当前已经有用户正在游戏中，请稍后再试[玫瑰]';
+                                        }
+                                    }
+                                }
                             }
                             break;
 
