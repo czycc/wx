@@ -34,3 +34,10 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 //    $result = $qrcode->forever(999);
 //    return view('home',compact('qrcode', 'result'));
 //});
+
+
+//匡威入口
+
+Route::get('kw', function (){
+    return view('converse.index');
+});
