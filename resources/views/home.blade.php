@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    <img src="{{$qrcode->url($result->ticket)}}" alt="">
                 </div>
             </div>
         </div>
