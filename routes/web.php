@@ -39,5 +39,5 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 //匡威入口
 
 Route::get('kw', function (){
-    return view('converse.index');
+    return view('converse.main');
 });
