@@ -26,6 +26,9 @@ class WechatController extends Controller
                 case 'event':
                     switch ($message->Event) {
                         case 'subscribe':
+                            if (isset($message->EventKey)){
+                                return $message->EventKey;
+                            }
                             $str = '指缝太宽,时光太瘦
 机智的你、终于来了！[鼓掌]
 什么？不太熟？
@@ -47,7 +50,9 @@ class WechatController extends Controller
                             }
                             break;
                         case 'SCAN':
-                            return 'scan';
+                            if ($message->EventKey == '999'){
+                                return '999';
+                            }
                             break;
 
                     }
