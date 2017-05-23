@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Wechat;
 
+use EasyWeChat\Message\News;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use EasyWeChat\Message\Image;
 use EasyWeChat\Message\Material;
+use EasyWeChat\Message\Article;
 
 class WechatController extends Controller
 {
@@ -33,11 +35,11 @@ class WechatController extends Controller
                             break;
                         case 'CLICK':
                             if ($message->EventKey == 'menu_01') {
-                                $msg = new Material(['media_id' => 'AlsuxGHbgkOpWWlLaxtJzYlwPNu1QYNza037Lm5C_wc']);
+                                $msg = new Article(['media_id' => 'AlsuxGHbgkOpWWlLaxtJzYlwPNu1QYNza037Lm5C_wc']);
                                 $openid = $message->FromUserName;
                                 $wechat->staff->message($msg)->to($openid)->send();
                             } elseif ($message->EventKey == 'menu_02') {
-                                $msg = new Material(['media_id' => 'AlsuxGHbgkOpWWlLaxtJzWQw5oW1EWtvSVyPK_7dfFE']);
+                                $msg = new News(['media_id' => 'AlsuxGHbgkOpWWlLaxtJzWQw5oW1EWtvSVyPK_7dfFE']);
                                 $openid = $message->FromUserName;
                                 $wechat->staff->message($msg)->to($openid)->send();
                                 return 'true';
