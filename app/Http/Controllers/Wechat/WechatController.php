@@ -36,7 +36,7 @@ class WechatController extends Controller
                             }elseif ($message->EventKey == 'menu_02'){
                                 return 'click2';
                             }else{
-                                return 'click3';
+                                return '您好！九牧厨柜诚邀您共同开启财富之门！九牧厨柜招商热线：0592-2677770九牧厨柜期待您的加入！';
                             }
                             break;
                         case 'SCAN':
