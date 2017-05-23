@@ -38,6 +38,7 @@ class WechatController extends Controller
                                 $msg = new Article(['media_id' => 'AlsuxGHbgkOpWWlLaxtJzYlwPNu1QYNza037Lm5C_wc']);
                                 $openid = $message->FromUserName;
                                 $wechat->staff->message($msg)->to($openid)->send();
+                                return 'true';
                             } elseif ($message->EventKey == 'menu_02') {
                                 $msg = new News(['media_id' => 'AlsuxGHbgkOpWWlLaxtJzWQw5oW1EWtvSVyPK_7dfFE']);
                                 $openid = $message->FromUserName;
