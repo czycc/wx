@@ -21,7 +21,7 @@ class MaterialController extends Controller
 
     public function index()
     {
-        $lists = $this->material->lists('news', 36, 5);
+        $lists = $this->material->lists('news', 33, 5);
         return $lists;
     }
 }
