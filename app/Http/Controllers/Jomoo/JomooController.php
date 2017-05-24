@@ -12,7 +12,7 @@ class JomooController extends Controller
     public function index(Request $request)
     {
         $validate=Validator::make($request->all(), [
-            'code' => 'required|between:1000,9999'
+            'code' => 'required'
         ]);
         if ($validate->fails()) {
             return 'false';
