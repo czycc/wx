@@ -78,7 +78,7 @@
             </div>
             <div class="footerBtn">
                 <img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
-                <img src="{{asset('converse/img/camera/logo.png')}}}}" class="pos">
+                <img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
                 <img src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight">
             </div>
             <div class="popup ">

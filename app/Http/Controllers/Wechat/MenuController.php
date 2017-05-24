@@ -12,7 +12,7 @@ class MenuController extends Controller
 
     /**
      * MenuController constructor.
-     * @param $menu
+     * @param $app
      */
     public function __construct(Application $app)
     {
@@ -26,19 +26,19 @@ class MenuController extends Controller
                 "name" => "关于九牧",
                 "sub_button" => [
                     [
-                        "type" => "click",
+                        "type" => "view",
                         "name" => "走进九牧",
-                        "key" => "menu_01"
-                    ],
-                    [
-                        "type" => "click",
-                        "name" => "九牧厨柜",
-                        "key" => "menu_02"
+                        "url" => "http://www.jomoocg.com/index.php?s=/Index/blurb/"
                     ],
                     [
                         "type" => "view",
-                        "name" => "企业动态",
-                        "url" => "http://mp.weixin.qq.com/s?__biz=MzAwNzk1ODEzNw==&mid=100000013&idx=1&sn=c63f4f404fe449bb1d9fe68ae2375758&scene=18#wechat_redirect"
+                        "name" => "九牧厨柜",
+                        "url" => "http://www.jomoocg.com/index.php?s=/Index"
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "阿九牧哥",
+                        "url" => "http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzk1ODEzNw==&hid=4&sn=8134cab4e62bb5e09e512f48f41bb370#wechat_redirect"
                     ],
                 ],
             ],
@@ -48,13 +48,18 @@ class MenuController extends Controller
                     [
                         "type" => "view",
                         "name" => "招商政策",
-                        "url" => "http://mp.weixin.qq.com/s?__biz=MzAwNzk1ODEzNw==&mid=100000035&idx=1&sn=df66f22cbfc32101affc4f98e5cdc6f9&scene=18#wechat_redirect"
+                        "url" => "http://www.jomoocg.com/index.php?s=/Jion/"
                     ],
                     [
-                        "type" => "click",
-                        "name" => "一键招商",
-                        "key" => "menu_03"
-                    ]
+                        "type" => "view",
+                        "name" => "一键加盟",
+                        "url" => "http://www.jomoocg.com/index.php?s=/Jion/jmsq/id/59"
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "企业动态",
+                        "url" => "http://mp.weixin.qq.com/mp/homepage?__biz=MzAwNzk1ODEzNw==&hid=3&sn=afec944876b3f492e8f11926e840104b#wechat_redirect"
+                    ],
                 ],
             ],
             [

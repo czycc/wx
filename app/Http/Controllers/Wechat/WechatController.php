@@ -93,8 +93,8 @@ class WechatController extends Controller
                     }
                     break;
                 case 'text':
-                    if ($message->Content == '0802') {
-
+                    if ($message->Content == '招商' || $message->Content =='加盟' || $message->content == '招商、加盟') {
+                        return 'http://www.jomoocg.com/index.php?s=/Jion/jmsq/id/59';
                     }
                     return '收到关键字';
                     break;
