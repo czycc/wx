@@ -35,4 +35,32 @@ class JomooController extends Controller
             return 'false';
         }
     }
+
+    public function destroy(Request $request)
+    {
+        $validate=Validator::make($request->all(), [
+            'code' => 'required'
+        ]);
+        if ($validate->fails()) {
+            return 'false';
+        }
+        $code = $request->code;
+        $code1 = Redis::get('code1');
+        $code2 = Redis::get('code2');
+        $code3 = Redis::get('code3');
+
+        if ($code == $code1){
+            Redis::del('code1');
+            return 'true';
+        }elseif($code == $code2){
+            Redis::del('code2');
+            return 'true';
+        }elseif($code == $code3){
+            Redis::del('code2');
+            return 'true';
+        }else{
+            return 'false';
+        }
+
+    }
 }

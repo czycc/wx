@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post('jomoo', 'Jomoo\JomooController@index');
+Route::post('jomoo/destroy', 'Jomoo\JomooController@destroy');
