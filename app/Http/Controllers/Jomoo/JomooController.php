@@ -15,7 +15,7 @@ class JomooController extends Controller
             'code' => 'required|between:1000,9999'
         ]);
         if ($validate->fails()) {
-            return 'false';
+            return 'true';
         }
         $code = $request->code;
         $code1 = Redis::get('code1');
