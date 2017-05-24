@@ -30,16 +30,16 @@ class WechatController extends Controller
                             //扫码
                             if (isset($message->EventKey) && $message->EventKey == 'qrscene_999'){
                                 $code = mt_rand('1000','9999');
-                                $bool=Redis::setex('code1',60, $code);
-                                if ($bool){
+                                $bool=Redis::set('code1', $code,'ex','60','nx');
+                                if ($bool=='OK'){
                                     return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
                                 }else{
-                                    $bool=Redis::setex('code2',60, $code);
-                                    if ($bool){
+                                    $bool=Redis::set('code2', $code,'ex','60','nx');
+                                    if ($bool=='OK'){
                                         return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
                                     }else{
-                                        $bool=Redis::setex('code3',60, $code);
-                                        if ($bool){
+                                        $bool=Redis::set('code3', $code,'ex','60','nx');
+                                        if ($bool=='OK'){
                                             return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
                                         }else{
                                             return '很遗憾，当前已经有用户正在游戏中，请稍后再试[玫瑰]';

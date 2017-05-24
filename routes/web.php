@@ -10,6 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Redis;
+
+Route::get('/test', function (){
+   Redis::set('test', 'name', 'ex','60','nx');
+   $result = Redis::get('test');
+   return $result;
+});
 
 //强生安视优项目
 Route::get('/asy/mobile', function () {
