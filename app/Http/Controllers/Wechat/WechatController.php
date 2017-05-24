@@ -73,15 +73,27 @@ class WechatController extends Controller
                                 $code = mt_rand('1000','9999');
                                 $bool=Redis::setex('code1',60, $code);
                                 if ($bool){
-                                    return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                    return '九牧厨柜邀您体验智慧厨房！
+请在游戏界面输入代码“'.$code.'”，开始游戏。
+
+分享游戏视频，精美礼品等你拿：
+拍摄游戏小视频 ￫ 分享至朋友圈￫ 前台领取礼品';
                                 }else{
                                     $bool=Redis::setex('code2',60, $code);
                                     if ($bool){
-                                        return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                        return '九牧厨柜邀您体验智慧厨房！
+请在游戏界面输入代码“'.$code.'”，开始游戏。
+
+分享游戏视频，精美礼品等你拿：
+拍摄游戏小视频 ￫ 分享至朋友圈￫ 前台领取礼品';
                                     }else{
                                         $bool=Redis::setex('code3',60, $code);
                                         if ($bool){
-                                            return '感谢您参与游戏，游戏验证码：'.$code.',祝您游玩愉快！[微笑]';
+                                            return '九牧厨柜邀您体验智慧厨房！
+请在游戏界面输入代码“'.$code.'”，开始游戏。
+
+分享游戏视频，精美礼品等你拿：
+拍摄游戏小视频 ￫ 分享至朋友圈￫ 前台领取礼品';
                                         }else{
                                             return '很遗憾，当前已经有用户正在游戏中，请稍后再试[玫瑰]';
                                         }

@@ -41,3 +41,9 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 Route::get('kw', function (){
     return view('converse');
 });
+
+//抽奖h5入口
+
+Route::get('/draw',function (){
+   return '这是抽奖h5入口，等待开放时间';
+});
