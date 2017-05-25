@@ -83,7 +83,7 @@
 					<div class="popup ">
 						<label class="modal modal1">
 							<img src="{{asset('converse/img/photoword/hand.png')}}">
-							<input type="file" id="gocamera" style="display: none">
+							<input type="file" id="gocamera" style="display: none" capture="camera">
 
 						</label>
 					</div>
