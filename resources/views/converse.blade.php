@@ -25,17 +25,17 @@
 			</div>
 			<div class="bottom">
 				<div class="lBtm btm">
-					<img src="{{asset('img/mode/lBtm.png')}}"/>
+					<img src="{{asset('converse/img/mode/lBtm.png')}}"/>
 				</div>
 				<div class="sayBtm btm">
-					<img src="{{asset('img/mode/sayBtm.png')}}"/>
+					<img src="{{asset('converse/img/mode/sayBtm.png')}}"/>
 				</div>
 			</div>
 		</div>
 		<div class=" page3 face hidden" id="page3">
 			<div class="container">
 				<div class="bg">
-					<img src="{{asset('img/photoword/shoneBody.png')}}"/>
+					<img src="{{asset('converse/img/photoword/shoneBody.png')}}"/>
 				</div>
 				<div class="pic" id="view"></div>
 				<div class="page page3Container">
@@ -76,20 +76,20 @@
 	
 					</div>
 					<div class="footerBtn">
-						<img src="{{asset('img/photoword/reset.png')}}" class="footerBtnLeft">
-						<img src="{{asset('img/camera/logo.png"')}} class="pos">
-						<img src="{{asset('img/photoword/generate.png')}}" class="footerBtnRight">
+						<img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
+						<img src="{{asset('converse/img/camera/logo.png"')}} class="pos">
+						<img src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight">
 					</div>
 					<div class="popup ">
 						<label class="modal modal1">
-							<img src="{{asset('img/photoword/hand.png')}}">
+							<img src="{{asset('converse/img/photoword/hand.png')}}">
 							<input type="file" id="gocamera" style="display: none">
 
 						</label>
 					</div>
 					<div class="popup2 hidden">
 						<div class=" modal modal2 ">
-							<img src="{{asset('img/photoword/hand2.png')}}">
+							<img src="{{asset('converse/img/photoword/hand2.png')}}">
 						</div>	
 					</div>
 	
@@ -99,7 +99,7 @@
 		<div class="page page33 hidden" id="pa">
 			<div class="page33Container">
 				<div class="bg">
-					<img src="{{asset('img/photoword/shoneBody.png')}}"/>
+					<img src="{{asset('converse/img/photoword/shoneBody.png')}}"/>
 				</div>
 				<div class="pic" id="view"></div>
 				<div class="page page33Container">
@@ -145,7 +145,7 @@
 					</div>
 					<div class="logo pos">
 	
-						<img src="{{asset('img/camera/logo.png')}}" class="pos">
+						<img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
 	
 					</div>
 	
@@ -155,22 +155,22 @@
 		</div>
 		<div class="page page4 hidden">
 			<div class="bg pos">
-				<img src="{{asset('img/camera/Brightness-Contrast-1.png')}}"/>
+				<img src="{{asset('converse/img/camera/Brightness-Contrast-1.png')}}"/>
 			</div>
 			<div class="picture" id="clipArea"></div>
 			<div class="backBtm cBtm">
-				<img src="{{asset('img/camera/back.png')}}"/>
+				<img src="{{asset('converse/img/camera/back.png')}}"/>
 			</div>
 			<div class="goBtm cBtm" id="goBtm">
-				<img src="{{asset('img/camera/ok.png')}}"/>
+				<img src="{{asset('converse/img/camera/ok.png')}}"/>
 			</div>
 			<div class="logo">
-				<img src="{{asset('img/camera/adjust.png')}}"/>
+				<img src="{{asset('converse/img/camera/adjust.png')}}"/>
 			</div>
 		</div>
 		<div class="page1 page page5 hidden">
 			<div class="bf">
-				<img src="{{asset('img/111p1-loading.gif')}}"/>
+				<img src="{{asset('converse/img/111p1-loading.gif')}}"/>
 			</div>
 			<div class="loadText pos">
 				海报生成中...<span>100%</span>
@@ -181,13 +181,13 @@
 				<!--<img src="" alt="" />-->
 			</div>
 			<div class="erweima">
-				<img src="{{asset('img/poster/erweima.png')}}"/>
+				<img src="{{asset('converse/img/poster/erweima.png')}}"/>
 			</div>
 			<div class="copy">
-				<img src="{{asset('img/poster/adjectText.png')}}"/>
+				<img src="{{asset('converse/img/poster/adjectText.png')}}"/>
 			</div>
 			<div class="link">
-				<img src="{{asset('img/poster/link.png')}}"/>
+				<img src="{{asset('converse/img/poster/link.png')}}"/>
 			</div>
 		</div>
 </body>
