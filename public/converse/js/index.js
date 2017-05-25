@@ -276,14 +276,16 @@ $(function(){
                 url: "http://wx.touchworld-sh.com/api/kw/image",
                 async: true,
                 data: { image : imageBase },
+                dataType: "json",
                 success: function(data) {
                     console.log(data.responseText);
                     console.log($("#canvas2img"));
                     $("#canvas2img").attr("src",data.responseText);
                 },
                 error: function(err) {
-
-                    console.log(err);
+                    console.log(err.responseText);
+                    console.log($("#canvas2img"));
+                    $("#canvas2img").attr("src",err.responseText);
                 }
             });
 
