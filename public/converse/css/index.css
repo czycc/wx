@@ -24,6 +24,8 @@ input{
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
+	font-size: 3vw;
+	font-family: 'FZYTK.TTF';
 }
 img{
 	display: block;
@@ -48,6 +50,9 @@ img{
 }
 .hidden{
 	display: none;
+}
+.face{
+	position: absolute;
 }
 /*第一页*/
 .pageBegin{
@@ -111,7 +116,7 @@ img{
 
 /*第三页*/
 /*第三页*/
-.page3{
+.page3,.page33{
 	font-family: 'FZYTK.TTF';
 	alignment-baseline: alphabetic;
 	width: 100%;
@@ -125,7 +130,7 @@ img{
 	right: 0%;
 	margin: auto;
 }
-.page3 .bg{
+.page3 .bg,.page33 .bg{
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -135,7 +140,7 @@ img{
 	right: 0%;
 	margin: auto;
 }
-.page3 .bg img{
+.page3 .bg img,.page33 .bg img{
 	width: 100%;
 	height: 100%;
 }
@@ -149,11 +154,23 @@ img{
 	left: 39.5vw
 }
 .personInfo{
-	position: absolute;
 	top: 60%;
+}
+.personInfo3{
+	top: 60%;
+}
+.page33 .page33Container{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.personInfo,.personInfo3{
+	position: absolute;
+
 	font-size: 3.0vw;
-
-
 	color: #fff;
 	background-size: 100%;
 	width: 80%;
@@ -161,7 +178,7 @@ img{
 .personInfo img{
 	width: 80%;
 }
-.personInfo p{
+.personInfo p,.personInfo3 p{
 	line-height: 4.8vw;
 	margin-left: 9vw;
 
@@ -182,7 +199,7 @@ img{
 	line-height: 4.2vw;
 	margin-left: 17vw;
 	position: absolute;
-	top: 108%;
+	top: 120%;
 }
 .page33 .personInfo p:last-child{
 	top: 100%;
@@ -190,7 +207,7 @@ img{
 	margin-left: 17vw;
 	position: absolute;
 }
-.personInfo2{
+.personInfo2,.personInfo4{
 	position: absolute;
 	top: 56%;
 	font-size: 2.4vw;
@@ -201,16 +218,20 @@ img{
 	height: 40%;
 
 }
-.personInfo2 .top{
+
+.personInfo2 .top,.personInfo4 .top{
 	position: absolute;
 	top: 12%;
 	left: 30%;
 }
-.personInfo2 .bottom{
+.personInfo2 .bottom,.personInfo4 .bottom{
 	position: absolute;
 	top: 52%;
 	/*bottom: 20%;*/
 	left: 30%;
+}
+.page33 .personInfo4{
+	top: 56%;
 }
 .personInfo2 input{
 	border:none;
@@ -232,10 +253,11 @@ img{
 	position: absolute;
 	z-index: -10;
 }
-.page33 .personInfo p:last-child{
+.page33 .personInfo3 p:last-child{
 	top: 92%;
+	left: 8%;
 }
-.page33 .personInfo .lastText{
+.page33 .personInfo3 .lastText{
 	
 	top: 115%;
 }
@@ -266,7 +288,7 @@ img{
 	right: 5vw;
 }
 /*第三页模态框*/
-.page3{
+.page3,.page33{
 	position: absolute;
 	top: 0%;
 	bottom: 0%;
@@ -307,18 +329,22 @@ img{
 
 .page3 .modal2 img{
 	position: absolute;
-	left: 30vw;
-	top: 110vw;
+	left: 30%;
+	top: 62%;
 	width: 30%;
 }
-.page3 .pic{
+.page3 .pic,.page33 .pic{
 	position: absolute;
-	left: 42%;
-	top: 10%;
-	width: 14%;
-	height: 32%;
+	left: 43%;
+	top: 9%;
+	width: 13%;
+	height: 35%;
 	z-index: -1;
 	/*background: red;*/
+}
+.page33{
+	position: absolute;
+	z-index: -5;
 }
 /*第四页*/
 .page4 .bg{
@@ -352,10 +378,10 @@ img{
 }
 .page4 .logo{
 	position: absolute;
-	width: 50%;
+	width: 46%;
 	z-index: 10;
 	left: 40%;
-	top: 40%;
+	top: 41%;
 	pointer-events:none;
 }
 .page4 .picture{
@@ -471,3 +497,23 @@ img{
 	top: 92%;
 	right: 10%;
 }
+
+
+.personInfo .text1{
+	width: 22%;
+}
+
+.personInfo .text4{
+	width: 34%;
+}
+
+.personInfo .text5{
+	width: 34%;
+}
+.personInfo .text6{
+	width: 68%;
+}
+.personInfo .text7{
+	width: 34%;
+}
+
