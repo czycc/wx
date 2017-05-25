@@ -265,8 +265,24 @@ $(function(){
 //			var image = canvas.toDataURL("image/jpg");
 //
 //			canvas2.src = image;
+			var imageBase = canvas.toDataURL("image/jpg");
+			console.log("1::"+imageBase)
+            $.ajax({
+                type: "POST",
+                url: "http://wx.touchworld-sh.com/api/kw/image",
+                async: true,
+                data: { image: imageBase },
+                dataType: "json",
+                success: function(data) {
+                    console.log("2::"+data);
+                },
+                error: function(err) {
 
-			canvas2.appendChild(canvas);
+                    console.log(error);
+                }
+            });
+
+			// canvas2.appendChild(canvas);
 
 		})
 
