@@ -4,7 +4,8 @@
     <meta charset="utf-8"/>
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1, maximum-scale=1,,user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1, maximum-scale=1,,user-scalable=no">
     <meta name="format-detection" content="telephone=no,email=no"/>
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <title>converse</title>
@@ -13,180 +14,180 @@
 
 </head>
 <body>
-	<div class="page page1 pageBegin ">
+<div class="page page1 pageBegin ">
 
-			<div class="loadText pos">
-				Loading...<span>100%</span>
-			</div>
-		</div>
-		<div class="page page2 hidden">
-			<div class="top">
+    <div class="loadText pos">
+        Loading...<span>100%</span>
+    </div>
+</div>
+<div class="page page2 hidden">
+    <div class="top">
 
-			</div>
-			<div class="bottom">
-				<div class="lBtm btm">
-					<img src="{{asset('converse/img/mode/lBtm.png')}}"/>
-				</div>
-				<div class="sayBtm btm">
-					<img src="{{asset('converse/img/mode/sayBtm.png')}}"/>
-				</div>
-			</div>
-		</div>
-		<div class=" page3 face hidden" id="page3">
-			<div class="container">
-				<div class="bg">
-					<img src="{{asset('converse/img/photoword/shoneBody.png')}}"/>
-				</div>
-				<div class="pic" id="view"></div>
-				<div class="page page3Container">
-					<div class="personInfo pos ">
-						<p>
-							我是 <input class="text1 text" class="text2" type="text" name="" maxlength="8">,
-							一个 <input class="text2 text" type="text" name="">
-							的 <input class="text3 text" type="text" name="">。
-						</p>
-						<p>
-							不是谁都懂我的 <input class="text4 text" class="noBelieveText" type="text" name="">。
-						</p>
-						<p>
-							对此， <input class="text5 text" class="conText" type="text" name="">,
-						</p>
-						<p>因为我相信</p>
-						<p><input class="text6 text" class="believeText" type="text" name="">。</p>
-						<p>
-							就像这双有表情的鞋，<br/>
-							不是谁都理解那道弧度的存在<br/>
-							不懂？<br/>
-							那就 <input class="text7 text" type="text" name="">吧。
-						</p>
-					</div>
-					<div class="personInfo2 hidden">
-						<div class="top">
-							<p>我是<input class="text1 text" type="text">，</p>
-							<p>不是谁都懂我的<input class="text2 text" type="text">，</p>
-							<p>但这正是让我成为"我"的原因。</p>
-						</div>
-						<div class="bottom">
-							<p>就像这双有表情的鞋</p>
-							<p>不是谁都理解那道弧度的存在</p>
-							<p>不懂？</p>
-							<p>那就<input class="text3 text" type="text">吧。</p>
-						</div>
-
-
-					</div>
-					<div class="footerBtn">
-						<img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
-						<img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
-						<img src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight">
-					</div>
-					<div class="popup ">
-						<label class="modal modal1">
-							<img src="{{asset('converse/img/photoword/hand.png')}}">
-							<input type="file" id="gocamera" style="display: none">
-
-						</label>
-					</div>
-					<div class="popup2 hidden">
-						<div class=" modal modal2 ">
-							<img src="{{asset('converse/img/photoword/hand2.png')}}">
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-		<div class="page page33 hidden" id="pa">
-			<div class="page33Container">
-				<div class="bg">
-					<img src="{{asset('converse/img/photoword/shoneBody.png')}}"/>
-				</div>
-				<div class="pic" id="view"></div>
-				<div class="page page33Container">
-					<div class="personInfo3 pos ">
-						<p>
-							我是 <span class="spanText1 spanText"></span>,
-							一个 <span class="spanText2 spanText"></span>
-							的<span class="spanText3 spanText"></span>。
-						</p>
-						<p>
-							不是谁都懂我的 <span class="spanText4 spanText"></span>。
-						</p>
-						<p>
-							对此，<span class="spanText5 spanText"></span>,
-						</p>
-						<p>
-							因为我相信 <br/>
-
-							<span class="spanText6 spanText"></span>。
-						</p>
-						<br/>
-						<p class="lastText">
-							就像这双有表情的鞋，<br/>
-							不是谁都理解那道弧度的存在<br/>
-							不懂？<br/>
-							那就 <span class="spanText7 spanText"></span>吧。
-						</p>
-					</div>
-					<div class="personInfo4 hidden">
-						<div class="top">
-							<p>我是<span class="spanText1 spanText"></span>，</p>
-							<p>不是谁都懂我的<span class="spanText2 spanText"></span>，</p>
-							<p>但这正是让我成为"我"的原因。</p>
-						</div>
-						<div class="bottom">
-							<p>就像这双有表情的鞋</p>
-							<p>不是谁都理解那道弧度的存在</p>
-							<p>不懂？</p>
-							<p>那就<span class="spanText3 spanText"></span>吧。</p>
-						</div>
+    </div>
+    <div class="bottom">
+        <div class="lBtm btm">
+            <img src="{{asset('converse/img/mode/lBtm.png')}}"/>
+        </div>
+        <div class="sayBtm btm">
+            <img src="{{asset('converse/img/mode/sayBtm.png')}}"/>
+        </div>
+    </div>
+</div>
+<div class=" page3 face hidden" id="page3">
+    <div class="container">
+        <div class="bg">
+            <img src="{{asset('converse/img/photoword/shoneBody.png')}}"/>
+        </div>
+        <div class="pic" id="view"></div>
+        <div class="page page3Container">
+            <div class="personInfo pos ">
+                <p>
+                    我是 <input class="text1 text" class="text2" type="text" name="" maxlength="8">,
+                    一个 <input class="text2 text" type="text" name="">
+                    的 <input class="text3 text" type="text" name="">。
+                </p>
+                <p>
+                    不是谁都懂我的 <input class="text4 text" class="noBelieveText" type="text" name="">。
+                </p>
+                <p>
+                    对此， <input class="text5 text" class="conText" type="text" name="">,
+                </p>
+                <p>因为我相信</p>
+                <p><input class="text6 text" class="believeText" type="text" name="">。</p>
+                <p>
+                    就像这双有表情的鞋，<br/>
+                    不是谁都理解那道弧度的存在<br/>
+                    不懂？<br/>
+                    那就 <input class="text7 text" type="text" name="">吧。
+                </p>
+            </div>
+            <div class="personInfo2 hidden">
+                <div class="top">
+                    <p>我是<input class="text1 text" type="text">，</p>
+                    <p>不是谁都懂我的<input class="text2 text" type="text">，</p>
+                    <p>但这正是让我成为"我"的原因。</p>
+                </div>
+                <div class="bottom">
+                    <p>就像这双有表情的鞋</p>
+                    <p>不是谁都理解那道弧度的存在</p>
+                    <p>不懂？</p>
+                    <p>那就<input class="text3 text" type="text">吧。</p>
+                </div>
 
 
-					</div>
-					<div class="logo pos">
+            </div>
+            <div class="footerBtn">
+                <img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
+                <img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
+                <img src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight">
+            </div>
+            <div class="popup ">
+                <label class="modal modal1">
+                    <img src="{{asset('converse/img/photoword/hand.png')}}">
+                    <input type="file" id="gocamera" style="display: none">
 
-						<img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
+                </label>
+            </div>
+            <div class="popup2 hidden">
+                <div class=" modal modal2 ">
+                    <img src="{{asset('converse/img/photoword/hand2.png')}}">
+                </div>
+            </div>
 
-					</div>
+        </div>
+    </div>
+</div>
+<div class="page page33 hidden" id="pa">
+    <div class="page33Container">
+        <div class="bg">
+            <img src="{{asset('converse/img/photoword/shoneBody.png')}}"/>
+        </div>
+        <div class="pic" id="view"></div>
+        <div class="page page33Container">
+            <div class="personInfo3 pos ">
+                <p>
+                    我是 <span class="spanText1 spanText"></span>,
+                    一个 <span class="spanText2 spanText"></span>
+                    的<span class="spanText3 spanText"></span>。
+                </p>
+                <p>
+                    不是谁都懂我的 <span class="spanText4 spanText"></span>。
+                </p>
+                <p>
+                    对此，<span class="spanText5 spanText"></span>,
+                </p>
+                <p>
+                    因为我相信 <br/>
+
+                    <span class="spanText6 spanText"></span>。
+                </p>
+                <br/>
+                <p class="lastText">
+                    就像这双有表情的鞋，<br/>
+                    不是谁都理解那道弧度的存在<br/>
+                    不懂？<br/>
+                    那就 <span class="spanText7 spanText"></span>吧。
+                </p>
+            </div>
+            <div class="personInfo4 hidden">
+                <div class="top">
+                    <p>我是<span class="spanText1 spanText"></span>，</p>
+                    <p>不是谁都懂我的<span class="spanText2 spanText"></span>，</p>
+                    <p>但这正是让我成为"我"的原因。</p>
+                </div>
+                <div class="bottom">
+                    <p>就像这双有表情的鞋</p>
+                    <p>不是谁都理解那道弧度的存在</p>
+                    <p>不懂？</p>
+                    <p>那就<span class="spanText3 spanText"></span>吧。</p>
+                </div>
 
 
-				</div>
-			</div>
-		</div>
-		<div class="page page4 hidden">
-			<div class="bg pos">
-				<img src="{{asset('converse/img/camera/Brightness-Contrast-1.png')}}"/>
-			</div>
-			<div class="picture" id="clipArea"></div>
-			<div class="backBtm cBtm">
-				<img src="{{asset('converse/img/camera/back.png')}}"/>
-			</div>
-			<div class="goBtm cBtm" id="goBtm">
-				<img src="{{asset('converse/img/camera/ok.png')}}"/>
-			</div>
-			<div class="logo">
-				<img src="{{asset('converse/img/camera/adjust.png')}}"/>
-			</div>
-		</div>
-		<div class="page1 page page5 hidden">
-			<div class="bf">
-				<img src="{{asset('converse/img/111p1-loading.gif')}}"/>
-			</div>
-			<div class="loadText pos">
-				海报生成中...<span>100%</span>
-			</div>
-		</div>
-		<div class="page page6 hidden">
-			<div class="center pos"  id="canvas2">
-				{{--<img id="canvas2img"/>--}}
-			</div>
-			<div class="copy">
-				<img src="{{asset('converse/img/poster/adjectText.png')}}"/>
-			</div>
-			<div class="link">
-				<img src="{{asset('converse/img/poster/link.png')}}"/>
-			</div>
-		</div>
+            </div>
+            <div class="logo pos">
+
+                <img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="page page4 hidden">
+    <div class="bg pos">
+        <img src="{{asset('converse/img/camera/Brightness-Contrast-1.png')}}"/>
+    </div>
+    <div class="picture" id="clipArea"></div>
+    <div class="backBtm cBtm">
+        <img src="{{asset('converse/img/camera/back.png')}}"/>
+    </div>
+    <div class="goBtm cBtm" id="goBtm">
+        <img src="{{asset('converse/img/camera/ok.png')}}"/>
+    </div>
+    <div class="logo">
+        <img src="{{asset('converse/img/camera/adjust.png')}}"/>
+    </div>
+</div>
+<div class="page1 page page5 hidden">
+    <div class="bf">
+        <img src="{{asset('converse/img/111p1-loading.gif')}}"/>
+    </div>
+    <div class="loadText pos">
+        海报生成中...<span>100%</span>
+    </div>
+</div>
+<div class="page page6 hidden">
+    <div class="center pos" id="canvas2">
+        <img id="canvas2img"/>
+    </div>
+    <div class="copy">
+        <img src="{{asset('converse/img/poster/adjectText.png')}}"/>
+    </div>
+    <div class="link">
+        <img src="{{asset('converse/img/poster/link.png')}}"/>
+    </div>
+</div>
 </body>
 <script src="{{asset('converse/js/jquery-1.11.3.min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('converse/js/lib/iscroll-zoom.js')}}" type="text/javascript" charset="utf-8"></script>
@@ -196,49 +197,66 @@
 <script src="{{asset('converse/js/index.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('converse/js/dom-to-image.min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="{{asset('converse/js/html2canvas.js')}}"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 <script>
-		var pc = new PhotoClip('#clipArea', {
-				outputSize: 140,
-				//adaptive: ['60%', '80%'],
-				file: '#gocamera',
-				view: '#view',//显示截取后图像的容器的选择器或者DOM对象。
-				ok: '#goBtm',//确认截图按钮的选择器或者DOM对象。
-				//img: 'img/mm.jpg',
-				loadStart: function() {
-					//开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
-					console.log('开始读取照片');
-				},
-				//加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
-				loadComplete: function() {
+    wx.config(<?php echo $js->config(array('onMenuShareTimeline', 'onMenuShareAppMessage'), false) ?>);
+    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在 页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready 函数中。
+    wx.ready(function(){
+        // 获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareTimeline({
+            title: '有人说了一些不是谁都懂的话,来看看你懂吗?', // 分享标题
+            link:"http://wx.touchworld-sh.com/kw",
+            imgUrl: "{{asset('converse/img/share.png')}}" // 分享图标
+        });
+        // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage({
+            title: '有人说了一些不是谁都懂的话,来看看你懂吗?', // 分享标题
+            desc: "是同类就放胆说你想说的!", // 分享描述
+            link:"http://wx.touchworld-sh.com/kw",
+            imgUrl: "{{asset('converse/img/share.png')}}", // 分享图标
+            type: 'link' // 分享类型,music、video或link，不填默认为link
+        });
+    });
+    var pc = new PhotoClip('#clipArea', {
+        outputSize: 140,
+        //adaptive: ['60%', '80%'],
+        file: '#gocamera',
+        view: '#view',//显示截取后图像的容器的选择器或者DOM对象。
+        ok: '#goBtm',//确认截图按钮的选择器或者DOM对象。
+        //img: 'img/mm.jpg',
+        loadStart: function () {
+            //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
+            console.log('开始读取照片');
+        },
+        //加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
+        loadComplete: function () {
 
-					$('.page4').show().siblings().hide();
+            $('.page4').show().siblings().hide();
 
-					console.log('照片读取完成');
-				},
-				//
-				done: function(dataURL) {
-					console.log(dataURL);
+            console.log('照片读取完成');
+        },
+        //
+        done: function (dataURL) {
+            console.log(dataURL);
 
-					$('.face').show().siblings().hide();
+            $('.face').show().siblings().hide();
 
-					$('.popup').hide();
+            $('.popup').hide();
 
-					$('.popup2').show();
-				},
-				fail: function(msg) {
-					alert(msg);
-				}
-	});
+            $('.popup2').show();
+        },
+        fail: function (msg) {
+            alert(msg);
+        }
+    });
 
-		$('.popup2').click(function(){
+    $('.popup2').click(function () {
 
-			$(this).hide();
+        $(this).hide();
 
-			$('.text1').focus();
+        $('.text1').focus();
 
-		})
-
-
+    })
 
 
 </script>

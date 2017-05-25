@@ -10,11 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Http\File;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use EasyWeChat\Foundation\Application;
+
 Route::get('/test', function (){
-    $qrcode = QrCode::format('png')->margin(0)->size(100)->generate(env('APP_URL').'/aaaaaaaaaaaaaaaa');
-    return $qrcode;
+
 });
 
 //强生安视优项目
@@ -45,7 +44,9 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 //匡威入口
 
 Route::get('kw', function (){
-    return view('converse');
+    $js = WeChat::js();
+//    $js = $app->js;
+    return view('converse', compact('js'));
 });
 
 //抽奖h5入口
