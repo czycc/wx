@@ -10,12 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Support\Facades\Redis;
-
+use Illuminate\Http\File;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 Route::get('/test', function (){
-   Redis::set('test', 'name', 'ex','60','nx');
-   $result = Redis::get('test');
-   return $result;
+    $qrcode = QrCode::format('png')->margin(0)->size(100)->generate(env('APP_URL').'/aaaaaaaaaaaaaaaa');
+    return $qrcode;
 });
 
 //强生安视优项目

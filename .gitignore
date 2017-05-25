@@ -13,3 +13,5 @@ npm-debug.log
 _ide_helper.php
 yarn.lock
 .project
+composer.lock
+public/converse/upload

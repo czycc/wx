@@ -179,6 +179,7 @@ return [
 
         Overtrue\LaravelWechat\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
     ],
 
     /*
@@ -229,6 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'WeChat' => Overtrue\LaravelWechat\Facade::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class
     ],
 
 ];
