@@ -325,7 +325,7 @@ $(function(){
 
 			var len = $('.spanText').eq(i).text().length;
 
-			$('.spanText').eq(i).css('background-image', 'url("img/space/space' + len + '.png")');
+			// $('.spanText').eq(i).css('background-image', 'url("img/space/space' + len + '.png")');
 
 		}
 

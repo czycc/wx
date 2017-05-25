@@ -105,27 +105,27 @@
 				<div class="page page33Container">
 					<div class="personInfo3 pos ">
 						<p>
-							我是 <span class="spanText1 spanText">的隔阂</span>,
-							一个 <span class="spanText2 spanText">温泉</span>
-							的<span class="spanText3 spanText">温泉的</span>。
+							我是 <span class="spanText1 spanText"></span>,
+							一个 <span class="spanText2 spanText"></span>
+							的<span class="spanText3 spanText"></span>。
 						</p>
 						<p>
-							不是谁都懂我的 <span class="spanText4 spanText">无情的谷</span>。
+							不是谁都懂我的 <span class="spanText4 spanText"></span>。
 						</p>
 						<p>
-							对此，<span class="spanText5 spanText">情的谷温泉</span>,
+							对此，<span class="spanText5 spanText"></span>,
 						</p>
 						<p>
 							因为我相信 <br/>
 	
-							<span class="spanText6 spanText">无情的谷温泉的隔阂</span>。
+							<span class="spanText6 spanText"></span>。
 						</p>
 						<br/>
 						<p class="lastText">
 							就像这双有表情的鞋，<br/>
 							不是谁都理解那道弧度的存在<br/>
 							不懂？<br/>
-							那就 <span class="spanText7 spanText">水电费是否是</span>吧。
+							那就 <span class="spanText7 spanText"></span>吧。
 						</p>
 					</div>
 					<div class="personInfo4 hidden">
