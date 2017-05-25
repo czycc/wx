@@ -166,6 +166,7 @@ $(function(){
 
 		$('.page33').show();
 
+        space();
 
 
 		if($('.page33').css('display') == 'block'){
@@ -335,7 +336,7 @@ $(function(){
 	}
 
 	// 加白条
-	space();
+
 
 	function space() {
 
