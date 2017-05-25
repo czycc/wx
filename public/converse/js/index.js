@@ -262,17 +262,11 @@ $(function(){
 
 		html2canvas(pa).then(function(canvas) {
 			
-//			var image = canvas.toDataURL("image/jpg");
-//			
+			var image = canvas.toDataURL("image/jpg");
+			console.log(image);
 //			canvas2.src = image;
 			
-			// canvas2.appendChild(canvas);
-
-
-            var img = new Image;
-            img.crossOrigin = "anonymous";
-            img.src = canvas.toDataURL('image/png');
-            canvas2.appendChild(img);
+			canvas2.appendChild(canvas);
 
 		})
 
