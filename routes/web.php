@@ -44,8 +44,8 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 //匡威入口
 
 Route::get('kw', function (){
-    $app = new Application();
-    $js = $app->js;
+    $js = WeChat::js();
+//    $js = $app->js;
     return view('converse', compact('js'));
 });
 
