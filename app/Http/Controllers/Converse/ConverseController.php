@@ -21,6 +21,6 @@ class ConverseController extends Controller
         $image2 = Image::make($qrcode);
         $image = Image::make($img_path)->insert($image2,'bottom-left','5','25');
         $image->save($img_path);
-        return $image->response('png');
+        return env('APP_URL').'/'.$img_path;
     }
 }
