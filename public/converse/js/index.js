@@ -278,7 +278,7 @@ $(function(){
                 },
                 error: function(err) {
 
-                    console.log(error);
+                    console.log(err);
                 }
             });
 
