@@ -415,6 +415,7 @@ img{
 	display: inline-block;
 	color: #183d8e;
 	margin:0px 1px ;
+    padding: 0px 1px;
 }
 .spanText1{
 	background-image: url(../img/space/space4.png);

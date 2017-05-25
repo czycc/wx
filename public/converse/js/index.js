@@ -270,6 +270,9 @@ $(function(){
 
             newImg.src =  imageBase;
             // canvas2.appendChild(newImg);
+            if (regplatfrom.test(platfrom)) {
+                canvas2.appendChild(canvas);
+            }
 
             $.ajax({
                 type: "POST",
@@ -329,7 +332,7 @@ function limit(){
 
 		var reg = /[a-zA-Z0-9]+/;
 		var maxLength = [8,6,6,12,12,24,10];
-		$('.text').each(function(index){
+		$('.personInfo .text').each(function(index){
 			this.oninput = function(){
 				var len = 0;
 				var cn = 0;
@@ -350,6 +353,29 @@ function limit(){
 				}
 			}
 		});
+
+    var maxLength2 = [8,6,6];
+    $('.personInfo2 .text').each(function(index){
+        this.oninput = function(){
+            var len = 0;
+            var cn = 0;
+            for(var i = 0; i < this.value.length; i++){
+                if(reg.test(this.value[i])){
+                    len++;
+                }else{
+                    len += 2;
+                    if(len-2 < maxLength2[index]){
+                        cn++;
+                    }
+                }
+            }
+            if(len > maxLength[index]){
+//					console.log(len)
+                var val = this.value.substring(0,maxLength2[index]-cn);
+                this.value = val;
+            }
+        }
+    });
 
 
 
