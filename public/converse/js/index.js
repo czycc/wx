@@ -1,5 +1,14 @@
 //第一页loading
 $(function(){
+	//判断设备
+	var platfrom = navigator.userAgent;
+	var regplatfrom = /iPhone/gi;
+	console.log("IOS");
+    if (!regplatfrom.test(platfrom)) {
+		console.log("Android");
+		$("#gocamera").attr("accept","image/*");
+        $("#gocamera").attr("capture","camera");
+    }
 
 	count();
 
@@ -266,12 +275,17 @@ $(function(){
 //
 //			canvas2.src = image;
 			var imageBase = canvas.toDataURL("image/jpg");
-			console.log("1::"+imageBase)
+            var newImg = document.createElement("img");
+            console.log("1::"+imageBase)
+
+            newImg.src =  imageBase;
+            canvas2.appendChild(newImg);
+
             $.ajax({
                 type: "POST",
                 url: "http://wx.touchworld-sh.com/api/kw/image",
                 async: true,
-                data: { image: imageBase },
+                data: { image : imageBase },
                 dataType: "json",
                 success: function(data) {
                     console.log("2::"+data);
