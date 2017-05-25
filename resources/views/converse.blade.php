@@ -14,7 +14,7 @@
 </head>
 <body>
 	<div class="page page1 pageBegin ">
-	
+
 			<div class="loadText pos">
 				Loading...<span>100%</span>
 			</div>
@@ -64,7 +64,7 @@
 						<div class="top">
 							<p>我是<input class="text1 text" type="text">，</p>
 							<p>不是谁都懂我的<input class="text2 text" type="text">，</p>
-							<p>但这正是让我成为"我"的原因。</p>	
+							<p>但这正是让我成为"我"的原因。</p>
 						</div>
 						<div class="bottom">
 							<p>就像这双有表情的鞋</p>
@@ -72,8 +72,8 @@
 							<p>不懂？</p>
 							<p>那就<input class="text3 text" type="text">吧。</p>
 						</div>
-	
-	
+
+
 					</div>
 					<div class="footerBtn">
 						<img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
@@ -83,15 +83,16 @@
 					<div class="popup ">
 						<label class="modal modal1">
 							<img src="{{asset('converse/img/photoword/hand.png')}}">
-							<input type="file" id="gocamera" style="display: none" accept="image/*" multiple>
+							<input type="file" id="gocamera" style="display: none">
+
 						</label>
 					</div>
 					<div class="popup2 hidden">
 						<div class=" modal modal2 ">
 							<img src="{{asset('converse/img/photoword/hand2.png')}}">
-						</div>	
+						</div>
 					</div>
-	
+
 				</div>
 			</div>
 		</div>
@@ -116,7 +117,7 @@
 						</p>
 						<p>
 							因为我相信 <br/>
-	
+
 							<span class="spanText6 spanText"></span>。
 						</p>
 						<br/>
@@ -131,7 +132,7 @@
 						<div class="top">
 							<p>我是<span class="spanText1 spanText">的隔阂</span>，</p>
 							<p>不是谁都懂我的<span class="spanText2 spanText">的隔阂</span>，</p>
-							<p>但这正是让我成为"我"的原因。</p>	
+							<p>但这正是让我成为"我"的原因。</p>
 						</div>
 						<div class="bottom">
 							<p>就像这双有表情的鞋</p>
@@ -139,16 +140,16 @@
 							<p>不懂？</p>
 							<p>那就<span class="spanText3 spanText">的隔阂</span>吧。</p>
 						</div>
-	
-	
+
+
 					</div>
 					<div class="logo pos">
-	
+
 						<img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
-	
+
 					</div>
-	
-	
+
+
 				</div>
 			</div>
 		</div>
@@ -212,7 +213,7 @@
 				},
 				//加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
 				loadComplete: function() {
-					
+
 					$('.page4').show().siblings().hide();
 
 					console.log('照片读取完成');
@@ -220,24 +221,24 @@
 				//
 				done: function(dataURL) {
 					console.log(dataURL);
-					
+
 					$('.face').show().siblings().hide();
-					
+
 					$('.popup').hide();
-					
+
 					$('.popup2').show();
 				},
 				fail: function(msg) {
 					alert(msg);
 				}
 	});
-	
+
 		$('.popup2').click(function(){
-			
+
 			$(this).hide();
-			
+
 			$('.text1').focus();
-			
+
 		})
 
 

@@ -53,14 +53,14 @@ $(function(){
 				clearInterval(timer);
 
 				$('.page2').show().siblings().hide();
-				
+
 				setTimeout(function(){
-					
+
 					$('.page2').animate({ 'top': '-200%' }, 3000);
-					
+
 				},1500)
 
-				
+
 			}
 
 			$('.page1 .loadText span').html(random + '%');
@@ -73,7 +73,7 @@ $(function(){
 	//海报生成中
 
 	function count2() {
-		
+
 		var random = 0;
 
 		var num = 0;
@@ -120,7 +120,7 @@ $(function(){
 
 				clearInterval(timer);
 
-			
+
 
 				$('.page6').show().siblings().hide();
 
@@ -137,8 +137,8 @@ $(function(){
 
 		// console.log(123);
 		//高冷模式和话唠模式
-		
-		
+
+
 		for(var i = 0; i < $('.personInfo .text').length + 1; i++) {
 
 			$('.personInfo3 .spanText' + i).html($('.personInfo .text' + i).val());
@@ -150,34 +150,34 @@ $(function(){
 			$('.personInfo4 .spanText' + i).html($('.personInfo2 .text' + i).val());
 
 		}
-		
+
 		$('.face').hide();
-		
+
 		$('.page5').show();
-		
+
 		$('.page33').show();
-			
-	
-		
+
+
+
 		if($('.page33').css('display') == 'block'){
-			
+
 			setTimeout(function(){
-				
+
 				clip();
-				
-				
+
+
 			},2000)
 		}
-		
-		
 
-		
-		
-		
-	
-		
-		
-		
+
+
+
+
+
+
+
+
+
 		//截取图片
 
 		// $('.page5').show().siblings().hide();
@@ -196,7 +196,7 @@ $(function(){
 
 		$('.personInfo').show();
 		$('.personInfo3').show();
-		
+
 
 		$('.personInfo2').hide();
 		$('.personInfo4').hide();
@@ -222,9 +222,9 @@ $(function(){
 	$('.footerBtnLeft').click(function() {
 
 		$('.page3 input').val('');
-		
+
 		$('.popup').show();
-		
+
 		$('#view').css('background-image','');
 
 
@@ -242,18 +242,18 @@ $(function(){
 	var height = $(window).height();
 
 	$('.face .container').height(height);
-	
+
 	$('.page33 .page33Container').height(height);
 
 	//截屏
 
 	function clip() {
-		
-	
-	
+
+
+
 		var canvas2 = document.getElementById('canvas2');
 		var pa = document.getElementById('pa');
-		
+
 //		html2canvas(pa, {
 //          onrendered: function(canvas) {
 //              canvas2.appendChild(canvas);
@@ -261,11 +261,11 @@ $(function(){
 //      });
 
 		html2canvas(pa).then(function(canvas) {
-			
-			var image = canvas.toDataURL("image/jpg");
-			console.log(image);
+
+//			var image = canvas.toDataURL("image/jpg");
+//
 //			canvas2.src = image;
-			
+
 			canvas2.appendChild(canvas);
 
 		})
@@ -279,8 +279,8 @@ $(function(){
 			//    		console.log(base);
 
 			//     		 ajaxUpLoad(base);
-			//	        var pHtml = "<img src="+image+" />";  
-			//	        $('#html2canvas').html(pHtml);  
+			//	        var pHtml = "<img src="+image+" />";
+			//	        $('#html2canvas').html(pHtml);
 
 		//})
 
@@ -336,7 +336,7 @@ $(function(){
 //作字符限制
  limit();
 function limit(){
-	
+
 		var reg = /[a-zA-Z0-9]+/;
 		var maxLength = [8,6,6,12,12,24,10];
 		$('.text').each(function(index){
@@ -360,12 +360,12 @@ function limit(){
 				}
 			}
 		});
-		
 
-	
+
+
 }
 
-		
+
 })
 
 
