@@ -130,15 +130,15 @@
 					</div>
 					<div class="personInfo4 hidden">
 						<div class="top">
-							<p>我是<span class="spanText1 spanText">的隔阂</span>，</p>
-							<p>不是谁都懂我的<span class="spanText2 spanText">的隔阂</span>，</p>
+							<p>我是<span class="spanText1 spanText"></span>，</p>
+							<p>不是谁都懂我的<span class="spanText2 spanText"></span>，</p>
 							<p>但这正是让我成为"我"的原因。</p>
 						</div>
 						<div class="bottom">
 							<p>就像这双有表情的鞋</p>
 							<p>不是谁都理解那道弧度的存在</p>
 							<p>不懂？</p>
-							<p>那就<span class="spanText3 spanText">的隔阂</span>吧。</p>
+							<p>那就<span class="spanText3 spanText"></span>吧。</p>
 						</div>
 
 
