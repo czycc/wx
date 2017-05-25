@@ -166,7 +166,6 @@ $(function(){
 
 		$('.page33').show();
 
-        space();
 
 
 		if($('.page33').css('display') == 'block'){
@@ -264,23 +263,14 @@ $(function(){
 		var canvas2 = document.getElementById('canvas2');
 		var pa = document.getElementById('pa');
 
-//		html2canvas(pa, {
-//          onrendered: function(canvas) {
-//              canvas2.appendChild(canvas);
-//          }
-//      });
-
 		html2canvas(pa).then(function(canvas) {
 
-//			var image = canvas.toDataURL("image/jpg");
-//
-//			canvas2.src = image;
 			var imageBase = canvas.toDataURL("image/jpg");
             var newImg = document.createElement("img");
             console.log("1::"+imageBase)
 
             newImg.src =  imageBase;
-            canvas2.appendChild(newImg);
+            // canvas2.appendChild(newImg);
 
             $.ajax({
                 type: "POST",
@@ -290,6 +280,7 @@ $(function(){
                 dataType: "json",
                 success: function(data) {
                     console.log("2::"+data);
+                    $("#canvas2img").attr("src",data.responseText);
                 },
                 error: function(err) {
 
@@ -297,46 +288,13 @@ $(function(){
                 }
             });
 
-			// canvas2.appendChild(canvas);
-
 		})
 
 
-
-			//var base = encodeURIComponent(image);
-
-			//canvas2.src = image;
-
-			//    		console.log(base);
-
-			//     		 ajaxUpLoad(base);
-			//	        var pHtml = "<img src="+image+" />";
-			//	        $('#html2canvas').html(pHtml);
-
-		//})
-
-	}
-	//图片上传
-	function ajaxUpLoad(base) {
-		$.ajax({
-			type: "POST",
-			url: "",
-			async: true,
-			data: { base: base },
-			dataType: "json",
-			success: function(data) {
-
-				console.log(success);
-			},
-			error: function(err) {
-
-				console.log(error);
-			}
-		});
 	}
 
 	// 加白条
-
+	space();
 
 	function space() {
 

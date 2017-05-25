@@ -409,31 +409,48 @@ img{
 	margin-top: 1px;
 }
 
-.spanText{
 
+
+.spanText{
+	display: inline-block;
 	color: #183d8e;
 	margin:0px 1px ;
-
 }
-.spanText7{
-
-}
-.spanText{
-
-	display: inline-block;
-
-	/*height: 4.6vw;*/
-	/*position: absolute;*/
-
-
-	
-}
-.spanText{
-	background-image: url(../img/space/space2.png);
+.spanText1{
+	background-image: url(../img/space/space4.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-
+.spanText2{
+	background-image: url(../img/space/space3.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.spanText3{
+	background-image: url(../img/space/space3.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.spanText4{
+	background-image: url(../img/space/space6.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.spanText5{
+	background-image: url(../img/space/space6.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.spanText6{
+	background-image: url(../img/space/space12.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.spanText7{
+	background-image: url(../img/space/space5.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
 .bac6{
 	display: inline-block;
 	width: 50%;
@@ -482,12 +499,6 @@ img{
 .page6 .center img{
 	width: 100%;
 	height: 100%;
-}
-.page6 .erweima{
-	width: 16%;
-	position: absolute;
-	top: 78%;
-	left: 14%;
 }
 .page6 .copy{
 	width: 44%;
