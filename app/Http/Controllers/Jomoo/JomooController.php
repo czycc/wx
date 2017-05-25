@@ -56,7 +56,7 @@ class JomooController extends Controller
             Redis::del('code2');
             return 'true';
         }elseif($code == $code3){
-            Redis::del('code2');
+            Redis::del('code3');
             return 'true';
         }else{
             return 'false';
