@@ -266,8 +266,14 @@ $(function(){
 //			
 //			canvas2.src = image;
 			
-			canvas2.appendChild(canvas);
-			
+			// canvas2.appendChild(canvas);
+
+
+            var img = new Image;
+            img.crossOrigin = "anonymous";
+            img.src = canvas.toDataURL('image/png');
+            canvas2.appendChild(img);
+
 		})
 
 
