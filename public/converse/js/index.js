@@ -267,7 +267,6 @@ $(function(){
 
 			var imageBase = canvas.toDataURL("image/jpg");
             var newImg = document.createElement("img");
-            console.log("1::"+imageBase)
 
             newImg.src =  imageBase;
             // canvas2.appendChild(newImg);
@@ -279,7 +278,8 @@ $(function(){
                 data: { image : imageBase },
                 dataType: "json",
                 success: function(data) {
-                    console.log("2::"+data);
+                    console.log(data.responseText);
+                    console.log($("#canvas2img"));
                     $("#canvas2img").attr("src",data.responseText);
                 },
                 error: function(err) {
