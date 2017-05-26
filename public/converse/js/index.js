@@ -175,7 +175,7 @@ $(function(){
 				clip();
 
 
-			},2000)
+			},4000)
 		}
 
 
@@ -266,7 +266,7 @@ $(function(){
 		html2canvas(pa).then(function(canvas) {
 
 
-            canvas2.appendChild(canvas);
+            // canvas2.appendChild(canvas);
 
             // var imageBase = canvas.toDataURL("image/jpg");
             // var newImg = document.createElement("img");
@@ -274,23 +274,23 @@ $(function(){
             // newImg.src =  imageBase;
 
 
-            // $.ajax({
-            //     type: "POST",
-            //     url: "http://wx.touchworld-sh.com/api/kw/image",
-            //     async: true,
-            //     data: { image : imageBase },
-            //     dataType: "json",
-            //     success: function(data) {
-            //         console.log(data.responseText);
-            //         console.log($("#canvas2img"));
-            //         $("#canvas2img").attr("src",data.responseText);
-            //     },
-            //     error: function(err) {
-            //         console.log(err.responseText);
-            //         console.log($("#canvas2img"));
-            //         $("#canvas2img").attr("src",err.responseText);
-            //     }
-            // });
+            $.ajax({
+                type: "POST",
+                url: "http://wx.touchworld-sh.com/api/kw/image",
+                async: true,
+                data: { image : imageBase },
+                dataType: "json",
+                success: function(data) {
+                    console.log(data.responseText);
+                    console.log($("#canvas2img"));
+                    $("#canvas2img").attr("src",data.responseText);
+                },
+                error: function(err) {
+                    console.log(err.responseText);
+                    console.log($("#canvas2img"));
+                    $("#canvas2img").attr("src",err.responseText);
+                }
+            });
 
 		})
 
