@@ -272,7 +272,7 @@ $(function(){
             // var newImg = document.createElement("img");
             //
             // newImg.src =  imageBase;
-			alert(imageBase);
+			console.log(imageBase);
 
             $.ajax({
                 type: "POST",
