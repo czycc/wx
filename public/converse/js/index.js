@@ -268,11 +268,11 @@ $(function(){
 
             // canvas2.appendChild(canvas);
 
-            // var imageBase = canvas.toDataURL("image/jpg");
+            var imageBase = canvas.toDataURL("image/jpg");
             // var newImg = document.createElement("img");
             //
             // newImg.src =  imageBase;
-
+			alert(imageBase);
 
             $.ajax({
                 type: "POST",
