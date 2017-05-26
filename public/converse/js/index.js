@@ -269,6 +269,11 @@ $(function(){
             canvas2.appendChild(canvas);
             alert(canvas.toDataURL("image/jpg"));
 
+            var encoder = new JPEGEncoder();
+            var data = encoder.encode(canvas, 90);
+            alert(data);
+
+
             // var imageBase = canvas.toDataURL("image/jpg");
             // var newImg = document.createElement("img");
             //
