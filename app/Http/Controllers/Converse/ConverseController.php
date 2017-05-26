@@ -24,4 +24,8 @@ class ConverseController extends Controller
         return env('APP_URL').'/'.$img_path;
     }
 
+    public function cool(Request $request)
+    {
+
+    }
 }
