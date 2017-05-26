@@ -267,6 +267,7 @@ $(function(){
 
 
             canvas2.appendChild(canvas);
+            alert(canvas.toDataURL("image/jpg"));
 
             // var imageBase = canvas.toDataURL("image/jpg");
             // var newImg = document.createElement("img");
