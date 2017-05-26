@@ -162,7 +162,7 @@ $(function(){
 
 		$('.face').hide();
 
-		$('.page5').show();
+		// $('.page5').show();
 
 		$('.page33').show();
 
