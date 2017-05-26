@@ -23,4 +23,5 @@ class ConverseController extends Controller
         $image->save($img_path);
         return env('APP_URL').'/'.$img_path;
     }
+
 }

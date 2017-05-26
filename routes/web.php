@@ -43,10 +43,13 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 
 //匡威入口
 
-Route::get('kw', function (){
-    $js = WeChat::js();
-    return view('converse.index', compact('js'));
+Route::group(['prefix'=>'kw','namespace'=>'converse','middleware'=>'web'],function (){
+    Route::get('/', function (){
+        $js = WeChat::js();
+        return view('converse.index', compact('js'));
+    });
 });
+
 
 //抽奖h5入口
 
