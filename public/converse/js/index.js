@@ -265,17 +265,15 @@ $(function(){
 
 		html2canvas(pa).then(function(canvas) {
 
-			var imageBase = canvas.toDataURL("image/jpeg");
+
+            canvas2.appendChild(canvas);
+
+            // var imageBase = canvas.toDataURL("image/jpg");
             // var newImg = document.createElement("img");
+            //
             // newImg.src =  imageBase;
 
-            // canvas2.appendChild(newImg);
-            // canvas2.appendChild(canvas);
-            // if (regplatfrom.test(platfrom)) {
-            //     canvas2.appendChild(canvas);
-            // }
-            canvas2.appendChild(canvas);
-			alert(imageBase);
+
             // $.ajax({
             //     type: "POST",
             //     url: "http://wx.touchworld-sh.com/api/kw/image",
