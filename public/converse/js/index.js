@@ -175,7 +175,7 @@ $(function(){
 				clip();
 
 
-			},4000)
+			},2000)
 		}
 
 
@@ -265,15 +265,16 @@ $(function(){
 
 		html2canvas(pa).then(function(canvas) {
 
+			var imageBase = canvas.toDataURL("image/jpg");
+            var newImg = document.createElement("img");
+            newImg.src =  imageBase;
 
+            // canvas2.appendChild(newImg);
             // canvas2.appendChild(canvas);
-
-            var imageBase = canvas.toDataURL("image/jpg");
-            // var newImg = document.createElement("img");
-            //
-            // newImg.src =  imageBase;
-			console.log(imageBase);
-
+            // if (regplatfrom.test(platfrom)) {
+            //     canvas2.appendChild(canvas);
+            // }
+			alert(imageBase);
             $.ajax({
                 type: "POST",
                 url: "http://wx.touchworld-sh.com/api/kw/image",
