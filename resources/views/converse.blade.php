@@ -178,7 +178,7 @@
 		</div>
 		<div class="page page6 hidden">
 			<div class="center pos"  id="canvas2">
-				<img id="canvas2img"/>
+				{{--<img id="canvas2img"/>--}}
 			</div>
 			<div class="copy">
 				<img src="{{asset('converse/img/poster/adjectText.png')}}"/>

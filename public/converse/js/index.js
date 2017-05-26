@@ -265,33 +265,34 @@ $(function(){
 
 		html2canvas(pa).then(function(canvas) {
 
-			var imageBase = canvas.toDataURL("image/png");
-            var newImg = document.createElement("img");
-            newImg.src =  imageBase;
+			var imageBase = canvas.toDataURL("image/jpeg");
+            // var newImg = document.createElement("img");
+            // newImg.src =  imageBase;
 
             // canvas2.appendChild(newImg);
             // canvas2.appendChild(canvas);
             // if (regplatfrom.test(platfrom)) {
             //     canvas2.appendChild(canvas);
             // }
+            canvas2.appendChild(canvas);
 			alert(imageBase);
-            $.ajax({
-                type: "POST",
-                url: "http://wx.touchworld-sh.com/api/kw/image",
-                async: true,
-                data: { image : imageBase },
-                dataType: "json",
-                success: function(data) {
-                    console.log(data.responseText);
-                    console.log($("#canvas2img"));
-                    $("#canvas2img").attr("src",data.responseText);
-                },
-                error: function(err) {
-                    console.log(err.responseText);
-                    console.log($("#canvas2img"));
-                    $("#canvas2img").attr("src",err.responseText);
-                }
-            });
+            // $.ajax({
+            //     type: "POST",
+            //     url: "http://wx.touchworld-sh.com/api/kw/image",
+            //     async: true,
+            //     data: { image : imageBase },
+            //     dataType: "json",
+            //     success: function(data) {
+            //         console.log(data.responseText);
+            //         console.log($("#canvas2img"));
+            //         $("#canvas2img").attr("src",data.responseText);
+            //     },
+            //     error: function(err) {
+            //         console.log(err.responseText);
+            //         console.log($("#canvas2img"));
+            //         $("#canvas2img").attr("src",err.responseText);
+            //     }
+            // });
 
 		})
 
