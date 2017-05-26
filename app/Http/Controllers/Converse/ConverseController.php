@@ -17,15 +17,21 @@ class ConverseController extends Controller
         $image = Image::make($image);
         $image->save(public_path('converse/upload/1.jpg'));
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
-        $qrcode = QrCode::format('png')->margin(0)->size(40)->generate(env('APP_URL').'/'.$img_path);
+        $qrcode = QrCode::format('png')->margin(0)->size(40)->generate(env('APP_URL') . '/' . $img_path);
         $image2 = Image::make($qrcode);
-        $image = Image::make($img_path)->insert($image2,'bottom-left','20','25');
+        $image = Image::make($img_path)->insert($image2, 'bottom-left', '20', '25');
         $image->save($img_path);
-        return env('APP_URL').'/'.$img_path;
+        return env('APP_URL') . '/' . $img_path;
     }
 
     public function cool(Request $request)
     {
+
+    }
+
+    protected function input($text)
+    {
+        $img2 = Image::make(public_path('image/space/space3.png'));
 
     }
 }
