@@ -45,8 +45,7 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 
 Route::get('kw', function (){
     $js = WeChat::js();
-//    $js = $app->js;
-    return view('converse', compact('js'));
+    return view('converse.index', compact('js'));
 });
 
 //抽奖h5入口
