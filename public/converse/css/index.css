@@ -3,13 +3,13 @@
 html{
 	width: 100%;
 	height: 100%;
-	font-family: 'FZYTK.TTF'; 
-	
+	font-family: 'FZYTK.TTF';
+
 }
-@font-face { 
-  font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/ 
-  src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/ 
-} 
+@font-face {
+	font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/
+	src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/
+}
 body{
 	width: 100%;
 	height: 100%;
@@ -56,7 +56,7 @@ img{
 }
 /*第一页*/
 .pageBegin{
-	background: url(../img/p1-loading.gif) no-repeat center center;
+	background: url(../img/111p1-loading.gif) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 }
@@ -73,7 +73,7 @@ img{
 	color: white;
 
 	font-size: 4.5vw;
-	font-family: 'FZYTK.TTF'; 
+	font-family: 'FZYTK.TTF';
 }
 
 /*第二页*/
@@ -92,7 +92,7 @@ img{
 }
 .page2 .top{
 	top: 0%;
-	background: url(../img/mode/p1.jpg) no-repeat center center;
+	background: url(../img/mode/men.png) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 }
@@ -239,7 +239,7 @@ img{
 .personInfo2 input{
 	border:none;
 	outline: none;
-	background-color:#183d8e; 
+	background-color:#183d8e;
 	border-bottom:1px solid white;
 	width: 20%;
 	color: white;
@@ -261,7 +261,7 @@ img{
 	left: 8%;
 }
 .page33 .personInfo3 .lastText{
-	
+
 	top: 97%;
 	position: absolute;
 }
@@ -301,8 +301,9 @@ img{
 	margin: auto;
 }
 .page3 .popup{
-	background: url("../img/photoword/p3-tut.png") no-repeat center center;
-	background-size: 100% 100%;
+	/*background: url("../img/photoword/p3-tut.png") no-repeat center center;*/
+	/*background-size: 100% 100%;*/
+	background-color: rgba(0,0,0,0.5);
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -312,12 +313,29 @@ img{
 	bottom: 0;
 	margin: auto;
 }
-.page3 .modal1 img{
-	position: absolute;
-	left: 45vw;
-	top: 50vw;
+.page3 .popup .activity{
 	width: 30%;
+	position: absolute;
+	left: 52%;
+	top: 31%;
+	animation:activity .5s linear;
 }
+@keyframes activity{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 30%;
+	}
+}
+.page3 .popup label{
+	z-index: 100;
+	position: absolute;
+	left: 43%;
+	top: 22%;
+	width: 12%;
+}
+
 .page3 .popup2{
 	width: 100%;
 	height: 100%;
@@ -331,12 +349,7 @@ img{
 	background-size: 100% 100%;
 }
 
-.page3 .modal2 img{
-	position: absolute;
-	left: 30%;
-	top: 62%;
-	width: 30%;
-}
+
 .page3 .pic,.page33 .pic{
 	position: absolute;
 	left: 43%;
@@ -359,14 +372,14 @@ img{
 	height: 100%;
 	z-index: 10;
 	pointer-events: none;
-	
+
 }
 .page4 .bg img{
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
 
-	
+
 }
 .page4 .cBtm{
 	position: absolute;
@@ -382,11 +395,42 @@ img{
 }
 .page4 .logo{
 	position: absolute;
-	width: 46%;
-	z-index: 10;
+	width: 30%;
+	z-index: 16;
 	left: 40%;
 	top: 41%;
 	pointer-events:none;
+	opacity: 1;
+}
+.logoHand{
+	animation:logo .5s linear;
+}
+@keyframes logo{
+	from{
+		opacity: 0.5;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.page4 .headText{
+	position: absolute;
+	width: 40%;
+	z-index: 10;
+	left: 54%;
+	top: 54%;
+}
+.logoText{
+	animation: headText 0.5s linear;
+}
+@keyframes headText{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 40%;
+	}
 }
 .page4 .picture{
 
@@ -394,7 +438,7 @@ img{
 	margin-top: 20%;
 	/*z-index: 1000;*/
 
-	
+
 
 
 }
@@ -402,20 +446,32 @@ img{
 /*page33页*/
 .page33 span{
 	display: inline-block;
-	
+
 }
 .page33 p{
 	position: relative;
 	margin-top: 1px;
 }
 
-
-
 .spanText{
-	display: inline-block;
+
 	color: #183d8e;
 	margin:0px 1px ;
-    padding: 0px 1px;
+	padding: 0px 1px;
+
+}
+.spanText7{
+
+}
+.spanText{
+
+	display: inline-block;
+
+	/*height: 4.6vw;*/
+	/*position: absolute;*/
+
+
+
 }
 .spanText1{
 	background-image: url(../img/space/space4.png);
@@ -501,6 +557,12 @@ img{
 	width: 100%;
 	height: 100%;
 }
+.page6 .erweima{
+	width: 16%;
+	position: absolute;
+	top: 78%;
+	left: 14%;
+}
 .page6 .copy{
 	width: 44%;
 	position: absolute;
@@ -533,3 +595,140 @@ img{
 	width: 34%;
 }
 
+/*....提交表单...*/
+
+#submitBtm{
+	display: none;
+}
+.page3 .formBtm{
+	position: absolute;
+}
+.page3 .personInfo .lastText,.page3 .personInfo2 .lastText{
+	left: 8%;
+	top: 110%;
+	position: absolute;
+}
+.page3 .personInfo{
+	position: absolute;
+	left: 4%;
+}
+.page3 .personInfo2 .top{
+	left: 26%;
+}
+.page3 .personInfo2 .bottom{
+	left: 34%;
+
+}
+.page3 .popup2 .modal2{
+	position: absolute;
+	width: 10%;
+	top: 62%;
+	left: 30%;
+	z-index: 100;
+}
+.page3 .popup2 .inputText{
+	position: absolute;
+	width: 26%;
+	left: 36%;
+	top: 67%;
+}
+.ani{
+	animation:inputText .5s linear;
+}
+@keyframes inputText{
+	from{
+		width: 0%;
+	}
+	to{
+		width: 26%;
+	}
+}
+/*加载页*/
+.loading{
+	position: absolute;
+	z-index: 999;
+}
+.loading img{
+	width: 100%;
+	height: 100%;
+}
+/*图片加载*/
+.poster{
+	background: url(../img/poster/bg.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.poster img{
+	width: 100%;
+	height: 100%;
+}
+.poster .center{
+	width: 80%;
+	height:  78%;
+	top: 10%;
+	background-color: #f00;
+}
+.poster .frame{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scale(1.2);
+	background: url(../img/poster/camerablue.png) no-repeat;
+	background-size: 100% 100%;
+	animation: frame 1s linear;
+	animation-delay: 3.5s;
+}
+.poster .copy{
+	width: 44%;
+	position: absolute;
+	top: 88%;
+	left: 5%;
+	display: none;
+}
+.poster .link{
+	width: 36%;
+	position: absolute;
+	top: 92%;
+	right: 10%;
+	display: none;
+}
+.mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: none;
+}
+
+@keyframes frame{
+	0%{
+		transform: scale(2);
+	}
+	50%{
+		transform: scale(1.2);
+	}
+	60%{
+		background: url(../img/poster/camerablue.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	70%{
+		background: url(../img/poster/camerawhite.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	80%{
+		background: url(../img/poster/camerablue.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	90%{
+		background: url(../img/poster/camerawhite.png) no-repeat;
+		background-size: 100% 100%;
+	}
+	100%{
+		background: url(../img/poster/camerablue.png) no-repeat;
+		background-size: 100% 100%;
+	}
+}
