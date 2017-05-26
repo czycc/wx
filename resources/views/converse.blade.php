@@ -193,8 +193,8 @@
 <script src="{{asset('converse/js/lib/hammer.min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('converse/js/lib/lrz.all.bundle.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('converse/js/lib/PhotoClip.js')}}" type="text/javascript" charset="utf-8"></script>
+<script src="{{asset('converse/js/jpeg_encoder_basic.js')}}" type="text/javascript" charset="utf-8"></script>
 <script src="{{asset('converse/js/index.js')}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{asset('converse/js/dom-to-image.min.js')}}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="{{asset('converse/js/html2canvas.js')}}"></script>
 <script>
 		var pc = new PhotoClip('#clipArea', {
