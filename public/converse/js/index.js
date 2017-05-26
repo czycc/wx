@@ -265,7 +265,7 @@ $(function(){
 
 		html2canvas(pa).then(function(canvas) {
 
-			var imageBase = canvas.toDataURL("image/jpg");
+			var imageBase = canvas.toDataURL("image/png");
             var newImg = document.createElement("img");
             newImg.src =  imageBase;
 
