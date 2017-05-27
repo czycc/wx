@@ -32,7 +32,7 @@
                         <br/> 不懂？
                         <br/> 那就 <input class="text7 text" type="text" name="text7">吧。
                     </p>
-                    <input type="hidden" name="img" id="postImg">
+                    <input type="hidden" name="avatar" id="postImg">
                     <input type="submit" id="submitBtm"/>
                 </form>
                 <div class="footerBtn">
@@ -48,7 +48,7 @@
                         <input id="gocamera" style="display: none">
 
                     </label>
-                    <a href="rule.html" class="activity">
+                    <a href="{{ url('kw/rule') }}" class="activity">
                         <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
                     <div class="side">

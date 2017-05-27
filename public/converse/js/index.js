@@ -85,7 +85,7 @@ $(function() {
         });
         
         //高冷模式
-        var maxLength2 = [8, 6, 6];
+        var maxLength2 = [10, 10, 16];
         $('.personInfo2 .text').each(function(index) {
             this.oninput = function() {
                 var len = 0;
