@@ -28,6 +28,10 @@ class ConverseController extends Controller
     {
 
     }
+    public function hot(Request $request)
+    {
+
+    }
 
     protected function input($text)
     {

@@ -10,9 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use EasyWeChat\Foundation\Application;
 
-Route::get('/test', function (){
+Route::get('/test', function () {
 
 });
 
@@ -43,16 +42,33 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 
 //匡威入口
 
-Route::group(['prefix'=>'kw','namespace'=>'converse','middleware'=>'web'],function (){
-    Route::get('/', function (){
+Route::group(['prefix' => 'kw', 'namespace' => 'converse', 'middleware' => 'web'], function () {
+    Route::get('/', function () {
         $js = WeChat::js();
         return view('converse.index', compact('js'));
+    });
+    Route::get('/cool', function () {
+        $js = WeChat::js();
+        return view('converse.cool', compact('js'));
+    });
+    Route::post('/cool/poster', 'Converse\ConverseController@cool');
+
+    Route::get('/hot', function () {
+        $js = WeChat::js();
+        return view('converse.hot', compact('js'));
+    });
+
+    Route::post('/hot/poster', 'Converse\ConverseController@hot');
+
+    Route::get('/rule', function () {
+        $js = WeChat::js();
+        return view('converse.rule', compact('js'));
     });
 });
 
 
 //抽奖h5入口
 
-Route::get('/draw',function (){
-   return '这是抽奖h5入口，等待开放时间';
+Route::get('/draw', function () {
+    return '这是抽奖h5入口，等待开放时间';
 });

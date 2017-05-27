@@ -59,7 +59,7 @@ $(function() {
 
     //字符限制
     limit();
-
+    //吐槽模式
     function limit() {
         var reg = /[a-zA-Z0-9]+/;
         var maxLength = [8, 6, 6, 12, 12, 24, 10];

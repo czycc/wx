@@ -12,19 +12,19 @@
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
-
-                <form class="personInfo2">
+                <form class="personInfo2" action="{{ url('kw/cool/poster') }}" method="post">
+                    {{ csrf_field() }}
                     <div class="top">
                         <!--<input type="hidden" value="" />-->
-                        <p>我是<input class="text1 text" type="text">，</p>
-                        <p>不是谁都懂我的<input class="text2 text" type="text">，</p>
+                        <p>我是<input class="text1 text" type="text" name="text1">，</p>
+                        <p>不是谁都懂我的<input class="text2 text" type="text" name="text2">，</p>
                         <p>但这正是让我成为"我"的原因。</p>
                     </div>
                     <div class="bottom">
                         <p>就像这双有表情的鞋</p>
                         <p>不是谁都理解那道弧度的存在</p>
                         <p>不懂？</p>
-                        <p>那就<input class="text3 text" type="text">吧。</p>
+                        <p>那就<input class="text3 text" type="text" name="text3">吧。</p>
                     </div>
                     <input type="hidden" name="" id="postImg">
                     <input type="submit" id="submitBtm" />
@@ -88,12 +88,12 @@
             view: '#view', //显示截取后图像的容器的选择器或者DOM对象。
             ok: '#goBtm', //确认截图按钮的选择器或者DOM对象。
             //img: 'img/mm.jpg',
-            loadStart: function() {
+            loadStart: function () {
                 //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
                 console.log('开始读取照片');
             },
             //加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
-            loadComplete: function() {
+            loadComplete: function () {
 
                 $('.page4').show().siblings().hide();
 
@@ -104,7 +104,7 @@
                 console.log('照片读取完成');
             },
             //
-            done: function(dataURL) {
+            done: function (dataURL) {
                 console.log(dataURL);
 
                 $('.face').show().siblings().hide();
@@ -117,12 +117,12 @@
 
                 $("#postImg").val(dataURL);
             },
-            fail: function(msg) {
+            fail: function (msg) {
                 alert(msg);
             }
         });
 
-        $('.popup2').click(function() {
+        $('.popup2').click(function () {
 
             $(this).hide();
 
