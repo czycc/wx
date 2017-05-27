@@ -8,7 +8,7 @@
     <div class="page page1 pageBegin ">
         <img src="{{ asset('converse/img/loading/loading2.gif') }}">
     </div>
-    <div class="page page2 hidden">
+    <div class="page page2 hidden" id="page2">
         <div class="top"></div>
         <div class="bottom">
             <a href="cold.html" class="lBtm btm"><img src="{{ asset('converse/img/mode/lBtm.png') }}"/></a>
@@ -19,5 +19,12 @@
 @endsection
 
 @section('javascript')
-
+	<script>
+		var page2 = document.getElementById('page2');
+		
+			page2.addEventListener('touchmove',function(e){
+				
+				e.preventDefault();
+			})
+	</script>
 @endsection

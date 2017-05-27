@@ -32,7 +32,7 @@ body {
 
 }
 .newpage{
-	background: url(../eyeImg/GIF.gif) no-repeat center center;
+	background: url(../eyeImg/bgGif.gif) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 }
@@ -96,7 +96,7 @@ body {
 
 .page .day {
 	width: 40%;
-	top: 10%;
+	top: 8%;
 }
 
 .page .eye {

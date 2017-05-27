@@ -129,5 +129,12 @@
             $('.text1').focus();
 
         })
+        
+        var handHidden = document.getElementById('handHidden');
+
+		    handHidden.addEventListener('touchstart',function(){
+		
+		        $(this).hide();
+		 })
     </script>
 @endsection

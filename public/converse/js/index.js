@@ -111,12 +111,7 @@ $(function() {
     //点击缩放,手隐藏
 
 //	console.log($('.page4 .bg img'));
-    var handHidden = document.getElementById('handHidden');
 
-    handHidden.addEventListener('touchstart',function(){
-
-        $(this).hide();
-    })
 
 
 
