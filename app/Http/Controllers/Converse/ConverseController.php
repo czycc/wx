@@ -69,8 +69,8 @@ class ConverseController extends Controller
         $img = $img->insert($img1, '', 176, 673);
         $img = $img->insert($img2,'',310,711);
         $img = $img->insert($img3,'',190,909);
-
-        return $img->response('png');
+        $img = $img->insert($avatar,'',280,240);
+        return $avatar->response('png');
     }
 
     public function hot(Request $request)
