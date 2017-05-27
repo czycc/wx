@@ -71,8 +71,13 @@ class ConverseController extends Controller
         $img = $img->insert($img1, '', 176, 673);
         $img = $img->insert($img2, '', 310, 711);
         $img = $img->insert($img3, '', 190, 909);
-        $img = $img->insert($avatar, '', 280, 240);
-        return $img->response('png');
+        $img = $img->insert($avatar, '', 284, 240);
+        //将图片保存到服务器
+        $img->save(public_path('converse/upload/1.jpg'));
+        $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
+        $img_url = env('APP_URL') . '/' . $img_path;
+
+        return view('converse.poster',compact('img_url'));
     }
 
     public function hot(Request $request)
@@ -102,64 +107,69 @@ class ConverseController extends Controller
         //在白底上添加输入的文字
         $img1 = $img1->text($request->input('text1'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img2 = $img2->text($request->input('text2'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img3 = $img3->text($request->input('text3'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img4 = $img4->text($request->input('text4'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img5 = $img5->text($request->input('text5'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img6 = $img6->text($request->input('text6'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img7 = $img7->text($request->input('text7'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         //将白底插入到背景图
-        $img = $img->insert($img1, '', 188, 658);
-        $img = $img->insert($img2, '', 310, 711);
-//        $img = $img->insert($img3, '', 190, 909);
-//        $img = $img->insert($img4, '', 176, 673);
-//        $img = $img->insert($img5, '', 310, 711);
-//        $img = $img->insert($img6, '', 190, 909);
-//        $img = $img->insert($img6, '', 190, 909);
+        $img = $img->insert($img1, '', 196, 658);
+        $img = $img->insert($img2, '', 328, 658);
+        $img = $img->insert($img3, '', 400, 658);
+        $img = $img->insert($img4, '', 312, 690);
+        $img = $img->insert($img5, '', 208, 721);
+        $img = $img->insert($img6, '', 150, 787);
+        $img = $img->insert($img7, '', 231, 912);
 
         $img = $img->insert($avatar, '', 280, 240);
-        return $img->response('png');
+        //将图片保存到服务器
+        $img->save(public_path('converse/upload/1.jpg'));
+        $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
+        $img_url = env('APP_URL') . '/' . $img_path;
+
+        return view('converse.poster',compact('img_url'));
     }
 
     protected function length($text)

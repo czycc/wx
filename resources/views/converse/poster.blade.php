@@ -10,7 +10,7 @@
     </div>
     <div class="page poster">
         <div class="center pos">
-            <img/>
+            <img src="{!! $img_url !!}"/>
             <div class="frame"></div>
         </div>
         <div class="copy">
