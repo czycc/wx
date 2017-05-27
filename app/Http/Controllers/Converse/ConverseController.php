@@ -36,9 +36,9 @@ class ConverseController extends Controller
         $length2 = $this->length($request->input('text2'));
         $length3 = $this->length($request->input('text3'));
         //用户头像 base64编码
-        $avatar = Image::make($request->input('avatar'))->resize(68,98);
+        $avatar = Image::make($request->input('avatar'))->resize(68, 98);
         $mask = Image::make(public_path('converse/img/mask2.png'));
-        $avatar= $avatar->mask($mask);
+        $avatar = $avatar->mask($mask);
         //背景图片
         $img = Image::make(public_path('converse/img/cool.png'));
         //根据输入字段长度确定白底长度
@@ -77,7 +77,8 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
-        return view('converse.poster',compact('img_url'));
+        $js = WeChat::js();
+        return view('converse.poster', compact('img_url', 'js'));
     }
 
     public function hot(Request $request)
@@ -93,9 +94,9 @@ class ConverseController extends Controller
         //用户头像 base64编码
         //背景图片
         $img = Image::make(public_path('converse/img/hot.png'));
-        $avatar = Image::make($request->input('avatar'))->resize(68,98);
+        $avatar = Image::make($request->input('avatar'))->resize(68, 98);
         $mask = Image::make(public_path('converse/img/mask2.png'));
-        $avatar= $avatar->mask($mask);
+        $avatar = $avatar->mask($mask);
         //根据输入字段长度确定白底长度
         $img1 = Image::make(public_path('converse/img/coolSpace/' . $length1 . '.png'));
         $img2 = Image::make(public_path('converse/img/coolSpace/' . $length2 . '.png'));
@@ -169,7 +170,8 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
-        return view('converse.poster',compact('img_url'));
+        $js = WeChat::js();
+        return view('converse.poster', compact('img_url', 'js'));
     }
 
     protected function length($text)
