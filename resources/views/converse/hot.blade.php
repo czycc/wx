@@ -16,7 +16,8 @@
                     {{ csrf_field() }}
                     <p>
                         我是 <input class="text1 text" class="text2" type="text" name="text1" maxlength="8">, 一个
-                        <input class="text2 text" type="text" name="text2"> 的 <input class="text3 text" type="text" name="text3">。
+                        <input class="text2 text" type="text" name="text2"> 的 <input class="text3 text" type="text"
+                                                                                     name="text3">。
                     </p>
                     <p>
                         不是谁都懂我的 <input class="text4 text" class="noBelieveText" type="text" name="text4">。
@@ -51,8 +52,8 @@
                         <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
                     <div class="side">
-						<img src="{{asset('converse/img/photoword/side.png')}}"/>
-					</div>
+                        <img src="{{asset('converse/img/photoword/side.png')}}"/>
+                    </div>
                 </div>
                 <div class="popup2 hidden">
                     <div class=" modal modal2 ">
@@ -149,24 +150,22 @@
 
             $(this).hide();
         })
-        
-        $('.page3 .popup').click(function(){
-			
-			$('.page3 .popup .activity').hide();
-			
-			$('.page3 .popup .side').show();
-			
-			$('.page3 .popup .side').addClass('sideAni');
-			
-			setTimeout(function(){
-				
-				$('#gocamera').attr('type','file');
-				
-			},1000)
-			
-			
-			
-			
-		})
+
+        $('.page3 .popup').click(function () {
+
+            $('.page3 .popup .activity').hide();
+
+            $('.page3 .popup .side').show();
+
+            $('.page3 .popup .side').addClass('sideAni');
+
+            setTimeout(function () {
+
+                $('#gocamera').attr('type', 'file');
+
+            })
+
+
+        })
     </script>
 @endsection

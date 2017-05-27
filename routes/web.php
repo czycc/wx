@@ -42,7 +42,7 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 
 //匡威入口
 
-Route::group(['prefix' => 'kw', 'namespace' => 'converse', 'middleware' => 'web'], function () {
+Route::group(['prefix' => 'kw', 'middleware' => 'web'], function () {
     Route::get('/', function () {
         $js = WeChat::js();
         return view('converse.index', compact('js'));

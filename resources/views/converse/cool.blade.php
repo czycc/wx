@@ -8,7 +8,7 @@
     <div class=" page3 face " id="page3">
         <div class="container">
             <div class="bg">
-                <img src="{{asset('converse/img/photoword/cold.png')}}" />
+                <img src="{{asset('converse/img/photoword/cold.png')}}"/>
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
@@ -27,11 +27,12 @@
                         <p>那就<input class="text3 text" type="text" name="text3">吧。</p>
                     </div>
                     <input type="hidden" name="avatar" id="postImg">
-                    <input type="submit" id="submitBtm" />
+                    <input type="submit" id="submitBtm"/>
                 </form>
                 <div class="footerBtn">
                     <img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
-                    <label class="footerBtnRightLabel" for="submitBtm"><img src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight"></label>
+                    <label class="footerBtnRightLabel" for="submitBtm"><img
+                                src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight"></label>
                 </div>
                 <div class="popup ">
                     <label class="modal modal1">
@@ -44,8 +45,8 @@
                         <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
                     <div class="side">
-						<img src="{{asset('converse/img/photoword/side.png')}}"/>
-					</div>
+                        <img src="{{asset('converse/img/photoword/side.png')}}"/>
+                    </div>
                 </div>
                 <div class="popup2 hidden">
                     <div class=" modal modal2 ">
@@ -62,18 +63,18 @@
 
     <div class="page page4 hidden">
         <div class="bg pos">
-            <img src="{{asset('converse/img/camera/Brightness-Contrast-1.png')}}" />
+            <img src="{{asset('converse/img/camera/Brightness-Contrast-1.png')}}"/>
         </div>
         <div class="picture" id="clipArea"></div>
         <div class="backBtm cBtm">
-            <img src="{{asset('converse/img/camera/back.png')}}" />
+            <img src="{{asset('converse/img/camera/back.png')}}"/>
         </div>
         <div class="goBtm cBtm" id="goBtm">
-            <img src="{{asset('converse/img/camera/ok.png')}}" />
+            <img src="{{asset('converse/img/camera/ok.png')}}"/>
         </div>
         <div class="popup" id="handHidden">
             <div class="logo">
-                <img src="{{asset('converse/img/camera/ti.png')}}" />
+                <img src="{{asset('converse/img/camera/ti.png')}}"/>
             </div>
             <div class="headText">
                 <img src="{{asset('converse/img/camera/tihand.png')}}"/>
@@ -132,31 +133,29 @@
             $('.text1').focus();
 
         })
-        
+
         var handHidden = document.getElementById('handHidden');
 
-		    handHidden.addEventListener('touchstart',function(){
-		
-		        $(this).hide();
-		 })
-		 
-		$('.page3 .popup').click(function(){
-			
-			$('.page3 .popup .activity').hide();
-			
-			$('.page3 .popup .side').show();
-			
-			$('.page3 .popup .side').addClass('sideAni');
-			
-			setTimeout(function(){
-				
-				$('#gocamera').attr('type','file');
-				
-			},1000);
-			
-			
-			
-			
-		})
+        handHidden.addEventListener('touchstart', function () {
+
+            $(this).hide();
+        })
+
+        $('.page3 .popup').click(function () {
+
+            $('.page3 .popup .activity').hide();
+
+            $('.page3 .popup .side').show();
+
+            $('.page3 .popup .side').addClass('sideAni');
+
+            setTimeout(function () {
+
+                $('#gocamera').attr('type', 'file');
+
+            });
+
+
+        })
     </script>
 @endsection
