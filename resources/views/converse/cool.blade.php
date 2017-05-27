@@ -31,7 +31,7 @@
                 </form>
                 <div class="footerBtn">
                     <img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
-                    <label class="footerBtnRightLabel" for="submitBtm"><img
+                    <label class="footerBtnRightLabel"><img
                                 src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight"></label>
                 </div>
                 <div class="popup ">
