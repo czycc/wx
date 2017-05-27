@@ -1,23 +1,22 @@
 //第一页loading
-$(function(){
-
+$(function() {
     // 第一页跳转
-    setTimeout(function(){
+    setTimeout(function() {
         $(".page1").hide();
         $(".page2").show();
-        setTimeout(function(){
+        setTimeout(function() {
             $('.page2').animate({ 'top': '-200%' }, 3000);
-        },1500)
-    },3500);
+        }, 1500)
+    }, 3500);
 
     //判断设备
     var platfrom = navigator.userAgent;
     var regplatfrom = /iPhone/gi;
     console.log("IOS");
-    if (!regplatfrom.test(platfrom)) {
+    if(!regplatfrom.test(platfrom)) {
         console.log("Android");
-        $("#gocamera").attr("accept","image/*");
-        $("#gocamera").attr("capture","camera");
+        $("#gocamera").attr("accept", "image/*");
+        $("#gocamera").attr("capture", "camera");
     }
 
     //第三页
@@ -29,9 +28,8 @@ $(function(){
     $('.footerBtnLeft').click(function() {
         $('.page3 input').val('');
         $('.popup').show();
-        $('#view').css('background-image','');
+        $('#view').css('background-image', '');
     });
-
 
     //重新选择照片
     $('.backBtm img').click(function() {
@@ -39,19 +37,20 @@ $(function(){
     });
 
     //全输入验证
-    $(".text").blur(function(){
-        if(allInput($('.text'))){
-            $(".footerBtnRight").attr("src","img/photoword/bluefooterBtnRight.png");
-        }else{
-            $(".footerBtnRight").attr("src","img/photoword/generate.png");
+    $(".text").blur(function() {
+        if(allInput($('.text'))) {
+            $(".footerBtnRight").attr("src", "img/photoword/bluefooterBtnRight.png");
+        } else {
+            $(".footerBtnRight").attr("src", "img/photoword/generate.png");
         };
     });
-    function allInput(val){
-        if($(".pic").css("background-image") == ""){
+
+    function allInput(val) {
+        if($(".pic").css("background-image") == "") {
             return false;
         }
-        for(var i = 0; i < val.length; i++){
-            if(val[i].value == ""){
+        for(var i = 0; i < val.length; i++) {
+            if(val[i].value == "") {
                 return false;
             }
         }
@@ -60,63 +59,65 @@ $(function(){
 
     //字符限制
     limit();
-    function limit(){
+
+    function limit() {
         var reg = /[a-zA-Z0-9]+/;
-        var maxLength = [8,6,6,12,12,24,10];
-        $('.text').each(function(index){
-            this.oninput = function(){
+        var maxLength = [8, 6, 6, 12, 12, 24, 10];
+        $('.text').each(function(index) {
+            this.oninput = function() {
                 var len = 0;
                 var cn = 0;
-                for(var i = 0; i < this.value.length; i++){
-                    if(reg.test(this.value[i])){
+                for(var i = 0; i < this.value.length; i++) {
+                    if(reg.test(this.value[i])) {
                         len++;
-                    }else{
+                    } else {
                         len += 2;
-                        if(len-2 < maxLength[index]){
+                        if(len - 2 < maxLength[index]) {
                             cn++;
                         }
                     }
                 }
-                if(len > maxLength[index]){
-                    var val = this.value.substring(0,maxLength[index]-cn);
+                if(len > maxLength[index]) {
+                    var val = this.value.substring(0, maxLength[index] - cn);
                     this.value = val;
                 }
             }
         });
     }
 
-
     //跳转生成海报
-    $('.footerBtnRight').click(function() {
-        var reg = /generate/gi;
-        if(!reg.test(this.src)){
 
-            $(".footerBtn .footerBtnRight").attr("for","submitBtm");
+    $('.footerBtnRight').click(function() {
+        var reg = /generate/g;
+        var src = $(this).attr('src');
+        if(!reg.test(src)){
+            $(".footerBtnRightLabel").attr("for", "submitBtm");
         }
     })
 
     //加载页显示
-    setTimeout(function(){
+    setTimeout(function() {
         $(".loading").hide();
-    },3500);
+    }, 3500);
 
     // 相框隐藏
-    setTimeout(function(){
+    setTimeout(function() {
         $(".frame").hide();
         $(".copy").show();
         $(".link").show();
         $(".mask").show().fadeOut(1000);
-    },4800);
+    }, 4800);
 
+    //点击缩放,手隐藏
 
+//	console.log($('.page4 .bg img'));
+    var handHidden = document.getElementById('handHidden');
 
+    handHidden.addEventListener('touchstart',function(){
 
-
-
-
+        $(this).hide();
+    })
 
 
 
 })
-
-
