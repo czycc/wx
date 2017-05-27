@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="page page1 pageBegin ">
-        <img src="{{ asset('converse/img/loading/loading2.gif') }}">
+
     </div>
     <div class="page page2 hidden" id="page2">
         <div class="top"></div>
