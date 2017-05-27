@@ -41,7 +41,7 @@
                         <input id="gocamera" style="display: none">
 
                     </label>
-                    <a href="rule.html" class="activity">
+                    <a href="{{ url('kw/rule') }}" class="activity">
                         <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
                     <div class="side">
