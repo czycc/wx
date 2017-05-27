@@ -78,5 +78,54 @@
 @endsection
 
 @section('javascript')
+    <script>
+        var pc = new PhotoClip('#clipArea', {
+            outputSize: 140,
+            //adaptive: ['60%', '80%'],
+            file: '#gocamera',
+            view: '#view', //显示截取后图像的容器的选择器或者DOM对象。
+            ok: '#goBtm', //确认截图按钮的选择器或者DOM对象。
+            //img: 'img/mm.jpg',
+            loadStart: function() {
+                //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
+                console.log('开始读取照片');
+            },
+            //加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
+            loadComplete: function() {
 
+                $('.page4').show().siblings().hide();
+
+                $('.page4 .logo').addClass('logoHand');
+
+                $('.page4 .headText').addClass('logoText');
+
+                console.log('照片读取完成');
+            },
+            //
+            done: function(dataURL) {
+                console.log(dataURL);
+
+                $('.face').show().siblings().hide();
+
+                $('.popup').hide();
+
+                $('.popup2').show();
+
+                $('.page3 .popup2 .inputText').addClass('ani');
+
+//				$('.popup2 .inputText').animate({'width','26%'},2000);
+            },
+            fail: function(msg) {
+                alert(msg);
+            }
+        });
+
+        $('.popup2').click(function() {
+
+            $(this).hide();
+
+            $('.text1').focus();
+
+        })
+    </script>
 @endsection
