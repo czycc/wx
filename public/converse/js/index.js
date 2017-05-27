@@ -62,8 +62,8 @@ $(function() {
     //吐槽模式
     function limit() {
         var reg = /[a-zA-Z0-9]+/;
-        var maxLength = [8, 6, 6, 12, 12, 24, 10];
-        $('.text').each(function(index) {
+        var maxLength1 = [8, 6, 6, 12, 12, 24, 10];
+        $('.personInfo .text').each(function(index) {
             this.oninput = function() {
                 var len = 0;
                 var cn = 0;
@@ -72,13 +72,36 @@ $(function() {
                         len++;
                     } else {
                         len += 2;
-                        if(len - 2 < maxLength[index]) {
+                        if(len - 2 < maxLength1[index]) {
                             cn++;
                         }
                     }
                 }
-                if(len > maxLength[index]) {
-                    var val = this.value.substring(0, maxLength[index] - cn);
+                if(len > maxLength1[index]) {
+                    var val = this.value.substring(0, maxLength1[index] - cn);
+                    this.value = val;
+                }
+            }
+        });
+        
+        //高冷模式
+        var maxLength2 = [8, 6, 6];
+        $('.personInfo2 .text').each(function(index) {
+            this.oninput = function() {
+                var len = 0;
+                var cn = 0;
+                for(var i = 0; i < this.value.length; i++) {
+                    if(reg.test(this.value[i])) {
+                        len++;
+                    } else {
+                        len += 2;
+                        if(len - 2 < maxLength2[index]) {
+                            cn++;
+                        }
+                    }
+                }
+                if(len > maxLength2[index]) {
+                    var val = this.value.substring(0, maxLength2[index] - cn);
                     this.value = val;
                 }
             }
