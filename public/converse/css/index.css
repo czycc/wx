@@ -3,13 +3,13 @@
 html{
 	width: 100%;
 	height: 100%;
-	font-family: 'FZYTK.TTF';
-
+	font-family: 'FZYTK.TTF'; 
+	
 }
-@font-face {
-	font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/
-	src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/
-}
+@font-face { 
+  font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/ 
+  src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/ 
+} 
 body{
 	width: 100%;
 	height: 100%;
@@ -73,7 +73,7 @@ img{
 	color: white;
 
 	font-size: 4.5vw;
-	font-family: 'FZYTK.TTF';
+	font-family: 'FZYTK.TTF'; 
 }
 
 /*第二页*/
@@ -237,7 +237,7 @@ img{
 .personInfo2 input{
 	border:none;
 	outline: none;
-	background-color:#183d8e;
+	background-color:#183d8e; 
 	border-bottom:1px solid white;
 	width: 20%;
 	color: white;
@@ -259,7 +259,7 @@ img{
 	left: 8%;
 }
 .page33 .personInfo3 .lastText{
-
+	
 	top: 97%;
 	position: absolute;
 }
@@ -318,6 +318,17 @@ img{
 	top: 31%;
 	animation:activity .5s linear;
 }
+.page3 .popup .side{
+	width: 30%;
+	position: absolute;
+	left: 52%;
+	top: 31%;
+	display: none;
+	
+}
+.sideAni{
+	animation:activity .5s linear;
+}
 @keyframes activity{
 	from{
 		width: 0%;
@@ -370,14 +381,14 @@ img{
 	height: 100%;
 	z-index: 10;
 	pointer-events: none;
-
+	
 }
 .page4 .bg img{
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
 
-
+	
 }
 .page4 .cBtm{
 	position: absolute;
@@ -436,7 +447,7 @@ img{
 	margin-top: 23%;
 	/*z-index: 1000;*/
 
-
+	
 
 
 }
@@ -444,7 +455,7 @@ img{
 /*page33页*/
 .page33 span{
 	display: inline-block;
-
+	
 }
 .page33 p{
 	position: relative;
@@ -469,7 +480,7 @@ img{
 	/*position: absolute;*/
 
 
-
+	
 }
 .spanText1{
 	background-image: url(../img/space/space4.png);
@@ -741,5 +752,5 @@ img{
 	right: 0;
 	margin: auto;
 	background-color: rgba(0,0,0,0.4);
-
+	
 }

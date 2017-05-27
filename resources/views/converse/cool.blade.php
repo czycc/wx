@@ -37,12 +37,15 @@
                     <label class="modal modal1">
                         <img src="{{asset('converse/img/photoword/head.png')}}">
                         <!--<input type="file" accept="image/*" capture="camera"style="display: none">-->
-                        <input type="file" id="gocamera" style="display: none">
+                        <input id="gocamera" style="display: none">
 
                     </label>
                     <a href="rule.html" class="activity">
                         <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
+                    <div class="side">
+						<img src="img/photoword/side.png"/>
+					</div>
                 </div>
                 <div class="popup2 hidden">
                     <div class=" modal modal2 ">
@@ -136,5 +139,24 @@
 		
 		        $(this).hide();
 		 })
+		 
+		$('.page3 .popup').click(function(){
+			
+			$('.page3 .popup .activity').hide();
+			
+			$('.page3 .popup .side').show();
+			
+			$('.page3 .popup .side').addClass('sideAni');
+			
+			setTimeout(function(){
+				
+				$('#gocamera').attr('type','file');
+				
+			},1000);
+			
+			
+			
+			
+		})
     </script>
 @endsection

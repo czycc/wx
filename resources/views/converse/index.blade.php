@@ -19,12 +19,13 @@
 @endsection
 
 @section('javascript')
-	<script>
+	<script type="application/ecmascript">
 		var page2 = document.getElementById('page2');
 		
 			page2.addEventListener('touchmove',function(e){
 				
 				e.preventDefault();
+				
 			})
 	</script>
 @endsection

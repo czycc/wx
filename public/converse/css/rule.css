@@ -1,79 +1,79 @@
-@font-face {
-    font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/
-    src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/
-}
+@font-face { 
+	font-family: 'FZYTK.TTF'; /*这里是说明调用来的字体名字*/ 
+	src: url('../face/FZYTK.TTF'); /*这里是字体文件路径*/ 
+} 
 html{
-    font-family: 'FZYTK.TTF';
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-size: 4vw;
-    list-style: none;
+	font-family: 'FZYTK.TTF';
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 4vw;
+	list-style: none;
 }
 .rule1 ul,ol{
-    list-style: none;
-
+	list-style: none;
+	
 
 }
 .rule1 ul{
-    margin-top: 20px;
+	margin-top: 20px;
 }
 .rule1 ul span{
-    width: 5%;
-    /*position: absolute;*/
-    float: left;
-    top: 0%;
-
+	width: 5%;
+	/*position: absolute;*/
+	float: left;
+	top: 0%;
+	
 }
 .rule1 .underline{
-    text-decoration: underline;
+	text-decoration: underline;
 }
 .rule1 .bold{
-    font-weight: bold;
+	font-weight: bold;
 }
 .rule1 ul li{
-    position: relative;
-    overflow: hidden;
-    /*height: 30px;*/
+	position: relative;
+	overflow: hidden;
+	/*height: 30px;*/
 }
 .rule1 ul li:nth-child(1){
-    margin-bottom: 12px;
+	margin-bottom: 12px;
 }
 .rule1 ul p{
-    /*display: inline-block;*/
-    width: 94%;
-    float: right;
-    /*position: absolute;*/
-    right: 0%;
+	/*display: inline-block;*/
+	width: 94%;
+	float: right;
+	/*position: absolute;*/
+	right: 0%;
 }
 .rule{
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background-image: url(../img/rule.png);
-    color: #183d8e;
-    padding: 3vw 6vw;
-    /*-webkit-background-size: 100% 100%;*/
-    /*background-size: 100% 100%;*/
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-image: url(../img/rule.png);
+	color: #183d8e;
+	padding: 3vw 6vw;
+	/*-webkit-background-size: 100% 100%;*/
+	/*background-size: 100% 100%;*/
 }
-h3{
-    text-align: center;
-    color: #183d8e;
+ h3{
+	text-align: center;
+	color: #183d8e;
 }
 .rule1 i{
-    background-color: yellow;
+	background-color: yellow;
 }
 .hidden{
-    display: none;
+	display: none;
 }
 .rule2 p{
-    margin-top: 20px;
+	margin-top: 20px;
 }
 .rule2 .so{
-    /*margin-top: 20px;*/
-    font-style: italic ;
+	/*margin-top: 20px;*/
+	 font-style: italic ;
 }
 .bold{
-    font-weight: bold;
+	font-weight: bold;
 }
