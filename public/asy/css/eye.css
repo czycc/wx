@@ -22,11 +22,20 @@ body {
 	top: 0%;
 	bottom: 0%;
 	margin: auto;
+
+
+}
+.oldpage{
 	background: url(../eyeImg/commonBg.jpg) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
-}
 
+}
+.newpage{
+	background: url(../eyeImg/GIF.gif) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
 .hidden {
 	display: none;
 }
@@ -44,20 +53,20 @@ body {
 }
 
 .page1 .top {
-	width: 70%;
-	top: 14%;
+	width: 90%;
+	top: 8%;
 }
 
 .page1 .beginPlay {
 	position: absolute;
 	left: 56%;
 	width: 24%;
-	top: 34%;
+	top: 36%;
 }
 
 .page1 .intruText {
-	width: 74%;
-	top: 56%;
+	width: 80%;
+	top: 58%;
 }
 
 .page .shake {
@@ -86,8 +95,8 @@ body {
 /*通用*/
 
 .page .day {
-	width: 38%;
-	top: 18%;
+	width: 40%;
+	top: 10%;
 }
 
 .page .eye {
@@ -105,16 +114,18 @@ body {
 
 .page .goBtm {
 	position: absolute;
-	left: 58%;
+	left: 64%;
 	width: 26%;
-	top: 38%;
+	top: 56%;
+	display: none;
 }
 
 .page .trowBtm {
 	position: absolute;
 	left: 16%;
 	width: 26%;
-	top: 38%;
+	top: 56%;
+	display: none;
 }
 
 /*第五页*/
@@ -196,107 +207,5 @@ body {
 	animation: hand_move infinite 0.6s;
 }
 
-/*细菌*/
-.grem{
-	position: absolute;
-	width: 6%;
-}
-.page3 .redgrem{
-	top: 32%;
-	left: 34%;
-	animation: wmove 1.5s linear infinite alternate;
-}
-.page3 .blackgrem{
-	top: 28%;
-	left: 45%;
-	width: 8%;
-	animation: wmove2 1.5s linear infinite alternate;
-}
-.page3 .bluegrem{
-	top: 30%;
-	left: 60%;
-	width: 7%;
-	animation: wmove 1.5s linear infinite alternate;
-}
-@keyframes wmove{
-	0%{
-		transform: translate3d(0,0,0);
-	}
-	
-	100%{
-		transform: translate3d(0,5px,0);
-	}
-	
-}
-@keyframes wmove2{
-	0%{
-		transform: translate3d(0,0,0);
-	}
-	
-	100%{
-		transform: translate3d(0,-10px,0);
-	}
-}
-@keyframes wmove3{
-	0%{
-		transform: translate3d(0,0,0);
-	}
-	
-	100%{
-		transform: translate3d(0,10px,0);
-	}
-}
-@keyframes wmove4{
-	0%{
-		transform: translate3d(0,0,0);
-	}
-	
-	100%{
-		transform: translate3d(0,-15px,0);
-	}
-}
-/*page4细菌*/
 
-.gremAll .redgrem{
-	left: 46%;
-	top: 37%;
-	width: 5%;
-	animation: wmove2 1.5s linear infinite alternate;
-}
-.gremAll .bluegrem{
-	top: 33%;
-	left: 60%;
-	width: 6%;
-	animation: wmove 1.5s linear infinite alternate;
-}
-.gremAll .blackgrem{
-	top: 28%;
-	left: 40%;
-	width: 6%;
-	animation: wmove 1.5s linear infinite alternate;
 
-}
-.gremAll .greengrem{
-	top: 28%;
-	left: 52%;
-	width: 8%;
-	animation: wmove4 1.5s linear infinite alternate;
-}
-.gremAll .orangegrem{
-	top: 30%;
-	left: 32%;
-	width: 6%;
-	animation: wmove3 1.5s linear infinite alternate;
-}
-.gremAll .greensmall{
-	top: 26%;
-	left: 46%;
-	width: 6%;
-	animation: wmove3 1.5s linear infinite alternate;
-}
-.gremAll .orangesmall{
-	top: 26%;
-	left: 30%;
-	width: 6%;
-	animation: wmove2 1.5s linear infinite alternate;
-}
