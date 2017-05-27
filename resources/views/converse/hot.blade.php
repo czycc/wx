@@ -51,7 +51,7 @@
                         <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
                     <div class="side">
-						<img src="img/photoword/side.png"/>
+						<img src="{{asset('converse/img/photoword/side.png')}}"/>
 					</div>
                 </div>
                 <div class="popup2 hidden">
