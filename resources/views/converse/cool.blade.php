@@ -8,7 +8,7 @@
     <div class=" page3 face " id="page3">
         <div class="container">
             <div class="bg">
-                <img src="img/photoword/10.png" />
+                <img src="{{ asset('converse/img/photoword/10.png') }}"/>
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
@@ -25,31 +25,32 @@
                         <p>不懂？</p>
                         <p>那就<input class="text3 text" type="text">吧。</p>
                     </div>
-                    <input  type="submit" id="submitBtm" />
+                    <input type="submit" id="submitBtm"/>
 
                 </form>
                 <div class="footerBtn">
-                    <img src="img/photoword/reset.png" class="footerBtnLeft">
-                    <img src="img/camera/logo.png" class="pos">
-                    <label class="footerBtnRight" for="submitBtm"><img src="img/photoword/generate.png" class="footerBtnRight"></label>
+                    <img src="{{asset('converse/img/photoword/reset.png')}}" class="footerBtnLeft">
+                    <img src="{{asset('converse/img/camera/logo.png')}}" class="pos">
+                    <label class="footerBtnRight" for="submitBtm"><img
+                                src="{{asset('converse/img/photoword/generate.png')}}" class="footerBtnRight"></label>
                 </div>
                 <div class="popup ">
                     <label class="modal modal1">
-                        <img src="img/photoword/head.png">
+                        <img src="{{asset('converse/img/photoword/head.png')}}">
                         <!--<input type="file" accept="image/*" capture="camera"style="display: none">-->
                         <input type="file" id="gocamera" style="display: none">
 
                     </label>
                     <a href="rule.html" class="activity">
-                        <img src="img/photoword/activity.png"/>
+                        <img src="{{asset('converse/img/photoword/activity.png')}}"/>
                     </a>
                 </div>
                 <div class="popup2 hidden">
                     <div class=" modal modal2 ">
-                        <img src="img/photoword/he.png">
+                        <img src="{{asset('converse/img/photoword/he.png')}}">
                     </div>
                     <div class="inputText">
-                        <img src="img/photoword/text.png"/>
+                        <img src="{{asset('converse/img/photoword/text.png')}}"/>
                     </div>
                 </div>
 
@@ -59,20 +60,20 @@
 
     <div class="page page4 hidden">
         <div class="bg pos">
-            <img src="img/camera/Brightness-Contrast-1.png" />
+            <img src="{{asset('converse/img/camera/Brightness-Contrast-1.png')}}"/>
         </div>
         <div class="picture" id="clipArea"></div>
         <div class="backBtm cBtm">
-            <img src="img/camera/back.png" />
+            <img src="{{asset('converse/img/camera/back.png')}}"/>
         </div>
         <div class="goBtm cBtm" id="goBtm">
-            <img src="img/camera/ok.png" />
+            <img src=""/>
         </div>
         <div class="logo">
-            <img src="img/camera/ti.png" />
+            <img src="{{asset('converse/img/camera/ti.png')}}"/>
         </div>
         <div class="headText">
-            <img src="img/camera/tihand.png"/>
+            <img src="{{asset('converse/img/camera/tihand.png')}}"/>
         </div>
     </div>
 @endsection

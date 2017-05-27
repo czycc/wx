@@ -8,13 +8,14 @@
     <div class=" page3 face " id="page3">
         <div class="container">
             <div class="bg">
-                <img src="img/photoword/10.png" />
+                <img src="{{ asset('converse/img/photoword/10.png') }}"/>
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
                 <form class="personInfo pos ">
                     <p>
-                        我是 <input class="text1 text" class="text2" type="text" name="" maxlength="8">, 一个 <input class="text2 text" type="text" name=""> 的 <input class="text3 text" type="text" name="">。
+                        我是 <input class="text1 text" class="text2" type="text" name="" maxlength="8">, 一个 <input
+                                class="text2 text" type="text" name=""> 的 <input class="text3 text" type="text" name="">。
                     </p>
                     <p>
                         不是谁都懂我的 <input class="text4 text" class="noBelieveText" type="text" name="">。
@@ -29,32 +30,33 @@
                         <br/> 不懂？
                         <br/> 那就 <input class="text7 text" type="text" name="">吧。
                     </p>
-                    <input  type="submit" id="submitBtm" />
+                    <input type="submit" id="submitBtm"/>
                 </form>
 
                 <div class="footerBtn">
-                    <img src="img/photoword/reset.png" class="footerBtnLeft">
-                    <img src="img/camera/logo.png" class="pos">
+                    <img src="{{ asset('converse/img/photoword/reset.png') }}" class="footerBtnLeft">
+                    <img src="{{ asset('converse/img/camera/logo.png') }}" class="pos">
                     <!--<a><img src="img/photoword/generate.png" class="footerBtnRight"></a>-->
-                    <label class="footerBtnRight" ><img src="img/photoword/generate.png" class="footerBtnRight"></label>
+                    <label class="footerBtnRight"><img src="{{ asset('converse/img/photoword/generate.png') }}"
+                                                       class="footerBtnRight"></label>
                 </div>
                 <div class="popup ">
                     <label class="modal modal1">
-                        <img src="img/photoword/head.png">
+                        <img src="{{ asset('converse/img/photoword/head.png') }}">
                         <!--<input type="file" accept="image/*" capture="camera"style="display: none">-->
                         <input type="file" id="gocamera" style="display: none">
 
                     </label>
                     <a href="rule.html" class="activity">
-                        <img src="img/photoword/activity.png"/>
+                        <img src="{{ asset('img/photoword/activity.png') }}"/>
                     </a>
                 </div>
                 <div class="popup2 hidden">
                     <div class=" modal modal2 ">
-                        <img src="img/photoword/he.png">
+                        <img src="{{ asset('converse/img/photoword/he.png') }}">
                     </div>
                     <div class="inputText">
-                        <img src="img/photoword/text.png"/>
+                        <img src="{{ asset('converse/img/photoword/text.png') }}"/>
                     </div>
                 </div>
 
@@ -64,20 +66,20 @@
 
     <div class="page page4 hidden">
         <div class="bg pos">
-            <img src="img/camera/Brightness-Contrast-1.png" />
+            <img src="{{ asset('converse/img/camera/Brightness-Contrast-1.png') }}"/>
         </div>
         <div class="picture" id="clipArea"></div>
         <div class="backBtm cBtm">
-            <img src="img/camera/back.png" />
+            <img src="{{ asset('converse/img/camera/back.png') }}}"/>
         </div>
         <div class="goBtm cBtm" id="goBtm">
-            <img src="img/camera/ok.png" />
+            <img src="{{ asset('converse/img/camera/ok.png') }}"/>
         </div>
         <div class="logo">
-            <img src="img/camera/ti.png" />
+            <img src="{{ asset('converse/img/camera/ti.png') }}"/>
         </div>
         <div class="headText">
-            <img src="img/camera/tihand.png"/>
+            <img src="{{ asset('converse/img/camera/tihand.png') }}"/>
         </div>
     </div>
 @endsection
@@ -91,12 +93,12 @@
             view: '#view', //显示截取后图像的容器的选择器或者DOM对象。
             ok: '#goBtm', //确认截图按钮的选择器或者DOM对象。
             //img: 'img/mm.jpg',
-            loadStart: function() {
+            loadStart: function () {
                 //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
                 console.log('开始读取照片');
             },
             //加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
-            loadComplete: function() {
+            loadComplete: function () {
 
                 $('.page4').show().siblings().hide();
 
@@ -107,7 +109,7 @@
                 console.log('照片读取完成');
             },
             //
-            done: function(dataURL) {
+            done: function (dataURL) {
                 console.log(dataURL);
 
                 $('.face').show().siblings().hide();
@@ -120,12 +122,12 @@
 
 //				$('.popup2 .inputText').animate({'width','26%'},2000);
             },
-            fail: function(msg) {
+            fail: function (msg) {
                 alert(msg);
             }
         });
 
-        $('.popup2').click(function() {
+        $('.popup2').click(function () {
 
             $(this).hide();
 
