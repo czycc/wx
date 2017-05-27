@@ -26,7 +26,7 @@
                         <p>不懂？</p>
                         <p>那就<input class="text3 text" type="text" name="text3">吧。</p>
                     </div>
-                    <input type="hidden" name="" id="postImg">
+                    <input type="hidden" name="avatar" id="postImg">
                     <input type="submit" id="submitBtm" />
                 </form>
                 <div class="footerBtn">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="popup ">
                     <label class="modal modal1">
-                        <img src="{{asset('converse/')}}img/photoword/head.png">
+                        <img src="{{asset('converse/img/photoword/head.png')}}">
                         <!--<input type="file" accept="image/*" capture="camera"style="display: none">-->
                         <input type="file" id="gocamera" style="display: none">
 
