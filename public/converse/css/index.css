@@ -227,7 +227,7 @@ img{
 }
 .personInfo2 .bottom,.personInfo4 .bottom{
 	position: absolute;
-	top: 42%;
+	top: 44%;
 	/*bottom: 20%;*/
 	left: 30%;
 }
@@ -445,7 +445,7 @@ img{
 .page4 .picture{
 
 	height: 50%;
-	margin-top: 23%;
+	margin-top: 21%;
 	/*z-index: 1000;*/
 
 	
@@ -604,7 +604,15 @@ img{
 .personInfo .text7{
 	width: 34%;
 }
-
+.page3 .personInfo2 .text1{
+	width: 36%;
+}
+.page3 .personInfo2 .text2{
+	width: 36%;
+}
+.page3 .personInfo2 .text3{
+	width: 58%;
+}
 /*....提交表单...*/
 
 #submitBtm{
