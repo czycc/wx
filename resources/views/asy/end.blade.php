@@ -1,4 +1,4 @@
-@extends('layouts.asy)
+@extends('layouts.asy')
 @section('content')
     <!--第六页-->
     <div class="page page6 oldpage">
