@@ -121,6 +121,7 @@ $(function() {
     //加载页显示
     setTimeout(function() {
         $(".loading").hide();
+        $('.poster').show();
     }, 3500);
 
     // 相框隐藏

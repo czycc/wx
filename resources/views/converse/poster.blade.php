@@ -8,7 +8,7 @@
     <div class="page loading">
         <img src="{{asset('converse/img/loading/loading.gif')}}"/>
     </div>
-    <div class="page poster">
+    <div class="page poster hidden">
         <div class="center pos">
             <img src="{!! $img_url !!}"/>
             <div class="frame"></div>

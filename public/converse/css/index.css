@@ -1,3 +1,4 @@
+	background-color: #f00;
 /*通用样式*/
 
 html{
@@ -362,10 +363,10 @@ img{
 
 .page3 .pic,.page33 .pic{
 	position: absolute;
-	left: 43%;
-	top: 9%;
-	width: 13%;
-	height: 35%;
+	left: 44%;
+	top: 8%;
+	width: 12%;
+	height: 36%;
 	z-index: -1;
 	/*background: red;*/
 }
@@ -684,7 +685,7 @@ img{
 	width: 80%;
 	height:  78%;
 	top: 10%;
-	background-color: #f00;
+
 }
 .poster .frame{
 	position: absolute;
