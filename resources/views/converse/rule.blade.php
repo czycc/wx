@@ -10,8 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
     <title>converse</title>
     <link rel="stylesheet" href="{{asset('converse/css/common.css')}}"/>
-    <link rel="stylesheet" href="{{asset('converse/css/index.css')}}"/>
-
+    <link rel="stylesheet" href="{{asset('converse/css/rule.css')}}"/>
 </head>
 <body>
 <div class="rule rule1">
