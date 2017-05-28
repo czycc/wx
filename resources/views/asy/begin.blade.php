@@ -28,9 +28,9 @@
     <script type="application/javascript">
         var socket = io('http://{{ Request::getHost() }}:3000');
         //开始游戏
-        socket.emit('change', 1);
+        socket.emit('change', 'tostart');
         $('.page1 .beginPlay img').click(function () {
-            socket.emit('change', 2);
+            socket.emit('change', 'to1');
             window.location.href = "{{ url('asy/one') }}";
         });
     </script>
