@@ -19,6 +19,7 @@
 </body>
 
 <script src="{{ asset('asy/js/jquery-1.11.3..min.js') }}" type="text/javascript" charset="utf-8"></script>
+<script src="//{{ Request::getHost() }}:3000/socket.io/socket.io.js"></script>
 @yield('javascript')
 
 </html>
