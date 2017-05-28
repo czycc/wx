@@ -64,7 +64,7 @@ $(function() {
         var reg = /[a-zA-Z0-9]+/;
         var maxLength1 = [6, 4, 6, 8, 8, 18, 8];
         $('.personInfo .text').each(function(index) {
-            this.oninput = function() {
+            this.onblur = function() {
                 var len = 0;
                 var cn = 0;
                 for(var i = 0; i < this.value.length; i++) {
@@ -87,7 +87,7 @@ $(function() {
         //高冷模式
         var maxLength2 = [10, 10, 16];
         $('.personInfo2 .text').each(function(index) {
-            this.oninput = function() {
+            this.onblur = function() {
                 var len = 0;
                 var cn = 0;
                 for(var i = 0; i < this.value.length; i++) {

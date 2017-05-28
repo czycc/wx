@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>活动须知</title>
+    <title>有人说了一些不是谁都懂的话,来看看你懂吗?</title>
     <meta name="description" content="">
     <meta name="viewport"
           content="width=device-width,initial-scale=1.0, minimum-scale=1, maximum-scale=1,,user-scalable=no">
