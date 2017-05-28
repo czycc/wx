@@ -16,8 +16,28 @@ Route::get('/test', function () {
 });
 
 //强生安视优项目
+Route::group(['prefix' => 'asy', 'middleware' => 'web'], function () {
+    Route::get('/mobile', function () {
+        return view('asy.begin');
+    });
+    Route::get('/one', function () {
+        return view('asy.one');
+    });
+    Route::get('/seven', function () {
+        return view('asy.seven');
+    });
+    Route::get('/fourteen', function () {
+        return view('asy.fourteen');
+    });
+    Route::get('/end', function () {
+        return view('asy.end');
+    });
+    Route::get('/n', function () {
+        return view('asy.n');
+    });
+});
 Route::get('/asy/mobile', function () {
-    return view('asy.wx');
+    return view('asy.begin');
 });
 Route::get('/asy/pc', function () {
     return view('asy.pc');
