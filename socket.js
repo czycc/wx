@@ -11,6 +11,7 @@ socket.on('connection', function (socket) {
         socket.broadcast.emit('g', {gt: +val});
     });
     socket.on('num', function (val) {
+        console.log('msg:' + val);
         socket.broadcast.emit('s', {shark: +val});
     })
 });
