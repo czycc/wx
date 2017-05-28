@@ -37,7 +37,7 @@ class ConverseController extends Controller
         $length3 = $this->length($request->input('text3'));
         //用户头像 base64编码
         $avatar = Image::make($request->input('avatar'))->resize(64, 90);
-        $mask = Image::make(public_path('converse/img/mask2.png'));
+        $mask = Image::make(public_path('converse/img/mask1.png'));
         $avatar = $avatar->mask($mask);
         //背景图片
         $img = Image::make(public_path('converse/img/cool.png'));
