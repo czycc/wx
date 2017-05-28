@@ -12,7 +12,7 @@ socket.on('connection', function (socket) {
     });
     socket.on('num', function (val) {
         console.log('msg:' + val);
-        socket.broadcast.emit('s', {shark: val});
+        socket.broadcast.emit('s', {shake: val});
     })
 });
 
