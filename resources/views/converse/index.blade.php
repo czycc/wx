@@ -5,15 +5,19 @@
 @endsection
 
 @section('content')
-    <div class="page page1 pageBegin ">
-
-    </div>
+ 	<div class="page page1 pageBegin">
+		<img src="{{asset('converse/img/loading/loading2-fix.gif')}}">
+	</div>
     <div class="page page2 hidden" id="page2">
-        <div class="top"></div>
-        <div class="bottom">
-            <a href="{{ url('kw/cool') }}" class="lBtm btm"><img src="{{ asset('converse/img/mode/lBtm.png') }}"/></a>
-            <a href="{{ url('kw/hot') }}" class="sayBtm btm"><img src="{{ asset('converse/img/mode/sayBtm.png') }}"/></a>
-        </div>
+        <img src="{{ asset('converse/img/mode/page2.gif') }}">
+        
+        <a href="{{ url('kw/cool') }}" class="lBtm btm">
+        	<img src="{{ asset('converse/img/mode/lBtm.png') }}"/>
+        </a>
+        <a href="{{ url('kw/hot') }}" class="sayBtm btm">
+        	<img src="{{ asset('converse/img/mode/sayBtm.png') }}"/>
+        </a>
+        
 
     </div>
 @endsection
