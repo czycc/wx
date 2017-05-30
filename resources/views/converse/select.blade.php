@@ -18,5 +18,15 @@
 @endsection
 
 @section('javascript')
-
+<script type="application/javascript">
+    $(function () {
+        //第二页按钮显示
+        setTimeout(function() {
+            $(".page2 .btm").fadeIn(1000);
+            // setTimeout(function() {
+            // 	$('.page2').animate({ 'top': '-200%' }, 3000);
+            // }, 1500)
+        },8000);
+    })
+</script>
 @endsection

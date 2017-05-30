@@ -1,20 +1,6 @@
 //第一页loading
 $(function() {
 
-	// 第一页跳转
-	setTimeout(function() {
-		window.location.href = 'http://wx.touchworld-sh.com/kw/select';
-		// setTimeout(function() {
-		// 	$('.page2').animate({ 'top': '-200%' }, 3000);
-		// }, 1500)
-	}, 2500);
-	//第二页按钮显示
-	setTimeout(function() {
-		$(".page2 .btm").fadeIn(1000);
-		// setTimeout(function() {
-		// 	$('.page2').animate({ 'top': '-200%' }, 3000);
-		// }, 1500)
-	},8000);
 	//判断设备
 	var platfrom = navigator.userAgent;
 	var regplatfrom = /iPhone/gi;
