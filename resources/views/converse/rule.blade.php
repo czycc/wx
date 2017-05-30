@@ -183,7 +183,8 @@
 <script>
     $('.rule1 .link').click(function () {
 
-        $('.rule2').show().siblings().hide();
+        $('.rule2').show();
+        $('.rule1').hide();
     })
 </script>
 </html>
