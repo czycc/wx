@@ -8,9 +8,22 @@ use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Http\File;
+use EasyWeChat\Foundation\Application;
+
 
 class ConverseController extends Controller
 {
+    public $js;
+
+    /**
+     * ConverseController constructor.
+     * @param $js
+     */
+    public function __construct(Application $js)
+    {
+        $this->js = $js->js;
+    }
+
     public function image(Request $request)
     {
         $image = $request->image;
@@ -169,7 +182,7 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
-        return view('converse.poster', compact('img_url'));
+        return view('converse.poster', compact('img_url', 'js'));
     }
 
     protected function length($text)
