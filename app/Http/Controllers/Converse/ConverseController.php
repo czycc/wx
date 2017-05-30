@@ -19,9 +19,9 @@ class ConverseController extends Controller
      * ConverseController constructor.
      * @param $js
      */
-    public function __construct(Application $js)
+    public function __construct(Application $app)
     {
-        $this->js = $js->js;
+        $this->js = $app->js;
     }
 
     public function image(Request $request)
