@@ -17,7 +17,7 @@ class ConverseController extends Controller
 
     /**
      * ConverseController constructor.
-     * @param $js
+     * @param $app
      */
     public function __construct(Application $app)
     {
@@ -90,6 +90,7 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
+        $js = $this->js;
         return view('converse.poster', compact('img_url', 'js'));
     }
 
@@ -182,6 +183,7 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
+        $js = $this->js;
         return view('converse.poster', compact('img_url', 'js'));
     }
 
