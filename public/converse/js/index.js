@@ -46,9 +46,9 @@ $(function() {
 	//全输入验证
 	$(".text").blur(function() {
 		if(allInput($('.text'))) {
-			$(".footerBtnRight").attr("src", "../converse/img/photoword/bluefooterBtnRight.png");
+			$(".footerBtnRight").attr("src", "img/photoword/bluefooterBtnRight.png");
 		} else {
-			$(".footerBtnRight").attr("src", "../converse/img/photoword/generate.png");
+			$(".footerBtnRight").attr("src", "img/photoword/generate.png");
 		};
 	});
 
