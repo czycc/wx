@@ -14,8 +14,6 @@
         <a href="{{ url('kw/hot') }}" class="sayBtm btm">
         	<img src="{{ asset('converse/img/mode/sayBtm.png') }}"/>
         </a>
-        
-
     </div>
 @endsection
 

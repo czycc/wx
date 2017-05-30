@@ -67,6 +67,10 @@ Route::group(['prefix' => 'kw', 'middleware' => ['web', 'wechat.oauth:snsapi_bas
         $js = WeChat::js();
         return view('converse.index', compact('js'));
     });
+    Route::get('/select', function () {
+        $js = WeChat::js();
+        return view('converse.select', compact('js'));
+    });
     Route::get('/cool', function () {
         $js = WeChat::js();
         return view('converse.cool', compact('js'));
