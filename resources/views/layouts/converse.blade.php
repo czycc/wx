@@ -18,13 +18,7 @@
 @yield('content')
 
 </body>
-<script src="{{asset('converse/js/jquery-1.11.3.min.js')}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{asset('converse/js/lib/iscroll-zoom.js')}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{asset('converse/js/lib/hammer.min.js')}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{asset('converse/js/lib/lrz.all.bundle.js')}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{asset('converse/js/lib/PhotoClip.js')}}" type="text/javascript" charset="utf-8"></script>
-<script src="{{asset('converse/js/index.js')}}" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="{{asset('converse/js/html2canvas.js')}}"></script>
+
 
 @yield('javascript')
 </html>
