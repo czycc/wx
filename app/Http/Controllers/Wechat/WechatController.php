@@ -33,10 +33,8 @@ class WechatController extends Controller
                                 $bool=Redis::set('code1', $code,'ex','60','nx');
                                 if ($bool=='OK'){
                                     return '九牧厨柜邀您体验智慧厨房！
-请在游戏界面输入代码“'.$code.'”，开始游戏。
-
-分享游戏视频，精美礼品等你拿：
-拍摄游戏小视频 -> 分享至朋友圈 -> 前台领取礼品';
+请在游戏界面输入代码“<b color="red">'.$code.'</b>”，开始游戏。
+';
                                 }else{
                                     $bool=Redis::set('code2', $code,'ex','60','nx');
                                     if ($bool=='OK'){
