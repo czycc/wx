@@ -61,6 +61,13 @@ img{
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 }
+.pageBegin img{
+	position: absolute;
+	width: 92%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	}
 
 
 .page1 .shone{

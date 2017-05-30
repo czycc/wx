@@ -10,6 +10,16 @@ html{
 	font-size: 4vw;
 	list-style: none;
 }
+.cancel{
+	position: fixed;
+	width: 8%;
+	right: 1%;
+	top: 1%;
+
+}
+.cancel img{
+	width: 100%;
+}
 .rule1 ul,ol{
 	list-style: none;
 	

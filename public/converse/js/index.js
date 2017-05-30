@@ -3,8 +3,7 @@ $(function() {
 
 	// 第一页跳转
 	setTimeout(function() {
-		$(".page1").hide();
-		$(".page2").show();
+		window.href = 'select.blade.php';
 		// setTimeout(function() {
 		// 	$('.page2').animate({ 'top': '-200%' }, 3000);
 		// }, 1500)

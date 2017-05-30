@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{{asset('converse/css/rule.css')}}"/>
 </head>
 <body>
+<a class="cancel" href="javascript:history.go(-1)">
+    <img src="{{asset('converse/img/cancel.png')}}" alt="">
+</a>
 <div class="rule rule1">
     <h3>2017匡威#不是谁都懂#H5活动须知</h3>
 
