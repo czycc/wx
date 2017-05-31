@@ -353,11 +353,24 @@ img{
 	margin: auto;
 }
 .page3 .popup .activity{
-	width: 30%;
+	width: 100%;
 	position: absolute;
+	z-index: 10;
+	top: 92%;
+
+
+}
+.page3 .popup .hall{
+	position: absolute;
+	width: 30%;
 	left: 52%;
 	top: 31%;
 	animation:activity .5s linear;
+}
+.page3 .popup .hpic{
+	width: 100%;
+
+
 }
 .page3 .popup .side{
 	width: 30%;

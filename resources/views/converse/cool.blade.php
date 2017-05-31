@@ -44,9 +44,14 @@
                         <input id="gocamera" style="display: none">
 
                     </label>
-                    <a href="{{ url('kw/rule') }}" class="activity">
-                        <img src="{{asset('converse/img/photoword/activity.png')}}"/>
-                    </a>
+						<div class="hall">
+							<div class="hpic">
+								<img src="{{asset('converse/img/hpic.png')}}"/>
+							</div>
+							<a href="rule.html" class="activity">
+								<img src="{{asset('converse/img/hlink.png')}}" />
+							</a>
+						</div>
                     <div class="side">
                         <img src="{{asset('converse/img/photoword/side.png')}}"/>
                     </div>
@@ -148,7 +153,7 @@
 
         $('.page3 .popup').click(function () {
 
-            $('.page3 .popup .activity').hide();
+            $('.page3 .popup .hall').hide();
 
             $('.page3 .popup .side').show();
 
