@@ -76,9 +76,9 @@ class ConverseController extends Controller
                 }
             } else {
                 if ($length3 > 6) {
-                    $img = Image::make(public_path('converse/img/cool/cool_ssl.jpg'));
+                    $img = Image::make(public_path('converse/img/cool/cool_ssl.png'));
                 } else {
-                    $img = Image::make(public_path('converse/img/cool/cool_sss.jpg'));
+                    $img = Image::make(public_path('converse/img/cool/cool_sss.png'));
                 }
             }
         }
