@@ -55,7 +55,7 @@
 							<div class="hpic">
 								<img src="{{asset('converse/img/hpic.png')}}"/>
 							</div>
-							<a href="rule.html" class="activity">
+							<a href="{{ url('kw/rule') }}" class="activity">
 								<img src="{{asset('converse/img/hlink.png')}}" />
 							</a>
 						</div>
