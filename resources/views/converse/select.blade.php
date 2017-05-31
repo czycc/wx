@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="page page2 " id="page2">
-        <img src="{{ asset('converse/img/gif3.gif') }}">
+        <img src="{{ asset('converse/img/gif4.gif') }}">
         
         <a href="{{ url('kw/cool') }}" class="lBtm btm">
         	<img src="{{ asset('converse/img/mode/lBtm.png') }}"/>
