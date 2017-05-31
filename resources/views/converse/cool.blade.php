@@ -12,6 +12,9 @@
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
+            	<div class="cueText">
+					<p>请输入不大于<span>10</span>的中文</p>
+				</div>
                 <form class="personInfo2" action="{{ url('kw/cool/poster') }}" method="post">
                     {{ csrf_field() }}
                     <div class="top">
@@ -133,7 +136,7 @@
             $(this).hide();
 
             $('.text1').focus();
-
+			$('.cueText').show();
         })
 
         var handHidden = document.getElementById('handHidden');
@@ -159,7 +162,38 @@
 
 
         })
+        
+        
+		//显示
 
+		var length = [5, 5, 8]
+
+		$('.personInfo2 .text').each(function(index) {
+
+			this.onfocus = function() {
+
+				$('.cueText').find('span').html(length[index]);
+			}
+		})
+
+		$(".text").blur(function() {
+			
+			if(allInput($('.text'))) {
+				
+				$('.cueText').hide();
+				
+			}
+		});
+
+		function allInput(val) {
+
+			for(var i = 0; i < val.length; i++) {
+				if(val[i].value == "") {
+					return false;
+				}
+			}
+			return true;
+		}
 
     </script>
 @endsection

@@ -12,6 +12,9 @@
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
+            	<div class="cueText">
+					<p>请输入不大于<span></span>的中文</p>
+				</div>
                 <form class="personInfo pos" method="post" action="{{ url('/kw/hot/poster') }}">
                     {{ csrf_field() }}
                     <p>
@@ -143,6 +146,8 @@
             $(this).hide();
 
             $('.text1').focus();
+            
+            $('.cueText').show();
 
         })
 
@@ -169,6 +174,37 @@
 
 
         })
+        
+        //显示字符个数
+
+		var length = [4, 3, 3, 6, 6, 14, 5]
+
+		$('.personInfo .text').each(function(index) {
+
+			this.onfocus = function() {
+
+				$('.cueText').find('span').html(length[index]);
+			}
+		})
+
+		$(".text").blur(function() {
+			
+			if(allInput($('.text'))) {
+				
+				$('.cueText').hide();
+				
+			}
+		});
+
+		function allInput(val) {
+
+			for(var i = 0; i < val.length; i++) {
+				if(val[i].value == "") {
+					return false;
+				}
+			}
+			return true;
+		}
 
 
     </script>

@@ -268,6 +268,23 @@ img{
 
 
 }
+.page3Container .cueText{
+	width: 44%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 54%;
+	background: url(../img/hbg.png) no-repeat center center;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	font-size: 4vw;
+	line-height: 34px;
+	color: #183d8e;
+	display: none;
+	font-weight: bold;
+	text-align: center;
+}
 .personInfo2 .top p{
 	line-height: 6vw;
 }
