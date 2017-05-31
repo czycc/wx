@@ -204,7 +204,7 @@ class ConverseController extends Controller
         //将白底插入到背景图
         $img = $img->insert($img1, '', 196, 658);
         $img = $img->insert($img2, '', 328, 658);
-        $img = $img->insert($img3, '', 420, 658);
+        $img = $img->insert($img3, '', 430, 658);
         $img = $img->insert($img4, '', 312, 690);
         $img = $img->insert($img5, '', 208, 721);
         $img = $img->insert($img6, '', 150, 787);
