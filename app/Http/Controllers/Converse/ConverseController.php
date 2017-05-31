@@ -119,8 +119,8 @@ class ConverseController extends Controller
         $img_url = env('APP_URL') . '/' . $img_path;
 
         $js = $this->js;
-//        return view('converse.poster', compact('img_url', 'js'));
-        return $img->response('png');
+        return view('converse.poster', compact('img_url', 'js'));
+//        return $img->response('png');
     }
 
     public function hot(Request $request)
@@ -202,9 +202,9 @@ class ConverseController extends Controller
             $font->color('#183d8e');
         });
         //将白底插入到背景图
-        $img = $img->insert($img1, '', 196, 658);
-        $img = $img->insert($img2, '', 308, 658);
-        $img = $img->insert($img3, '', 430, 658);
+        $img = $img->insert($img1, '', 196, 656);
+        $img = $img->insert($img2, '', 328, 656);
+        $img = $img->insert($img3, '', 400, 656);
         $img = $img->insert($img4, '', 312, 690);
         $img = $img->insert($img5, '', 208, 721);
         $img = $img->insert($img6, '', 150, 787);
@@ -217,8 +217,8 @@ class ConverseController extends Controller
         $img_url = env('APP_URL') . '/' . $img_path;
 
         $js = $this->js;
-//        return view('converse.poster', compact('img_url', 'js'));
-        return $img->response('png');
+        return view('converse.poster', compact('img_url', 'js'));
+//        return $img->response('png');
 
     }
 
