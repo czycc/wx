@@ -16,9 +16,9 @@
         <div class="copy">
             <img src="{{asset('converse/img/poster/adjectText.png')}}"/>
         </div>
-        <div class="link">
+        <a class="link" href="https://www.converse.com.cn/jack_summer/category.htm?iid=npkvnv051120171400&cid=socwxjpinjackpurcellh5">
             <img src="{{asset('converse/img/poster/link.png')}}"/>
-        </div>
+        </a>
         <div class="mask"></div>
     </div>
 @endsection
