@@ -82,14 +82,14 @@ Route::get('/cool', function () {
     $js = WeChat::js();
     return view('converse.cool', compact('js'));
 });
-Route::post('/cool/poster', 'Converse\ConverseController@cool');
+Route::post('kw/cool/poster', 'Converse\ConverseController@cool');
 
 Route::get('/hot', function () {
     $js = WeChat::js();
     return view('converse.hot', compact('js'));
 });
 
-Route::post('/hot/poster', 'Converse\ConverseController@hot');
+Route::post('kw/hot/poster', 'Converse\ConverseController@hot');
 
 
 //抽奖h5入口
