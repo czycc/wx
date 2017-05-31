@@ -295,7 +295,7 @@ img{
 	width: 100%;
 }
 .personInfo input{
-	width: 12vw;
+
 	background: transparent;
 	border: 0;
 	border-bottom: 1px solid #fff;
@@ -611,21 +611,27 @@ img{
 
 
 .personInfo .text1{
-	width: 22%;
+	width: 16%;
+}
+.personInfo .text2{
+	width: 12%;
+}
+.personInfo .text3{
+	width: 12%;
 }
 
 .personInfo .text4{
-	width: 34%;
+	width: 26%;
 }
 
 .personInfo .text5{
-	width: 34%;
+	width: 26%;
 }
 .personInfo .text6{
 	width: 68%;
 }
 .personInfo .text7{
-	width: 34%;
+	width: 36%;
 }
 .page3 .personInfo2 .text1{
 	width: 36%;
