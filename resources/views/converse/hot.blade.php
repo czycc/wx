@@ -13,7 +13,7 @@
             <div class="pic" id="view"></div>
             <div class="page page3Container">
             	<div class="cueText">
-					<p>请输入不大于<span></span>的中文</p>
+					<p>请输入少于<span>10</span>的中文字</p>
 				</div>
                 <form class="personInfo pos" method="post" action="{{ url('/kw/hot/poster') }}">
                     {{ csrf_field() }}
