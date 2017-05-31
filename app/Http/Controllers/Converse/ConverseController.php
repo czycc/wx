@@ -134,8 +134,8 @@ class ConverseController extends Controller
         $length6 = $this->length($request->input('text6'));
         $length7 = $this->length($request->input('text7'));
         //用户头像 base64编码
-        //背景图片
-        if ($length6 >= 6) {
+        //背景图片，根据最后一个空格切换
+        if ($length7 >= 4) {
             $img = Image::make(public_path('converse/img/hot/hot_l.jpg'));
         } else {
             $img = Image::make(public_path('converse/img/hot/hot_s.jpg'));
@@ -146,10 +146,12 @@ class ConverseController extends Controller
         //根据输入字段长度确定白底长度
         $img1 = Image::make(public_path('converse/img/coolSpace/' . $length1 . '.png'));
         $img2 = Image::make(public_path('converse/img/coolSpace/' . $length2 . '.png'));
-        $img3 = Image::make(public_path('converse/img/coolSpace/' . $length3 . '.png'));
+        $img3 = Image::make(public_path('converse/img/coolSpace/hot2/' . $length3 . '.png'));
+        //加逗号的白条
         $img4 = Image::make(public_path('converse/img/coolSpace/hot/' . $length4 . '.png'));
         $img5 = Image::make(public_path('converse/img/coolSpace/hot/' . $length5 . '.png'));
-        $img6 = Image::make(public_path('converse/img/coolSpace/' . $length6 . '.png'));
+
+        $img6 = Image::make(public_path('converse/img/coolSpace/hot2/' . $length6 . '.png'));
         $img7 = Image::make(public_path('converse/img/coolSpace/' . $length7 . '.png'));
         //在白底上添加输入的文字
         $img1 = $img1->text($request->input('text1'), 0, 5, function ($font) {
