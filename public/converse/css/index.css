@@ -85,7 +85,7 @@ img{
 }
 
 /*第二页*/
-.page2{
+/*.page2{
 	width: 100%;
 }
 .page2 img{
@@ -103,8 +103,8 @@ img{
 }
 .page2 .sayBtm{
 	right: 10%;
-}
-/*.page2 .top,.page2 .bottom{
+}*/
+.page2 .top,.page2 .bottom{
 	width: 100%;
 	position: absolute;
 	height: 100%;
@@ -135,7 +135,7 @@ img{
 }
 .page2 .bottom .sayBtm{
 	right: 10%;
-}*/
+}
 
 /*第三页*/
 /*第三页*/
@@ -523,41 +523,7 @@ img{
 
 	
 }
-.spanText1{
-	background-image: url(../img/space/space4.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-.spanText2{
-	background-image: url(../img/space/space3.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-.spanText3{
-	background-image: url(../img/space/space3.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-.spanText4{
-	background-image: url(../img/space/space6.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-.spanText5{
-	background-image: url(../img/space/space6.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-.spanText6{
-	background-image: url(../img/space/space12.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-.spanText7{
-	background-image: url(../img/space/space5.png);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
+
 .bac6{
 	display: inline-block;
 	width: 50%;
