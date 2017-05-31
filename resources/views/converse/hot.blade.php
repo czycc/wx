@@ -177,7 +177,7 @@
         
         //显示字符个数
 
-		var length = [4, 3, 3, 6, 6, 12, 5]
+		var length = [4, 2, 3, 4, 4, 10, 5]
 
 		$('.personInfo .text').each(function(index) {
 

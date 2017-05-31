@@ -67,7 +67,18 @@ Route::group(['prefix' => 'kw', 'middleware' => ['web', 'wechat.oauth:snsapi_bas
         $js = WeChat::js();
         return view('converse.index', compact('js'));
     });
+    Route::get('/cool', function () {
+        $js = WeChat::js();
+        return view('converse.cool', compact('js'));
+    });
+    Route::post('/cool/poster', 'Converse\ConverseController@cool');
 
+    Route::get('/hot', function () {
+        $js = WeChat::js();
+        return view('converse.hot', compact('js'));
+    });
+
+    Route::post('/hot/poster', 'Converse\ConverseController@hot');
 
     Route::get('/rule', function () {
         $js = WeChat::js();
@@ -78,18 +89,7 @@ Route::get('kw/select', function () {
     $js = WeChat::js();
     return view('converse.select', compact('js'));
 });
-Route::get('/cool', function () {
-    $js = WeChat::js();
-    return view('converse.cool', compact('js'));
-});
-Route::post('kw/cool/poster', 'Converse\ConverseController@cool');
 
-Route::get('/hot', function () {
-    $js = WeChat::js();
-    return view('converse.hot', compact('js'));
-});
-
-Route::post('kw/hot/poster', 'Converse\ConverseController@hot');
 
 
 //抽奖h5入口

@@ -54,7 +54,7 @@ $(function() {
 
 	function limit() {
 		var reg = /[a-zA-Z0-9]+/;
-		var maxLength1 = [8, 6, 6, 12, 12, 24, 10];
+		var maxLength1 = [8, 4, 6, 8, 8, 20, 10];
 		$('.personInfo .text').each(function(index) {
 			this.onblur = function() {
 				var len = 0;
