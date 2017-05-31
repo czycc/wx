@@ -52,7 +52,7 @@ class ConverseController extends Controller
         $avatar = Image::make($request->input('avatar'))->resize(64, 90);
         $mask = Image::make(public_path('converse/img/mask3.png'));
         $avatar = $avatar->mask($mask);
-        //背景图片
+        //字数不同取不同的背景图片
         if ($length1 > 4) {
             if ($length2 > 4) {
                 if ($length3 > 6) {
@@ -147,8 +147,8 @@ class ConverseController extends Controller
         $img1 = Image::make(public_path('converse/img/coolSpace/' . $length1 . '.png'));
         $img2 = Image::make(public_path('converse/img/coolSpace/' . $length2 . '.png'));
         $img3 = Image::make(public_path('converse/img/coolSpace/' . $length3 . '.png'));
-        $img4 = Image::make(public_path('converse/img/coolSpace/' . $length4 . '.png'));
-        $img5 = Image::make(public_path('converse/img/coolSpace/' . $length5 . '.png'));
+        $img4 = Image::make(public_path('converse/img/coolSpace/hot/' . $length4 . '.png'));
+        $img5 = Image::make(public_path('converse/img/coolSpace/hot/' . $length5 . '.png'));
         $img6 = Image::make(public_path('converse/img/coolSpace/' . $length6 . '.png'));
         $img7 = Image::make(public_path('converse/img/coolSpace/' . $length7 . '.png'));
         //在白底上添加输入的文字

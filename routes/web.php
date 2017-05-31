@@ -35,6 +35,9 @@ Route::group(['prefix' => 'asy', 'middleware' => 'web'], function () {
     Route::get('/n', function () {
         return view('asy.n');
     });
+    Route::get('/reset', function (){
+        return view('asy.reset');
+    });
 });
 Route::get('/asy/mobile', function () {
     return view('asy.begin');
