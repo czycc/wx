@@ -25,14 +25,22 @@ body {
 
 
 }
+.page .centerGif{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 4%;
+
+}
 .oldpage{
-	background: url(../eyeImg/commonBg.jpg) no-repeat center center;
+	background: url(../eyeImg/bj.jpg) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 
 }
 .newpage{
-	background: url(../eyeImg/bgGif.gif) no-repeat center center;
+	background: url(../eyeImg/bj.jpg) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
 }
@@ -114,10 +122,11 @@ body {
 
 .page .goBtm {
 	position: absolute;
-	left: 64%;
+	left: 54%;
 	width: 26%;
 	top: 56%;
 	display: none;
+	z-index: 100;
 }
 
 .page .trowBtm {
@@ -126,6 +135,7 @@ body {
 	width: 26%;
 	top: 56%;
 	display: none;
+	z-index: 100;
 }
 
 /*第五页*/

@@ -2,6 +2,9 @@
 @section('content')
     <!--第二页 第一天-->
     <div class="page page2 newpage">
+    	<div class="centerGif">
+			<img src="{{asset('asy/eyeImg/GIF1.gif')}}"/>
+		</div>
         <div class="day pos">
             <img src="{{asset('asy/eyeImg/xiugai/1.png')}}"/>
         </div>

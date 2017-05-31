@@ -3,6 +3,9 @@
 @section('content')
     <!--第四页-->
     <div class="page page4  gremAll newpage">
+    	<div class="centerGif">
+			<img src="{{asset('asy/eyeImg/GIF1.gif')}}"/>
+		</div>
         <div class="day pos">
             <img src="{{ asset('asy/eyeImg/xiugai/14.png') }}"/>
         </div>

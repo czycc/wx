@@ -4,6 +4,9 @@
 
     <!--第三页 第7天-->
     <div class="page page3 newpage">
+    	<div class="centerGif">
+			<img src="{{asset('asy/eyeImg/GIF1.gif')}}"/>
+		</div>
         <div class="day pos">
             <img src="{{asset('asy/eyeImg/xiugai/7.png')}}"/>
         </div>
