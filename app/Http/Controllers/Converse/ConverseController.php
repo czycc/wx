@@ -53,7 +53,35 @@ class ConverseController extends Controller
         $mask = Image::make(public_path('converse/img/mask3.png'));
         $avatar = $avatar->mask($mask);
         //背景图片
-        $img = Image::make(public_path('converse/img/cool.png'));
+        if ($length1 > 4) {
+            if ($length2 > 4) {
+                if ($length3 > 6) {
+                    $img = Image::make(public_path('converse/img/cool/cool_lll.png'));
+                } else {
+                    $img = Image::make(public_path('converse/img/cool/cool_lls.png'));
+                }
+            } else {
+                if ($length3 > 6) {
+                    $img = Image::make(public_path('converse/img/cool/cool_lsl.png'));
+                } else {
+                    $img = Image::make(public_path('converse/img/cool/cool_lss.png'));
+                }
+            }
+        } else {
+            if ($length2 > 4) {
+                if ($length3 > 6) {
+                    $img = Image::make(public_path('converse/img/cool/cool_sll.png'));
+                } else {
+                    $img = Image::make(public_path('converse/img/cool/cool_sls.png'));
+                }
+            } else {
+                if ($length3 > 6) {
+                    $img = Image::make(public_path('converse/img/cool/cool_ssl.png'));
+                } else {
+                    $img = Image::make(public_path('converse/img/cool/cool_sss.png'));
+                }
+            }
+        }
         //根据输入字段长度确定白底长度
         $img1 = Image::make(public_path('converse/img/coolSpace/' . $length1 . '.png'));
         $img2 = Image::make(public_path('converse/img/coolSpace/' . $length2 . '.png'));
@@ -106,7 +134,11 @@ class ConverseController extends Controller
         $length7 = $this->length($request->input('text7'));
         //用户头像 base64编码
         //背景图片
-        $img = Image::make(public_path('converse/img/hot.png'));
+        if ($length6 >= 6) {
+            $img = Image::make(public_path('converse/img/hot/hot_l.png'));
+        } else {
+            $img = Image::make(public_path('converse/img/hot/hot_s.png'));
+        }
         $avatar = Image::make($request->input('avatar'))->resize(74, 98);
         $mask = Image::make(public_path('converse/img/mask2.png'));
         $avatar = $avatar->mask($mask);
