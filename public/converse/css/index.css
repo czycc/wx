@@ -708,7 +708,7 @@ img{
 	background: url(../img/poster/camerablue.png) no-repeat;
 	background-size: 100% 100%;
 	animation: frame 1s linear;
-	/*animation-delay: 3.5s;*/
+	animation-delay: 3.5s;
 }
 .poster .copy{
 	width: 44%;
