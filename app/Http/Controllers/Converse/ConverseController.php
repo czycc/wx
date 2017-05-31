@@ -56,29 +56,29 @@ class ConverseController extends Controller
         if ($length1 > 4) {
             if ($length2 > 4) {
                 if ($length3 > 6) {
-                    $img = Image::make(public_path('converse/img/cool/cool_lll.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_lll.jpg'));
                 } else {
-                    $img = Image::make(public_path('converse/img/cool/cool_lls.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_lls.jpg'));
                 }
             } else {
                 if ($length3 > 6) {
-                    $img = Image::make(public_path('converse/img/cool/cool_lsl.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_lsl.jpg'));
                 } else {
-                    $img = Image::make(public_path('converse/img/cool/cool_lss.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_lss.jpg'));
                 }
             }
         } else {
             if ($length2 > 4) {
                 if ($length3 > 6) {
-                    $img = Image::make(public_path('converse/img/cool/cool_sll.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_sll.jpg'));
                 } else {
-                    $img = Image::make(public_path('converse/img/cool/cool_sls.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_sls.jpg'));
                 }
             } else {
                 if ($length3 > 6) {
-                    $img = Image::make(public_path('converse/img/cool/cool_ssl.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_ssl.jpg'));
                 } else {
-                    $img = Image::make(public_path('converse/img/cool/cool_sss.png'));
+                    $img = Image::make(public_path('converse/img/cool/cool_sss.jpg'));
                 }
             }
         }
