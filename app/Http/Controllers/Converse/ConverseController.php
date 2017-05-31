@@ -140,7 +140,7 @@ class ConverseController extends Controller
         } else {
             $img = Image::make(public_path('converse/img/hot/hot_s.jpg'));
         }
-        $avatar = Image::make($request->input('avatar'))->resize(74, 98);
+        $avatar = Image::make($request->input('avatar'))->resize(64, 90);
         $mask = Image::make(public_path('converse/img/mask2.png'));
         $avatar = $avatar->mask($mask);
         //根据输入字段长度确定白底长度
