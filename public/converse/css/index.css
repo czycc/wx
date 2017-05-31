@@ -274,7 +274,7 @@ img{
 	left: 0;
 	right: 0;
 	margin: auto;
-	top: 54%;
+	top: 50%;
 	background: url(../img/hbg.png) no-repeat center center;
 	-webkit-background-size: 100% 100%;
 	background-size: 100% 100%;
@@ -628,13 +628,13 @@ img{
 
 
 .personInfo .text1{
-	width: 16%;
+	width: 17%;
 }
 .personInfo .text2{
-	width: 12%;
+	width: 13%;
 }
 .personInfo .text3{
-	width: 12%;
+	width: 13%;
 }
 
 .personInfo .text4{
