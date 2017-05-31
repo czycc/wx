@@ -119,7 +119,8 @@ class ConverseController extends Controller
         $img_url = env('APP_URL') . '/' . $img_path;
 
         $js = $this->js;
-        return view('converse.poster', compact('img_url', 'js'));
+//        return view('converse.poster', compact('img_url', 'js'));
+        return $img->response('png');
     }
 
     public function hot(Request $request)
@@ -216,7 +217,9 @@ class ConverseController extends Controller
         $img_url = env('APP_URL') . '/' . $img_path;
 
         $js = $this->js;
-        return view('converse.poster', compact('img_url', 'js'));
+//        return view('converse.poster', compact('img_url', 'js'));
+        return $img->response('png');
+
     }
 
     protected function length($text)
