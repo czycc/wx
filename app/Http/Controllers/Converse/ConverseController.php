@@ -110,8 +110,8 @@ class ConverseController extends Controller
         });
         //将白底插入到背景图
         $img = $img->insert($img1, '', 176, 673);
-        $img = $img->insert($img2, '', 310, 711);
-        $img = $img->insert($img3, '', 190, 909);
+        $img = $img->insert($img2, '', 290, 711);
+        $img = $img->insert($img3, '', 190, 907);
         $img = $img->insert($avatar, '', 284, 240);
         //将图片保存到服务器
         $img->save(public_path('converse/upload/1.jpg'));
