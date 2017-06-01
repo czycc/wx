@@ -76,7 +76,7 @@ $(function() {
 			}
 		});
 		
-		var maxLength2 = [10, 10, 16];
+		var maxLength2 = [10, 10, 12];
 		$('.personInfo2 .text').each(function(index) {
 			this.onblur = function() {
 				var len = 0;
