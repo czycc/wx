@@ -143,11 +143,11 @@ class ConverseController extends Controller
         //用户头像 base64编码
         //背景图片，根据最后一个空格切换
         if ($length7 >= 4) {
-            $img = Image::make(public_path('converse/img/hot-2/hot_l.jpg'));
+            $img = Image::make(public_path('converse/img/hot/hot_l.jpg'));
         } else {
-            $img = Image::make(public_path('converse/img/hot-2/hot_s.jpg'));
+            $img = Image::make(public_path('converse/img/hot/hot_s.jpg'));
         }
-        $avatar = Image::make($request->input('avatar'))->resize(74, 98);
+        $avatar = Image::make($request->input('avatar'))->resize(64, 90);
         $mask = Image::make(public_path('converse/img/mask2.png'));
         $avatar = $avatar->mask($mask);
         //根据输入字段长度确定白底长度
