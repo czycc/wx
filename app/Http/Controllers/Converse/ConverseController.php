@@ -96,21 +96,21 @@ class ConverseController extends Controller
         //在白底上添加输入的文字
         $img1 = $img1->text($request->input('text1'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img2 = $img2->text($request->input('text2'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
         $img3 = $img3->text($request->input('text3'), 0, 5, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
-            $font->size(27);
+            $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
@@ -147,7 +147,7 @@ class ConverseController extends Controller
         } else {
             $img = Image::make(public_path('converse/img/hot-2/hot_s.jpg'));
         }
-        $avatar = Image::make($request->input('avatar'))->resize(74, 99);
+        $avatar = Image::make($request->input('avatar'))->resize(64, 90);
         $mask = Image::make(public_path('converse/img/mask3.png'));
         $avatar = $avatar->mask($mask);
         //根据输入字段长度确定白底长度
@@ -219,7 +219,7 @@ class ConverseController extends Controller
         $img = $img->insert($img6, '', 150, 787);
         $img = $img->insert($img7, '', 231, 912);
 
-        $img = $img->insert($avatar, '', 279, 239);
+        $img = $img->insert($avatar, '', 280, 240);
         //将图片保存到服务器
         $img->save(public_path('converse/upload/1.jpg'));
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
