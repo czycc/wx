@@ -46,7 +46,7 @@
 			$(".page1").hide();
 			$(".page2").show();
 			setTimeout(function() {
-				$('.page2').animate({ 'top': '-95%' }, 3000);
+				$('.page2').animate({ 'top': '-106%' }, 3000);
 			}, 1500)
 		}, 2500);
 </script>
