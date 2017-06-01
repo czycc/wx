@@ -45,8 +45,15 @@
 		setTimeout(function() {
 			$(".page1").hide();
 			$(".page2").show();
+			var topHeight = $('.page2 .top').height();
+			
+			var windowHeigth = $(window).height();
+			
+			var scrolltop = topHeight - windowHeigth;
+
 			setTimeout(function() {
-				$('.page2').animate({ 'top': '-116%' }, 3000);
+				
+				$('.page2').animate({ 'top': -scrolltop + 'px'}, 3000);
 			}, 1500)
 		}, 2500);
 </script>
