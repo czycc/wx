@@ -171,7 +171,7 @@
         
 		//显示
 
-		var length = [5, 5, 8]
+		var length = [5, 5, 6]
 
 		$('.personInfo2 .text').each(function(index) {
 
