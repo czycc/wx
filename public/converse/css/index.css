@@ -85,50 +85,30 @@ img{
 }
 
 /*第二页*/
-/*.page2{
-	width: 100%;
-}
-.page2 img{
-	width: 100%;
-	height: 100%;
-}
-.page2 .btm{
+.page2{
 	position: absolute;
-	width: 32%;
-	top: 82%;
-	display: none;
+	width: 100%;
 }
-.page2 .lBtm{
-	left: 10%;
-}
-.page2 .sayBtm{
-	right: 10%;
-}*/
+
 .page2 .top,.page2 .bottom{
 	width: 100%;
 	position: absolute;
-	height: 100%;
+	
 }
 .page2 .top img,.page2 .bottom img{
 	width: 100%;
-	height: 100%;
+	
 }
-.page2 .top{
-	top: 0%;
-	background: url(../img/mode/men.png) no-repeat center center;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
-}
+
 .page2 .bottom{
-	top: 100%;
-	background: url(../img/mode/text.png) no-repeat center center;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
+	bottom: 8%;
 }
 .page2 .bottom .btm{
 	position: absolute;
 	width: 32%;
-	top: 82%;
+	
+
+	z-index: 100;
 }
 .page2 .bottom .lBtm{
 	left: 10%;
