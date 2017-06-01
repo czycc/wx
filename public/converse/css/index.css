@@ -176,6 +176,10 @@ img{
 	background-size: 100%;
 	width: 80%;
 }
+.personInfo input{
+	font-size: 3.4vw;
+	color: #fff;
+}
 .personInfo img{
 	width: 80%;
 }
