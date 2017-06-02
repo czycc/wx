@@ -25,6 +25,7 @@ $(function() {
 
 	//重新选择照片
 	$('.backBtm img').click(function() {
+		$('#gocamera').val('');
 		$('.face').show().siblings().hide();
 	});
 
