@@ -125,8 +125,10 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
-        $js = $this->js;
-        return view('converse.poster', compact('img_url', 'js'));
+//        $js = $this->js;
+//        return view('converse.poster', compact('img_url', 'js'));
+          return view('converse.poster', compact('img_url'));
+
 //        return $img->response('png');
     }
 
@@ -225,8 +227,10 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
-        $js = $this->js;
-        return view('converse.poster', compact('img_url', 'js'));
+//        $js = $this->js;
+//        return view('converse.poster', compact('img_url', 'js'));
+        return view('converse.poster', compact('img_url'));
+
 //        return $img->response('png');
 
     }
