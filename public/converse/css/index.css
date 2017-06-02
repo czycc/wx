@@ -171,7 +171,7 @@ img{
 .personInfo,.personInfo3{
 	position: absolute;
 
-	font-size: 3.4vw;
+	font-size: 3.3vw;
 	color: #fff;
 	background-size: 100%;
 	width: 80%;
@@ -184,7 +184,7 @@ img{
 	width: 80%;
 }
 .personInfo p,.personInfo3 p{
-	line-height: 4.6vw;
+	line-height: 4.5vw;
 	margin-left: 9vw;
 
 }
@@ -632,7 +632,7 @@ img{
 }
 .page3 .personInfo .lastText,.page3 .personInfo2 .lastText{
 	left: 8%;
-	top: 110%;
+	top: 109%;
 	position: absolute;
 }
 .page3 .personInfo{
