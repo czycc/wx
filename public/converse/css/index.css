@@ -630,9 +630,9 @@ img{
 .page3 .formBtm{
 	position: absolute;
 }
-.page3 .personInfo .lastText,.page3 .personInfo2 .lastText{
+.page3 .personInfo .lastText{
 	left: 8%;
-	top: 109%;
+	top: 111%;
 	position: absolute;
 }
 .page3 .personInfo{
