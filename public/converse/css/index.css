@@ -631,9 +631,11 @@ img{
 	position: absolute;
 }
 .page3 .personInfo .lastText{
-	left: 8%;
-	top: 113.5%;
-	position: absolute;
+	/*left: 8%;
+	top: 113.5%;*/
+	margin-top: 24px;
+	margin-left: 58px;
+	/*position: absolute;*/
 }
 .page3 .personInfo{
 	position: absolute;
