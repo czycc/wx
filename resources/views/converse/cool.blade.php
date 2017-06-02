@@ -103,7 +103,6 @@
             //img: 'img/mm.jpg',
             loadStart: function () {
                 //开始加载的回调函数。this指向 fileReader 对象，并将正在加载的 file 对象作为参数传入
-                console.log('开始读取照片');
             },
             //加载完成的回调函数。this指向图片对象，并将图片地址作为参数传入。
             loadComplete: function () {
@@ -114,7 +113,6 @@
 
                 $('.page4 .headText').addClass('logoText');
 
-                console.log('照片读取完成');
             },
             //
             done: function (dataURL) {
@@ -132,7 +130,7 @@
                 $("#postImg").val(dataURL);
             },
             fail: function (msg) {
-                alert(msg);
+                
             }
         });
 
@@ -163,15 +161,7 @@
 
                 $('#gocamera').attr('type', 'file');
                 
-//              $('.modal1 img').click(function(){
-//			
-//					setTimeout(function(){
-//						$(".page4").show().siblings().hide();
-//						$('#handHidden').show();
-//						
-//					},1000);
-//		
-//				})
+
 
             });
 
