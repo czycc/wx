@@ -167,6 +167,7 @@
 			
 					setTimeout(function(){
 						$(".page4").show().siblings().hide();
+						$('#handHidden').show();
 						
 					},1000);
 		

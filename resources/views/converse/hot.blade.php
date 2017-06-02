@@ -158,10 +158,10 @@
 
         var handHidden = document.getElementById('handHidden');
 
-        handHidden.addEventListener('touchstart', function () {
-
-            $(this).hide();
-        })
+	        handHidden.addEventListener('touchstart', function () {
+	
+	            $(this).hide();
+	        })
 
         $('.page3 .popup').click(function () {
 
@@ -179,6 +179,7 @@
 			
 					setTimeout(function(){
 						$(".page4").show().siblings().hide();
+						$('#handHidden').show();
 						
 					},1000);
 				
