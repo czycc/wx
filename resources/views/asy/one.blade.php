@@ -64,6 +64,7 @@
                     num++; //每摇一次，num加1
                     socket.emit('num',num);
                     if (num == 15) {
+                        num=0;
                         socket.emit('change', 'to7');
                         window.location.href='{{ url('asy/seven') }}'
                     }
