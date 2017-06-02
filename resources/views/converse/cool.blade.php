@@ -163,15 +163,15 @@
 
                 $('#gocamera').attr('type', 'file');
                 
-                $('.modal1 img').click(function(){
-			
-					setTimeout(function(){
-						$(".page4").show().siblings().hide();
-						$('#handHidden').show();
-						
-					},1000);
-		
-		})
+//              $('.modal1 img').click(function(){
+//			
+//					setTimeout(function(){
+//						$(".page4").show().siblings().hide();
+//						$('#handHidden').show();
+//						
+//					},1000);
+//		
+//				})
 
             });
 
