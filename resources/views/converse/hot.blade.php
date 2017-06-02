@@ -210,6 +210,14 @@
 			}
 			return true;
 		}
+		$('.modal1 img').click(function(){
+			
+			setTimeout(function(){
+				$(".page4").show().siblings().hide();
+				
+			},1000);
+		
+		})
 
 
     </script>
