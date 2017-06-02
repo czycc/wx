@@ -67,29 +67,29 @@ Route::get('/wechat/material', 'Wechat\MaterialController@index');
 
 Route::group(['prefix' => 'kw', 'middleware' => ['web', 'wechat.oauth:snsapi_base']], function () {
     Route::get('/', function () {
-        $js = WeChat::js();
+//        $js = WeChat::js();
         return view('converse.index', compact('js'));
     });
     Route::get('/cool', function () {
-        $js = WeChat::js();
+//        $js = WeChat::js();
         return view('converse.cool', compact('js'));
     });
     Route::post('/cool/poster', 'Converse\ConverseController@cool');
 
     Route::get('/hot', function () {
-        $js = WeChat::js();
+//        $js = WeChat::js();
         return view('converse.hot', compact('js'));
     });
 
     Route::post('/hot/poster', 'Converse\ConverseController@hot');
 
     Route::get('/rule', function () {
-        $js = WeChat::js();
+//        $js = WeChat::js();
         return view('converse.rule', compact('js'));
     });
 });
 Route::get('kw/select', function () {
-    $js = WeChat::js();
+//    $js = WeChat::js();
     return view('converse.select', compact('js'));
 });
 
