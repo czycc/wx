@@ -93,7 +93,7 @@ Route::get('kw/select', function () {
     return view('converse.select', compact('js'));
 });
 
-
+Route::get('qrcode/{code}', 'QrcodeController@index');
 
 //抽奖h5入口
 
