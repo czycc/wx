@@ -174,6 +174,15 @@
             setTimeout(function () {
 
                 $('#gocamera').attr('type', 'file');
+                
+                $('.modal1 img').click(function(){
+			
+					setTimeout(function(){
+						$(".page4").show().siblings().hide();
+						
+					},1000);
+				
+				})
 
             })
 
@@ -210,14 +219,7 @@
 			}
 			return true;
 		}
-		$('.modal1 img').click(function(){
-			
-			setTimeout(function(){
-				$(".page4").show().siblings().hide();
-				
-			},1000);
 		
-		})
 
 
     </script>
