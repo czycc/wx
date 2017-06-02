@@ -11,7 +11,7 @@
             <img src="{{asset('asy/eyeImg/xiugai/7.png')}}"/>
         </div>
         <div class="goBtm">
-            <img src="{{asset('asy/eyeImg/p3/goBtm.png')}}"/>
+            <img src="{{asset('asy/eyeImg/go.png')}}"/>
         </div>
         <div class="shake pos">
             <div class="shakeText">

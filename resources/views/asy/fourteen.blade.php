@@ -11,7 +11,7 @@
         </div>
 
         <div class="goBtm ">
-            <img src="{{ asset('asy/eyeImg/p3/goBtm.png') }}"/>
+            <img src="{{ asset('asy/eyeImg/t.png') }}"/>
         </div>
         <div class="trowBtm ">
             <img src="{{ asset('asy/eyeImg/p4/throw.png') }}"/>
