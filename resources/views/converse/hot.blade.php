@@ -8,7 +8,7 @@
     <div class=" page3 face " id="page3">
         <div class="container">
             <div class="bg">
-                <img src="{{asset('converse/img/menbg.png')}}"/>
+                <img src="{{asset('converse/img/p7.png')}}"/>
             </div>
             <div class="pic" id="view"></div>
             <div class="page page3Container">
