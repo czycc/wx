@@ -15,3 +15,4 @@ yarn.lock
 .project
 composer.lock
 public/converse/upload
+public/qrcodes
