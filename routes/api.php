@@ -13,9 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
 //匡威项目
 Route::post('kw/image', 'Converse\ConverseController@image');
 
