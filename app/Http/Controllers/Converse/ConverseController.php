@@ -94,21 +94,21 @@ class ConverseController extends Controller
         $img2 = Image::make(public_path('converse/img/coolSpace/hot/' . $length2 . '.png'));
         $img3 = Image::make(public_path('converse/img/coolSpace/' . $length3 . '.png'));
         //在白底上添加输入的文字
-        $img1 = $img1->text($request->input('text1'), 0, 5, function ($font) {
+        $img1 = $img1->text($request->input('text1'), 0, 4, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
             $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
-        $img2 = $img2->text($request->input('text2'), 0, 5, function ($font) {
+        $img2 = $img2->text($request->input('text2'), 0, 4, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
             $font->size(25);
             $font->align('left');
             $font->valign('top');
             $font->color('#183d8e');
         });
-        $img3 = $img3->text($request->input('text3'), 0, 5, function ($font) {
+        $img3 = $img3->text($request->input('text3'), 0, 4, function ($font) {
             $font->file(public_path('converse/face/FZYTK.TTF'));
             $font->size(25);
             $font->align('left');
