@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/test', function () {
-
-});
 
 //强生安视优项目
 Route::group(['prefix' => 'asy', 'middleware' => 'web'], function () {
