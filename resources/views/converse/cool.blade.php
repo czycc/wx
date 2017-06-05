@@ -29,7 +29,7 @@
                         <p>不懂？</p>
                         <p>那就<input class="text3 text" type="text" name="text3">吧。</p>
                     </div>
-                    <input type="hidden" name="avatar" id="postImg">
+                    <input class="text" type="hidden" name="avatar" id="postImg">
                     <input type="submit" id="submitBtm"/>
                 </form>
                 <div class="footerBtn">

@@ -34,7 +34,7 @@
                         <br/> 不懂？
                         <br/> 那就 <input class="text7 text" type="text" name="text7">吧。
                     </p>
-                    <input type="hidden" name="avatar" id="postImg">
+                    <input class="text" type="hidden" name="avatar" id="postImg">
                     <input type="submit" id="submitBtm"/>
                 </form>
                 <div class="footerBtn">
