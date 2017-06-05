@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="{{asset('converse/css/common.css')}}"/>
     <link rel="stylesheet" href="{{asset('converse/css/index.css')}}"/>
     @yield('style')
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fa1a25741de60b276f001364b2ac5c08";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 <body>
 
