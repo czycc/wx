@@ -20,7 +20,9 @@ $(function() {
 	$('.footerBtnLeft').click(function() {
 		$('.page3 .text').val('');
 		$('.popup').show();
+		$('#gocamera').val('');
 		$('#view').css('background-image', '');
+		
 	});
 
 	//重新选择照片
