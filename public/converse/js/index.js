@@ -18,7 +18,7 @@ $(function() {
 
 	//重做一次
 	$('.footerBtnLeft').click(function() {
-		$('.page3 input').val('');
+		$('.page3 .text').val('');
 		$('.popup').show();
 		$('#view').css('background-image', '');
 	});
