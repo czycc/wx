@@ -271,7 +271,7 @@ class ConverseController extends Controller
 
     public function share()
     {
-        $share = new Share;
+        $share = Share::find(1);
         $share->share += 1;
         $share->save();
         return 'true';
