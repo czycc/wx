@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Converse;
 
+use App\Models\Cool;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -44,6 +45,11 @@ class ConverseController extends Controller
             'text2' => 'required',
             'text3' => 'required'
         ]);
+        $cool = new Cool;
+        $cool->text1 = $request->input('text1');
+        $cool->text2 = $request->input('text2');
+        $cool->text3 = $request->input('text3');
+
         //获取输入字段长度
         $length1 = $this->length($request->input('text1'));
         $length2 = $this->length($request->input('text2'));
@@ -124,8 +130,11 @@ class ConverseController extends Controller
         $img->save(public_path('converse/upload/1.jpg'));
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
+        //保存海报地址
+        $cool->poster = $img_url;
+        $cool->save();
 
-        $js = $this->js;
+        $js = $this->js;//wechat jssdk分享
         return view('converse.poster', compact('img_url', 'js'));
 //          return view('converse.poster', compact('img_url'));
 
