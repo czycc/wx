@@ -44,7 +44,7 @@
         wx.onMenuShareTimeline({
             title: '有人说了一些不是谁都懂的话,来看看你懂吗?', // 分享标题
             link: "http://wx.touchworld-sh.com/kw",
-            imgUrl: "{{asset('converse/img/share.png')}}" // 分享图标
+            imgUrl: "{{asset('converse/img/share.png')}}", // 分享图标
             success: function () {
                 // 用户确认分享后执行的回调函数
                 $.post('{{url('api/converse/share')}}')
@@ -56,7 +56,11 @@
             desc: "是同类就放胆说你想说的!", // 分享描述
             link: "http://wx.touchworld-sh.com/kw",
             imgUrl: "{{asset('converse/img/share.png')}}", // 分享图标
-            type: 'link' // 分享类型,music、video或link，不填默认为link
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                $.post('{{url('api/converse/share')}}')
+            }
         });
     });
 </script>
