@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Converse;
 
 use App\Models\Cool;
+use App\Models\Hot;
+use App\Models\Share;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -143,6 +145,16 @@ class ConverseController extends Controller
 
     public function hot(Request $request)
     {
+        //保存输入数据
+        $hot = new Hot;
+        $hot->text1 = $request->input('text1');
+        $hot->text2 = $request->input('text2');
+        $hot->text3 = $request->input('text3');
+        $hot->text4 = $request->input('text4');
+        $hot->text5 = $request->input('text5');
+        $hot->text6 = $request->input('text6');
+        $hot->text7 = $request->input('text7');
+
         //获取输入字段长度
         $length1 = $this->length($request->input('text1'));
         $length2 = $this->length($request->input('text2'));
@@ -236,6 +248,10 @@ class ConverseController extends Controller
         $img_path = Storage::disk('public')->putFile('converse/upload', new File(public_path('converse/upload/1.jpg')));
         $img_url = env('APP_URL') . '/' . $img_path;
 
+        //保存海报
+        $hot->poster = $img_url;
+        $hot->save();
+
         $js = $this->js;
         return view('converse.poster', compact('img_url', 'js'));
 //        return view('converse.poster', compact('img_url'));
@@ -249,5 +265,13 @@ class ConverseController extends Controller
         $length = strlen(preg_replace("#[^\x{00}-\x{ff}]#u", '**', $text));
         $length = ceil($length / 2);
         return $length;
+    }
+
+    public function share()
+    {
+        $share = new Share;
+        $share->share += 1;
+        $share->save();
+        return 'true';
     }
 }

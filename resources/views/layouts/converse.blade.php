@@ -45,6 +45,10 @@
             title: '有人说了一些不是谁都懂的话,来看看你懂吗?', // 分享标题
             link: "http://wx.touchworld-sh.com/kw",
             imgUrl: "{{asset('converse/img/share.png')}}" // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                $.post('{{url('api/converse/share')}}')
+            }
         });
         // 获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({

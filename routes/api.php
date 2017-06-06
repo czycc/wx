@@ -18,3 +18,5 @@ Route::post('kw/image', 'Converse\ConverseController@image');
 
 Route::post('jomoo', 'Jomoo\JomooController@index');
 Route::post('jomoo/destroy', 'Jomoo\JomooController@destroy');
+
+Route::get('converse/share', 'Converse\ConverseController@share');
