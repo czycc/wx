@@ -60,7 +60,6 @@
             success: function () {
                 // 用户确认分享后执行的回调函数
                 $.post('{{url('api/converse/share')}}');
-                alert('success');
             }
         });
     });
