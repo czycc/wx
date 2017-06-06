@@ -59,7 +59,8 @@
             type: 'link', // 分享类型,music、video或link，不填默认为link
             success: function () {
                 // 用户确认分享后执行的回调函数
-                $.post('{{url('api/converse/share')}}')
+                $.post('{{url('api/converse/share')}}');
+                alert('success');
             }
         });
     });
