@@ -48,6 +48,7 @@ class ConverseController extends Controller
             'text3' => 'required'
         ]);
         $cool = new Cool;
+        $cool->openid = session('wechat.oauth_user.id');
         $cool->text1 = $request->input('text1');
         $cool->text2 = $request->input('text2');
         $cool->text3 = $request->input('text3');
@@ -154,6 +155,7 @@ class ConverseController extends Controller
         $hot->text5 = $request->input('text5');
         $hot->text6 = $request->input('text6');
         $hot->text7 = $request->input('text7');
+        $hot->openid = session('wechat.oauth_user.id');
 
         //获取输入字段长度
         $length1 = $this->length($request->input('text1'));
