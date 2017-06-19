@@ -16,7 +16,10 @@ use Illuminate\Http\Request;
 //匡威项目
 Route::post('kw/image', 'Converse\ConverseController@image');
 
+
+//九牧验证码
 Route::post('jomoo', 'Jomoo\JomooController@index');
 Route::post('jomoo/destroy', 'Jomoo\JomooController@destroy');
 
+//匡威统计分享次数
 Route::post('converse/share', 'Converse\ConverseController@share');

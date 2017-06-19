@@ -1,0 +1,156 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.all{
+	width: 640px;
+	position: relative;
+	
+}
+
+.pos{
+	position: absolute;
+	z-index: 10;
+}
+
+.aPos{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.all .logo{
+
+	left: 56px;
+}
+
+.all .w{
+	top: 154px;
+
+}
+.all .shop{
+	top: 164px;
+	left: 162px;
+}
+
+.all .hText{
+	top: 672px;
+}
+.all .part2{
+	top: 787px;
+	width: 613px;
+	height: 352px;
+}
+.all .kuang{
+	position: absolute;
+}
+.all .video{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+.all .part3{
+	top: 1190px;
+	width: 613px;
+	height: 352px;
+}
+.all .part4{
+	top: 1692px;
+	width: 613px;
+	height: 352px;
+}
+
+.all .part5{
+	top: 2290px;
+	width: 613px;
+	height: 352px;
+}
+
+.all .part6{
+	top: 2740px;
+	width: 613px;
+	height: 352px;
+}
+
+.all .part7{
+	top: 3195px;
+	width: 613px;
+	height: 352px;
+}
+.all .part8{
+	top: 3050px;
+}
+.all .bottom{
+	top: 4520px;
+}
+
+.hidden{
+	display: none;
+}
+/*...领取优惠券页面...*/
+
+.draw img{
+	width: 640px;
+	position: absolute;
+}
+
+/*...未购买产品用户页面....*/
+
+.undraw{
+	position: absolute;
+}
+.undraw .undrawbg{
+	position: absolute;
+	width: 640px;
+}
+.undraw .undrawbtn{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 810px;
+}
+
+
+
+
+
+/*已领注册礼*/
+
+.accPrize{
+	position: absolute;
+	width: 640px;
+}
+.accPrize .accbg{
+	position: absolute;
+	width: 640px;
+}
+.accPrize .accbtn{
+	position: absolute;
+	left:193px ;
+	top:856px;
+}
+
+/*参加活动说明*/
+
+.activity{
+	position: absolute;
+	width: 640px;
+}
+
+.activity .activitybg{
+	position: absolute;
+	width: 640px;
+}
+
+.activity .activitybtn{
+	position: absolute;
+	z-index: 10;
+	left:227px ;
+	top:802px ;
+}
