@@ -180,6 +180,7 @@ return [
         Overtrue\LaravelWechat\ServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*
