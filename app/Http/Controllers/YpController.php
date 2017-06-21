@@ -33,7 +33,7 @@ class YpController extends Controller
         }elseif ($request->type == 'location'){
             $city = City::where('city', $request->value)->first();
             $locations = Location::where('city_id', $city->id)
-                ->pluck('locaiton');
+                ->pluck('location');
             return $locations->toJson();
         }
     }
