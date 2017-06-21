@@ -23,3 +23,6 @@ Route::post('jomoo/destroy', 'Jomoo\JomooController@destroy');
 
 //匡威统计分享次数
 Route::post('converse/share', 'Converse\ConverseController@share');
+
+//一品皇家省市区接口
+Route::get('yp/location', 'YpController@location');

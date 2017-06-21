@@ -90,14 +90,13 @@ Route::get('kw/select', function () {
     return view('converse.select', compact('js'));
 });
 
-Route::get('qrcode/{code}', 'QrcodeController@index');
+//数梦工厂签到活动，已结束
+//Route::get('qrcode/{code}', 'QrcodeController@index');
 
+//一品皇家项目
 Route::group(['prefix' => 'draw'], function (){
     //一品皇家抽奖h5入口
-    Route::get('/', function () {
-        return '这是抽奖h5入口，等待开放时间';
-    });
+    Route::get('/', 'YpController@index');
     //更改二维码状态
     Route::post('/qrcode', 'YpController@qrcode');
-    //
 });
