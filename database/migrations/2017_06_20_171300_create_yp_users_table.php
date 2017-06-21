@@ -15,8 +15,9 @@ class CreateYpUsersTable extends Migration
     {
         Schema::create('yp_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('openid');
-            $table->string('qrcode_url');
+            $table->string('openid')->unique();
+            $table->string('customermobile');
+            $table->string('qrcode_url')->nullable();
             $table->enum('status',[0,1])->default(0)->comment('是否核销');
             $table->timestamps();
         });

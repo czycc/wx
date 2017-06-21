@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\Location;
 use App\Models\Province;
+use App\Models\Yp_user;
 use Illuminate\Http\Request;
 
 class YpController extends Controller
@@ -16,7 +17,18 @@ class YpController extends Controller
 
     public function qrcode(Request $request)
     {
-
+        $qrcode = Yp_user::where('openid', $request->openid)
+            ->where('customermobile', $request->customermobile)
+            ->first();
+        if ($qrcode != null){
+            $qrcode->status = 1;
+            $qrcode->save();
+            return response()
+                ->json(['code' => 1,'desc' => 'success']);
+        }else{
+            return response()
+                ->json(['code' => 0,'desc' => '未找到指定记录']);
+        }
     }
 
     public function location(Request $request)
