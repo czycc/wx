@@ -31,7 +31,7 @@ class YpController extends Controller
 
     public function location(Request $request)
     {
-        $provinces = Location::unique('province')->pluck('province');
+        $provinces = Location::all()->unique('province')->pluck('province');
         return $provinces->toJson();
 
 //        if ($request->type == 'province'){
