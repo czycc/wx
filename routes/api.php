@@ -26,3 +26,4 @@ Route::post('converse/share', 'Converse\ConverseController@share');
 
 //一品皇家省市区接口
 Route::get('yp/location', 'YpController@location');
+Route::get('yp/verify', 'YpController@verify');

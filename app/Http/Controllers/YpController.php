@@ -37,6 +37,15 @@ class YpController extends Controller
                 ->pluck('locaiton');
             return $locations->toJson();
         }
+    }
 
+    public function verify(Request $request)
+    {
+        $location = Location::where('location', $request->location)->first();
+        if ($location->verify == $request->verify){
+            return 'true';
+        }else {
+            return 'false';
+        }
     }
 }
