@@ -31,23 +31,19 @@ class YpController extends Controller
 
     public function location(Request $request)
     {
-        $provinces = Location::all()->unique('province')->pluck('province');
-        return $provinces->toJson();
-
-//        if ($request->type == 'province'){
-//            $provinces = Location::unique('province')->pluck('province');
-//            return $provinces->toJson();
-//        }elseif ($request->type == 'city'){
-//            $cities = Location::where('province', $request->value)
-//                ->pluck('city')
-//                ->unique();
-//            return $cities->toJson();
-//        }elseif ($request->type == 'location'){
-//            $locations = Location::where('city', $request->value)
-//                ->pluck('location')
-//                ->unique();
-//            return $locations->toJson();
-//        }
+        if ($request->type == 'province'){
+            $provinces = Location::all()->unique('province')->pluck('province');
+            return $provinces->toJson();
+        }elseif ($request->type == 'city'){
+            $cities = Location::where('province', $request->value)
+                ->unique('city')
+                ->pluck('city');
+            return $cities->toJson();
+        }elseif ($request->type == 'location'){
+            $locations = Location::where('city', $request->value)
+                ->pluck('location');
+            return $locations->toJson();
+        }
     }
 
     public function verify(Request $request)
