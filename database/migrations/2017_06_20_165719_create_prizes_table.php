@@ -19,7 +19,6 @@ class CreatePrizesTable extends Migration
             $table->smallInteger('tp');
             $table->smallInteger('cot');
             $table->smallInteger('cream');
-            $table->timestamps();
         });
     }
 

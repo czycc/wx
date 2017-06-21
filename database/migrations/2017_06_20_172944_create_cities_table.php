@@ -20,7 +20,6 @@ class CreateCitiesTable extends Migration
             $table->integer('province_id')->unsigned();
 
             $table->foreign('province_id')->references('id')->on('provinces');
-            $table->timestamps();
         });
     }
 

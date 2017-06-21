@@ -20,7 +20,6 @@ class CreateLocationsTable extends Migration
             $table->integer('city_id')->unsigned();
 
             $table->foreign('city_id')->references('id')->on('cities');
-            $table->timestamps();
         });
     }
 
