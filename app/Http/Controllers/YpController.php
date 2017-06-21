@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\City;
 use App\Models\Location;
-use App\Models\Province;
 use App\Models\Yp_user;
 use Illuminate\Http\Request;
 
@@ -34,18 +32,17 @@ class YpController extends Controller
     public function location(Request $request)
     {
         if ($request->type == 'province'){
-            $provinces = Province::where('status','1')->pluck('province');
+            $provinces = Location::pluck('province')->unique();
             return $provinces->toJson();
         }elseif ($request->type == 'city'){
-            $province = Province::where('province', $request->value)->first();
-            $cities = City::where('status','1')
-                ->where('province_id', $province->id)
-                ->pluck('city');
+            $cities = Location::where('province', $request->value)
+                ->pluck('city')
+                ->unique();
             return $cities->toJson();
         }elseif ($request->type == 'location'){
-            $city = City::where('city', $request->value)->first();
-            $locations = Location::where('city_id', $city->id)
-                ->pluck('location');
+            $locations = Location::where('city', $request->value)
+                ->pluck('location')
+                ->unique();
             return $locations->toJson();
         }
     }
