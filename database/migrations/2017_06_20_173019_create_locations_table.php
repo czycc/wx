@@ -15,7 +15,7 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('location')->unique();
+            $table->string('location',50)->unique();
             $table->string('verify')->comment('验证码');
             $table->smallInteger('towel')->default(8)->comment('毛巾礼品');
             $table->smallInteger('award')->default(2)->comment('另外三种礼品');

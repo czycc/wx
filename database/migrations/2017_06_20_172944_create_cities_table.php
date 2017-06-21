@@ -15,7 +15,7 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('city')->unique();
+            $table->string('city',30)->unique();
             $table->enum('status',[0,1])->default(1);
             $table->integer('province_id')->unsigned();
 
