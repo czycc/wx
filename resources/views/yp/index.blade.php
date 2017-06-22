@@ -8,9 +8,10 @@
 	</head>
 	<body>
 		<!--领取优惠券页面-->
-		<div class="draw all ">
+		<div class="draw all hidden">
 			<img src="{{ asset('yp/img/lq.png') }}"/>
 		</div>
+		
 		<!--未购买产品用户页面-->
 		<div class="undraw all hidden">
 			<img class="undrawbg" src=""/>
@@ -22,6 +23,13 @@
 			<img class="accbg" src="{{ asset('yp/img/accprize/accbg.png') }}"/>
 			<img class="accbtn" src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
 		</div>
+		
+		<!--兑换奖品成功-->
+		<div class="all accPrize">
+			<img class="accbg" src="{{ asset('yp/img/accprize/success.png') }}"/>
+			<img class="accbtn" src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
+		</div>
+		
 		<!--参加活动说明-->
 		<div class="all activity hidden">
 			<img src="{{ asset('yp/img/acctivity/activitybg.png') }}" alt="" class="activitybg" />
