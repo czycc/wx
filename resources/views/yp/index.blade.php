@@ -13,8 +13,8 @@
 		</div>
 		
 		<!--未购买产品用户页面-->
-		<div class="undraw all hidden">
-			<img class="undrawbg" src=""/>
+		<div class="undraw all ">
+			<img class="undrawbg" src="{{ asset('yp/img/wlq.png') }}"/> 
 			<img src="{{ asset('yp/img/undrawbtn.png') }}" alt="" class="undrawbtn" />
 		</div>
 
@@ -25,7 +25,7 @@
 		</div>
 		
 		<!--兑换奖品成功-->
-		<div class="all accPrize">
+		<div class="all accPrize hidden">
 			<img class="accbg" src="{{ asset('yp/img/accprize/success.png') }}"/>
 			<img class="accbtn" src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
 		</div>
