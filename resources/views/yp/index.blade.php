@@ -35,5 +35,11 @@
 			<img src="{{ asset('yp/img/acctivity/activitybg.png') }}" alt="" class="activitybg" />
 			<img src="{{ asset('yp/img/acctivity/acctibtn.png') }}" class="activitybtn"/>
 		</div>
+		
+		<!--参与活动说明2-->
+		<div class="all activity ">
+			<img src="img/accprize/2.png" alt="" class="activitybg" />
+			<img src="img/acctivity/acctibtn.png" class="activitybtn"/>
+		</div>
 	</body>
 </html>
