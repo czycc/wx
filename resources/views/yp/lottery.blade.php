@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="{{ asset('yp/css/lottery.css') }}">
-    <script type="text/javascript" src="{{ asset('yp/js/jquery.min.js') }}"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>

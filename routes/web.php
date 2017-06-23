@@ -105,3 +105,42 @@ Route::group(['prefix' => 'draw'], function (){
         return view('yp.new');
     });
 });
+Route::get('test1', function (){
+    return view('yp.accept_err');
+});
+Route::get('test0', function (){
+    $url = 'http://tt.wedochina.cn/API/CampaignGiftWechatService.asmx?op=GetCommonQrcode';
+    $post_data ='<?xml version="1.0" encoding="utf-8"?>
+<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Header>
+    <CampaignGiftSoapHeader xmlns="http://tempuri.org/">
+      <uid>3073</uid>
+      <pwd>E10ADC3949BA59ABBE56E057F20F883E</pwd>
+    </CampaignGiftSoapHeader>
+  </soap12:Header>
+  <soap12:Body>
+    <GetCommonQrcode xmlns="http://tempuri.org/">
+      <qrcode_data>{"campaigncode":"GiftYPHJ","giftcode":"YPHJ01","customermobile":"13916594483","openid":"o4MeYjgami4X0SVPpmBfMa5zINjg","location":"爱婴室上海真光路店"}</qrcode_data>
+    </GetCommonQrcode>
+  </soap12:Body>
+</soap12:Envelope>';
+//    $postdata = http_build_query($post_data);
+    $options = array(
+        'http' => array(
+            'method' => 'POST',
+            'header' => 'Content-Type:text/xml',
+            'content' => $post_data,
+            'timeout' => 15 * 60 // 超时时间（单位:s）
+        )
+    );
+    $context = stream_context_create($options);
+    $res = file_get_contents($url, false, $context);
+    $string = $res;
+    $string = str_ireplace('soap:','',$string);
+    $formatter = Formatter::make($string, Formatter::XML);
+    $xml = $formatter->toArray();
+    $json= $xml['Body']['GetCommonQrcodeResponse']['GetCommonQrcodeResult'];
+    $json = Formatter::make($json, Formatter::JSON);
+    $arr = $json->toArray();
+    return $arr['code'];
+});
