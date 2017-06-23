@@ -46,9 +46,9 @@ class YpController extends Controller
                     return view('yp.accept_err');
                 }
                 $result = $this->qrcode_url($openid,$customermobile,$prize,$location);//获取抽奖二维码
-                if ($result['code'] !== 0){
-                    return '很抱歉，接口出现错误，请联系管理员';
-                }
+//                if ($result['code'] !== 0){
+//                    return '很抱歉，接口出现错误，请联系管理员';
+//                }
                 $new= new Yp_user;
                 $new->openid = $openid;
                 $new->location= $location;
