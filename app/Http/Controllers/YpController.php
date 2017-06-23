@@ -26,7 +26,7 @@ class YpController extends Controller
 
         //判断两天内用户的中奖码是否核销
         $user = Yp_user::where('openid', $openid)
-            ->where('status', 0)
+            ->where('status', '0')
             ->where('created_at', '>', Carbon::now()->subDays(2))
             ->first();
         return $user;
