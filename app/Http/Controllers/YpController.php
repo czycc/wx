@@ -93,6 +93,20 @@ class YpController extends Controller
                 ->json(['code' => 0, 'desc' => '未找到指定记录']);
         }
     }
+    public function qrcode_test($phone)
+    {
+        $qrcode = Yp_user::where('customermobile', $phone)
+            ->first();
+        if ($qrcode != null) {
+            $qrcode->status = 1;
+            $qrcode->save();
+            return response()
+                ->json(['code' => 1, 'desc' => 'success']);
+        } else {
+            return response()
+                ->json(['code' => 0, 'desc' => '未找到指定记录']);
+        }
+    }
 
     /**
      * @param Request $request
