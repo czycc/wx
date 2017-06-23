@@ -111,7 +111,7 @@
             //奖品名称
             $('.prize p').text(lottery.pri[lottery.index]);
             setTimeout(function () {
-                $('.prize .pri').attr('src', 'img/prize/' + (lottery.index) + '.png');
+                $('.prize .pri').attr('src', 'yp/img/prize/' + (lottery.index) + '.png');
 
                 $('.prize').show().siblings().hide();
             }, 2000)
