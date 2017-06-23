@@ -178,12 +178,12 @@ class YpController extends Controller
     </GetCommonQrcode>
   </soap12:Body>
 </soap12:Envelope>';
-        $postdata = http_build_query($post_data);
+//        $postdata = http_build_query($post_data);
         $options = array(
             'http' => array(
                 'method' => 'POST',
                 'header' => 'Content-Type:text/xml',
-                'content' => $postdata,
+                'content' => $post_data,
                 'timeout' => 15 * 60 // 超时时间（单位:s）
             )
         );
