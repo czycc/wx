@@ -29,7 +29,6 @@ class YpController extends Controller
             ->where('status', '0')
             ->where('created_at', '>', Carbon::now()->subDays(2))
             ->first();
-        return $user;
         if ($user != null) {
             $qrcode_url = $user->qrcode_url;
             $prize = $user->prize;
