@@ -18,6 +18,8 @@ class CreateYpUsersTable extends Migration
             $table->string('openid',180)->unique();
             $table->string('customermobile');
             $table->string('qrcode_url')->nullable();
+            $table->string('location');
+            $table->smallInteger('prize');
             $table->enum('status',[0,1])->default(0)->comment('是否核销');
             $table->timestamps();
         });

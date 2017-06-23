@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use SoapBox\Formatter\Formatter;
 
 
 //强生安视优项目
@@ -99,4 +100,8 @@ Route::group(['prefix' => 'draw'], function (){
     Route::get('/', 'YpController@index');
     //更改二维码状态
     Route::post('/qrcode', 'YpController@qrcode');
+    //新注册用户参与复购礼
+    Route::get('/new', function (){
+        return view('yp.new');
+    });
 });
