@@ -26,12 +26,10 @@ class YpController extends Controller
 
         //判断两天内用户的中奖码是否核销
         $user = Yp_user::where('openid', $openid)
-            ->where('location', $location)
             ->where('status', 0)
             ->where('created_at', '>', Carbon::now()->subDays(2))
             ->first();
-        return $user;
-        if ($qu != null) {
+        if ($user != null) {
             $qrcode_url = $user->qrcode_url;
             $prize = $user->prize;
             return view('yp.accept', compact('qrcode_url', 'prize'));
