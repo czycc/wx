@@ -68,7 +68,7 @@
         speed: 20, //初始转动速度
         times: 0, //转动次数
         cycle: 50, //转动基本次数：即至少需要转动多少次再进入抽奖环节
-        prize: {{ $prize}}, //中奖位置,-1为随机
+        prize: -1, //中奖位置,-1为随机
         pri: ['Terry Palmer 皇家至臻毛巾礼盒', 'Safty 1st 轻柔入梦4件套', '妙思乐贝贝护肤四件套', '内野毛巾礼盒'],
         init: function (id) {
             if ($("#" + id).find(".lottery-unit").length > 0) {
@@ -120,7 +120,7 @@
             if (lottery.times < lottery.cycle) {
                 lottery.speed -= 10;
             } else if (lottery.times == lottery.cycle) {
-                var index = Math.random() * (lottery.count) | 0; //中奖物品通过一个随机数生成
+                var index = {{$prize}}; //中奖物品通过一个随机数生成
                 lottery.prize = index;
 
             } else {
