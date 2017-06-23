@@ -98,7 +98,7 @@ class YpController extends Controller
         $qrcode = Yp_user::where('customermobile', $phone)
             ->first();
         if ($qrcode != null) {
-            $qrcode->status = 1;
+            $qrcode->status = '1';
             $qrcode->save();
             return response()
                 ->json(['code' => 1, 'desc' => 'success']);
