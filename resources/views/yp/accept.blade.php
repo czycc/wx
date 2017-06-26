@@ -40,13 +40,13 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="//{{ Request::getHost() }}:8000/socket.io/socket.io.js"></script>
 <script type="application/javascript">
-    var openid = {{$openid}};
+    var openid = '{{$openid}}';
     var socket = io('http://{{ Request::getHost() }}:8000');
     socket.on('main-channel:App\\Events\\QrcodeVerify', function (data) {
         if ( openid == data.openid) {
             $('.accPrize').show().siblings().hide();
         }
-    }
+    })
 </script>
 
 </html>
