@@ -46,7 +46,7 @@ class YpController extends Controller
     </GetCommonQrcode>
   </soap12:Body>
 </soap12:Envelope>';
-        return $post_data;
+        print_r('$post_data') ;
 
         //判断两天内用户的中奖码是否核销
         $user = Yp_user::where('openid', $openid)
