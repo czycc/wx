@@ -88,16 +88,16 @@ class YpController extends Controller
     {
         $qrcode = Yp_user::where('customermobile', $request->customermobile)
             ->first();
-//        if ($qrcode != null) {
+        if ($qrcode != null) {
             $qrcode->status = '1';
             $qrcode->save();
             event(new QrcodeVerify($request->openid));
             return response()
                 ->json(['code' => 1, 'desc' => 'success']);
-//        } else {
-//            return response()
-//                ->json(['code' => 0, 'desc' => '未找到指定记录']);
-//        }
+        } else {
+            return response()
+                ->json(['code' => 0, 'desc' => '未找到指定记录']);
+        }
     }
     public function qrcode_test($phone)
     {
