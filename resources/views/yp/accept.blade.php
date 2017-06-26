@@ -5,6 +5,7 @@
     <title></title>
     <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="{{ asset('yp/css/lottery.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('yp/css/index.css') }}">
 </head>
 <body>
 <!--领奖页面-->
