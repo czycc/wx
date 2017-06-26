@@ -86,7 +86,7 @@ class YpController extends Controller
      */
     public function qrcode(Request $request)
     {
-        $qrcode = Yp_user::where('customermobile', $request->customermobile)
+        $qrcode = Yp_user::where('openid', $request->openid)
             ->first();
         if ($qrcode != null) {
             $qrcode->status = '1';
@@ -183,7 +183,7 @@ class YpController extends Controller
                 $prize_code = 'YPHJ04';
                 break;
         }
-        $url = 'http://tt.wedochina.cn/Test/API/CampaignGiftWechatService.asmx?op=GetCommonQrcode';
+        $url = 'http://tt.wedochina.cn/API/CampaignGiftWechatService.asmx?op=GetCommonQrcode';
         $post_data ='<?xml version="1.0" encoding="utf-8"?>
 <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
   <soap12:Header>
