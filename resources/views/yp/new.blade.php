@@ -9,13 +9,13 @@
 <body>
 
 <!--新用户复购宣传-->
-<div class="all activity ">
-    <img src="{{ asset('yp/img/accprize/2.png') }}" alt="" class="activitybg"/>
-    <img src="{{ asset('yp/img/acctivity/acctibtn.png') }}" class="activitybtn" onclick="change()"/>
-</div>
+{{--<div class="all activity ">--}}
+    {{--<img src="{{ asset('yp/img/accprize/2.png') }}" alt="" class="activitybg"/>--}}
+    {{--<img src="{{ asset('yp/img/acctivity/acctibtn.png') }}" class="activitybtn" onclick="change()"/>--}}
+{{--</div>--}}
 
 <!--未购买产品用户页面-->
-<div class="undraw all hidden">
+<div class="undraw all">
     <img class="undrawbg" src="{{ asset('yp/img/wlq.png') }}"/>
     <a href="http://frisowechat.rfc-china.com/Friso/GiftYPHJ/index.htm">
         <img src="{{ asset('yp/img/undrawbtn.png') }}" alt="" class="undrawbtn"/>
