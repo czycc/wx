@@ -32,8 +32,8 @@
 <!--兑换奖品成功-->
 <div class="all accPrize hidden">
     <img class="accbg" src="{{ asset('yp/img/accprize/success.png') }}"/>
-    <a href="{{ url('draw/new') }}">
-        <img class="accbtn" src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
+    <a href="{{ url('draw/new') }}" class="accbtn">
+        <img  src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
     </a>
 </div>
 </body>
