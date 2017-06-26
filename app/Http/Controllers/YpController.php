@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\QrcodeVerify;
 use App\Models\Location;
 use App\Models\Prize;
 use App\Models\Yp_user;
@@ -12,6 +13,11 @@ use SoapBox\Formatter\Formatter;
 
 class YpController extends Controller
 {
+    /**
+     * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View|string
+     * 入口页面
+     */
     public function index(Request $request)
     {
         $this->validate($request, [
@@ -32,14 +38,14 @@ class YpController extends Controller
         if ($user != null) {
             $qrcode_url = $user->qrcode_url;
             $prize = $user->prize;
-            return view('yp.accept', compact('qrcode_url', 'prize'));
+            return view('yp.accept', compact('qrcode_url', 'prize', 'openid'));
         }
 
         switch ($request->customercode) {
             case 0 :
                 //新注册用户
                 //抽奖
-                $prize = $this->draw();//获取01234
+                $prize = $this->draw($location);//获取01234
                 //当奖品领完,显示奖品领完页面
                 if ($prize == 4){
                     return view('yp.accept_err');
@@ -58,7 +64,7 @@ class YpController extends Controller
 
                 $qrcode_url= $result['data'];
 
-                return view('yp.lottery', compact('prize', 'qrcode_url'));
+                return view('yp.lottery', compact('prize', 'qrcode_url', 'openid'));
                 break;
             case 1 :
                 //新客
@@ -86,6 +92,7 @@ class YpController extends Controller
         if ($qrcode != null) {
             $qrcode->status = 1;
             $qrcode->save();
+            event(new QrcodeVerify($request->openid));
             return response()
                 ->json(['code' => 1, 'desc' => 'success']);
         } else {
@@ -101,7 +108,7 @@ class YpController extends Controller
             $qrcode->status = '1';
             $qrcode->save();
             return response()
-                ->json(['code' => 1, 'desc' => 'success']);
+                 ->json(['code' => 1, 'desc' => 'success']);
         } else {
             return response()
                 ->json(['code' => 0, 'desc' => '未找到指定记录']);
@@ -218,40 +225,114 @@ class YpController extends Controller
      * @return string
      * 抽奖
      */
-    public function draw()
+    public function draw($location = 'test')
     {
-        $prize = Prize::first();
-        $prize0 = $prize->tp;//毛巾礼盒
-        $prize1 = $prize->cot;//小床
-        $prize2 = $prize->cream;//妙思乐
-        $prize3 = $prize->towel;//普通毛巾礼盒
-        $sum = $prize0 + $prize1 + $prize2 + $prize3;
-        //奖品总数为0
-        if ($sum < 1) {
+        //查询该场次奖品
+        $locate = Location::where('location', $location)->first();
+        //第一种情况,两个奖品都没有抽完
+        if ($locate->towel > 0 && $locate->award > 0 ) {
+            $prize = Prize::first();
+            $prize0 = $prize->tp;//毛巾礼盒
+            $prize1 = $prize->cot;//小床
+            $prize2 = $prize->cream;//妙思乐
+            $prize3 = $prize->towel;//普通毛巾礼盒
+            $sum = $prize0 + $prize1 + $prize2 + $prize3;
+            //奖品总数为0
+            if ($sum < 1) {
+                return '4';
+            }
+
+            $random = mt_rand(1, $sum);//抽取随机数
+            if ($random <= $prize0){
+                //库存量相应减少
+                $prize->tp -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->award -= 1;
+                $locate->save();
+                return '0';
+            }elseif ($random > $prize0 && $random <= ($prize0 + $prize1)){
+                //库存量相应减少
+                $prize->cot -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->award -= 1;
+                $locate->save();
+                return '1';
+            }elseif ($random > ($prize0 + $prize1) && $random <= ($prize0 + $prize1 + $prize2)){
+                //库存量相应减少
+                $prize->cream -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->award -= 1;
+                $locate->save();
+                return '2';
+            }else {
+                //库存量相应减少
+                $prize->towel -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->towel -= 1;
+                $locate->save();
+                return '3';
+            }
+        } elseif ($locate->towel <= 0 && $locate->award >0){
+            //第二种情况，普通毛巾都已经抽完
+            $prize = Prize::first();
+            $prize0 = $prize->tp;//毛巾礼盒
+            $prize1 = $prize->cot;//小床
+            $prize2 = $prize->cream;//妙思乐
+            $sum = $prize0 + $prize1 + $prize2;
+            //奖品总数为0
+            if ($sum < 1) {
+                return '4';
+            }
+
+            $random = mt_rand(1, $sum);//抽取随机数
+            if ($random <= $prize0){
+                //库存量相应减少
+                $prize->tp -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->award -= 1;
+                $locate->save();
+                return '0';
+            }elseif ($random > $prize0 && $random <= ($prize0 + $prize1)){
+                //库存量相应减少
+                $prize->cot -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->award -= 1;
+                $locate->save();
+                return '1';
+            }elseif ($random > ($prize0 + $prize1) && $random <= ($prize0 + $prize1 + $prize2)){
+                //库存量相应减少
+                $prize->cream -= 1;
+                $prize->save();
+                //该场次抽奖数减少
+                $locate->award -= 1;
+                $locate->save();
+                return '2';
+            }
+        } elseif ($locate->towel > 0 && $locate->award <=0){
+            //第三种情况，剩余毛巾没有抽完
+            $prize = Prize::first();
+            $prize0 = $prize->towel;//普通毛巾礼盒
+            //奖品总数为0
+            if ($prize0 < 1) {
+                return '4';
+            }
+            //库存量减少
+            $prize->towel -= 1;
+            $prize->save();
+            //该场次抽奖数减少
+            $locate->towel -= 1;
+            $locate->save();
+            return '3';
+        }else {
+            //第四种情况，两个奖品都已经抽完
             return '4';
         }
 
-        $random = mt_rand(1, $sum);//抽取随机数
-        if ($random <= $prize0){
-            //库存量相应减少
-            $prize->tp -= 1;
-            $prize->save();
-            return '0';
-        }elseif ($random > $prize0 && $random <= ($prize0 + $prize1)){
-            //库存量相应减少
-            $prize->cot -= 1;
-            $prize->save();
-            return '1';
-        }elseif ($random > ($prize0 + $prize1) && $random <= ($prize0 + $prize1 + $prize2)){
-            //库存量相应减少
-            $prize->cream -= 1;
-            $prize->save();
-            return '2';
-        }else {
-            //库存量相应减少
-            $prize->towel -= 1;
-            $prize->save();
-            return '3';
-        }
     }
 }
