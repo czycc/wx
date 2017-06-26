@@ -30,24 +30,6 @@ class YpController extends Controller
         $openid = $request->openid;
         $location = $request->location;
 
-
-        $post_data ='<?xml version="1.0" encoding="utf-8"?>
-<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
-  <soap12:Header>
-    <CampaignGiftSoapHeader xmlns="http://tempuri.org/">
-      <uid>3073</uid>
-      <pwd>E10ADC3949BA59ABBE56E057F20F883E</pwd>
-    </CampaignGiftSoapHeader>
-  </soap12:Header>
-  <soap12:Body>
-    <GetCommonQrcode xmlns="http://tempuri.org/">
-      <qrcode_data>{"campaigncode":"GiftYPHJ","giftcode":"'.'YPHJ01'.'","customermobile":"'.$customermobile.'",
-      "openid":"'.$openid.'","location":"'.$location.'"}</qrcode_data>
-    </GetCommonQrcode>
-  </soap12:Body>
-</soap12:Envelope>';
-        print_r($post_data) ;
-
         //判断两天内用户的中奖码是否核销
         $user = Yp_user::where('openid', $openid)
             ->where('status', '0')
