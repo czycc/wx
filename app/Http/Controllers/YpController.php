@@ -86,7 +86,7 @@ class YpController extends Controller
      */
     public function qrcode(Request $request)
     {
-        $qrcode = Yp_user::where('customermobile', $request->openid)
+        $qrcode = Yp_user::where('customermobile', $request->customermobile)
             ->first();
 //        if ($qrcode != null) {
             $qrcode->status = '1';
