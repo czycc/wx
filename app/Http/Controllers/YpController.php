@@ -204,7 +204,7 @@ class YpController extends Controller
         $options = array(
             'http' => array(
                 'method' => 'POST',
-                'header' => 'Content-Type:text/xml',
+                'header' => 'Content-Type:text/xml;charset=UTF-8',
                 'content' => $post_data,
                 'timeout' => 15 * 60 // 超时时间（单位:s）
             )
