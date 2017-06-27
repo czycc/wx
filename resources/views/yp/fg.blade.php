@@ -14,7 +14,7 @@
 </div>
 <!--领取优惠券页面-->
 <div class="draw all hidden">
-    <img src="{{ asset('yp/img/lq.png') }}"/>
+    <img src="{{ asset('yp/img/lqw.png') }}"/>
 </div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
