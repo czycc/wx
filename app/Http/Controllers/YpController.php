@@ -185,13 +185,13 @@ class YpController extends Controller
                 $prize_code = 'YPHJ04';
                 break;
         }
-        $url = 'http://tt.wedochina.cn/API/CampaignGiftWechatService.asmx?op=GetCommonQrcode';
+        $url = 'http://frisohih.rfc-china.com/API/CampaignGiftWechatService.asmx?op=GetCommonQrcode';
         $post_data ='<?xml version="1.0" encoding="utf-8"?>
 <soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
   <soap12:Header>
     <CampaignGiftSoapHeader xmlns="http://tempuri.org/">
-      <uid>3073</uid>
-      <pwd>E10ADC3949BA59ABBE56E057F20F883E</pwd>
+      <uid>4502</uid>
+      <pwd>71CD7E09C585E0B420930F405C34431B</pwd>
     </CampaignGiftSoapHeader>
   </soap12:Header>
   <soap12:Body>
