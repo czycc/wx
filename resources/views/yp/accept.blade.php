@@ -12,8 +12,16 @@
 <div class="prize all">
     <img class="prizebg" src="{{ asset('yp/img/prize/pri.png') }}"/>
     <!--获得的奖品名称-->
-    <p>妙思乐贝贝护肤四件套</p>
-    <!--获得奖品对应的图片-->
+    @if($prize === 0)
+    <p>Terry Palmer 皇家至臻毛巾礼盒</p>
+    @elseif($prize === 1)
+        <p>Safty 1st 轻柔入梦4件套</p>
+    @elseif($prize === 2)
+        <p>妙思乐贝贝护肤四件套</p>
+    @elseif($prize === 3)
+        <p>内野毛巾礼盒</p>
+    @endif
+        <!--获得奖品对应的图片-->
     <div class="priAll">
         <img src="{{ asset('yp/img/prize/'.$prize.'.png') }}" alt="" class="pri"/>
 
