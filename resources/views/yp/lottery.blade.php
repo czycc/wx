@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>皇家美素佳儿上市</title>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="{{ asset('yp/css/lottery.css') }}">
