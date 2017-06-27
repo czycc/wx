@@ -9,7 +9,7 @@
 <body>
 <!--奖品已发完-->
 <div class="all accPrize">
-    <img class="accbg" src="{{ asset('yp/img/accprize/accbg.png') }}"/>
+    <img class="accbg" src="{{ asset('yp/img/accprize/accbg.jpg') }}"/>
     <a href="{{ url('/draw/new') }}">
         <img class="accbtn" src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
     </a>
