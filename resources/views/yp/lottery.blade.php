@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title></title>
+    <title>解密皇家第一道奶源</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="{{ asset('yp/css/lottery.css') }}">
