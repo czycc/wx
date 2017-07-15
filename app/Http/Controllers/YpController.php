@@ -37,9 +37,7 @@ class YpController extends Controller
             ->first();
         if ($user != null) {
             if ($user->qrcode_url != null){
-                if ($request->customercode == 2 ) {
-                    return view('yp.fg');
-                }
+
                 $qrcode_url = $user->qrcode_url;
                 $prize = $user->prize;
                 return view('yp.accept', compact('qrcode_url', 'prize', 'openid'));
