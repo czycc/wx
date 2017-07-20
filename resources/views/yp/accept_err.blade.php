@@ -11,7 +11,7 @@
 <div class="all accPrize">
     <img class="accbg" src="{{ asset('yp/img/accprize/accbg.jpg') }}"/>
     <a href="{{ url('/draw/new') }}">
-        <img class="accbtn" src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
+        <img class="accbtn" src="{{ asset('yp/img/btn.png') }}"/>
     </a>
 </div>
 </body>

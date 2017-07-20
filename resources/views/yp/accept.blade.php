@@ -34,7 +34,7 @@
 
     </div>
     <a href="{{ url('draw/new') }}">
-        <img src="{{ asset('yp/img/prize/lqprizebtn.png') }}" alt="" class="priBtn"/>
+        <img src="{{ asset('yp/img/btn.png') }}" alt="" class="priBtn"/>
     </a>
 </div>
 
@@ -42,7 +42,7 @@
 <div class="all accPrize hidden">
     <img class="accbg" src="{{ asset('yp/img/accprize/success.png') }}"/>
     <a href="{{ url('draw/new') }}" class="accbtn">
-        <img  src="{{ asset('yp/img/accprize/accbtn.png') }}"/>
+        <img  src="{{ asset('yp/img/btn.png') }}"/>
     </a>
 </div>
 </body>
