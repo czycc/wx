@@ -71,11 +71,11 @@ class YpController extends Controller
                 break;
             case 1 :
                 //新客
-                return view('yp.xk');
+                return view('yp.fg3');
                 break;
             case 2 :
                 //复购用户
-                return view('yp.fg');
+                return view('yp.fg3');
                 break;
             default :
                 return '您的身份信息不通过';

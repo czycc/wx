@@ -104,11 +104,9 @@ Route::group(['prefix' => 'draw'], function (){
 
     //新注册用户参与复购礼
     Route::get('/new', function (){
-        return view('yp.new');
+        return view('yp.fg2');
     });
 });
 Route::get('test1', function (){
-    $str = '%u7231%u5a74%u5ba4%u4e0a%u6d77%u771f%u5149%u8def%u5e97';
-    return unicode_str_to_utf8($str);
-
+    return view('yp.fg3');
 });

@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.hidden{
+	display: none;
+}
+.page{
+	width: 640px;
+	height: 1038px;
+
+}
+.page1{
+	background: url(../img/bg.png) no-repeat center center;
+	
+}
+.page2{
+	background: url(../img/bg2.png) no-repeat center center;
+}
+.page1 .lqBtn{
+	position: absolute;
+	left: 227px;
+	top: 907px;
+}
+.page2 .lqBtn{
+	position: absolute;
+	left: 225px;
+	top: 837px;
+
+}
+.page3{
+	background: url(../img/bg3.png) no-repeat center center;
+}
