@@ -108,5 +108,6 @@ Route::group(['prefix' => 'draw'], function (){
     });
 });
 Route::get('test1', function (){
-    return view('yp.fg3');
+    $location= \App\Models\Location::all();
+    return response()->json($location);
 });
